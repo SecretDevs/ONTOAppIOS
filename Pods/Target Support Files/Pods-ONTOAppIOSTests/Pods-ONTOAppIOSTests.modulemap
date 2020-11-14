@@ -1,0 +1,6 @@
+framework module Pods_ONTOAppIOSTests {
+  umbrella header "Pods-ONTOAppIOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

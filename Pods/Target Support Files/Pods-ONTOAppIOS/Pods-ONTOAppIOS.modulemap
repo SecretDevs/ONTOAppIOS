@@ -1,0 +1,6 @@
+framework module Pods_ONTOAppIOS {
+  umbrella header "Pods-ONTOAppIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

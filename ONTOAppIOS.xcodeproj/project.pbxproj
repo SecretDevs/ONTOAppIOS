@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5DF21935ABD96A9E301A6C6D /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C542A6DB8880403580351BB4 /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework */; };
+		65044072671764F2A92BAEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504432579FF908C0836C2D7 /* SceneDelegate.swift */; };
+		650441AB53BCC0A5C3E3E9FA /* OntoShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650445E0B2A85EE63F8E5929 /* OntoShop.swift */; };
+		650441D7561E269A3925E57F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650443515D74FCF7CDB2AADE /* LaunchScreen.storyboard */; };
+		650442A91E92F84809C046EA /* OntoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504458D43A663D2D97CEF2F /* OntoUser.swift */; };
+		6504430383CBA4849AC83288 /* OntoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504458145F52CB4BF26F500 /* OntoLocation.swift */; };
+		65044334E7C6526C05535A49 /* ONTOAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044C2789951299F0598D8B /* ONTOAppIOSTests.swift */; };
+		650444AE8E85DCFFCB7D0C66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650446EC225688AC20CE20A9 /* Preview Assets.xcassets */; };
+		650445203070DB69EC5EF057 /* OntoOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650448E4C644A1108DBC319D /* OntoOffer.swift */; };
+		6504458443054033098E007A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044FC8AAB5F9D1DFFC78E0 /* AppDelegate.swift */; };
+		6504468BFCF2F6034D6F5B14 /* OntoProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650445B4BCF17EEA6A8D6EE2 /* OntoProduct.swift */; };
+		650448D82AC75D1992F9AA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650448CEAE349AA28D858F82 /* Assets.xcassets */; };
+		650448EB4985E5D77F2459EA /* OntoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650446C09B788735878B8655 /* OntoResponse.swift */; };
+		650449AC498C3EB2D979B078 /* OntoPickPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650444DD20327BECCD8A2A0C /* OntoPickPoint.swift */; };
+		650449B1BD87F132BE59F103 /* OntoPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504489D2D52AE231613650D /* OntoPet.swift */; };
+		650449F7C6A3D39CA9A0FC34 /* ONTOAppIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650440F0BFF71124B7F9D0E3 /* ONTOAppIOSUITests.swift */; };
+		650449FD65631E76F39C066A /* OntoPartner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504409DEFC61B3C9056EAFF /* OntoPartner.swift */; };
+		65044A86F2500E6328207386 /* OntoArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650444A94C34816CAA5B2801 /* OntoArticle.swift */; };
+		65044B275472E4490C8A9A76 /* ArticlesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044DBB598B53EB7E91C4EE /* ArticlesService.swift */; };
+		65044BD70345A689ED97BCE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650440C53F9896A8B73B5ABF /* ContentView.swift */; };
+		65044CFC94723F3E02FC3027 /* OntoAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044CCD868B83675D08A60A /* OntoAddress.swift */; };
+		65044DB076CCF7484A04D499 /* ONTOAppIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65044BC016ACC570DACCCEFC /* ONTOAppIOS.xcdatamodeld */; };
+		65044E1854773DB9BBAD7C0F /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504422F5FCEA44D54DC8F5D /* ArticlesViewModel.swift */; };
+		65044FF86CDA96264BFD1FFC /* ArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504444E280CA8D1D1132EAF /* ArticlesView.swift */; };
+		87BB72B071027667B3147083 /* Pods_ONTOAppIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C161AA868C4E077C1FE345E4 /* Pods_ONTOAppIOS.framework */; };
+		8C10AEF3125C956A597A43F7 /* Pods_ONTOAppIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5BDA32A497031E23E3CABC /* Pods_ONTOAppIOSTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65044CF415497E2A234968B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 650449AE72B9FE86DDD35AA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65044A39BCA44DCDE97719D0;
+			remoteInfo = ONTOAppIOS;
+		};
+		65044F4595A450C83C1E7B61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 650449AE72B9FE86DDD35AA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65044A39BCA44DCDE97719D0;
+			remoteInfo = ONTOAppIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AC6FE313BC2F32B138C3EE0 /* Pods-ONTOAppIOS-ONTOAppIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS-ONTOAppIOSUITests.release.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS-ONTOAppIOSUITests/Pods-ONTOAppIOS-ONTOAppIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2C6351996D80CFFAAA070F48 /* Pods-ONTOAppIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOSTests/Pods-ONTOAppIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		394975BC9360D3988DB4E712 /* Pods-ONTOAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4312FD2A337DDD5C629B7A74 /* Pods-ONTOAppIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS.release.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS.release.xcconfig"; sourceTree = "<group>"; };
+		605F06C8AD1005CA9689A80A /* Pods-ONTOAppIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOSTests.release.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOSTests/Pods-ONTOAppIOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		6504409DEFC61B3C9056EAFF /* OntoPartner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoPartner.swift; sourceTree = "<group>"; };
+		650440C53F9896A8B73B5ABF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		650440F0BFF71124B7F9D0E3 /* ONTOAppIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONTOAppIOSUITests.swift; sourceTree = "<group>"; };
+		6504422F5FCEA44D54DC8F5D /* ArticlesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
+		650442CC58A628EDA2AF353A /* ONTOAppIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ONTOAppIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		650442F4E3AF6A6FAD06F8CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		6504432579FF908C0836C2D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6504444E280CA8D1D1132EAF /* ArticlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesView.swift; sourceTree = "<group>"; };
+		650444A94C34816CAA5B2801 /* OntoArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoArticle.swift; sourceTree = "<group>"; };
+		650444B32CBDC88F62E4E345 /* ONTOAppIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ONTOAppIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		650444DD20327BECCD8A2A0C /* OntoPickPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoPickPoint.swift; sourceTree = "<group>"; };
+		6504458145F52CB4BF26F500 /* OntoLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoLocation.swift; sourceTree = "<group>"; };
+		6504458D43A663D2D97CEF2F /* OntoUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoUser.swift; sourceTree = "<group>"; };
+		650445B4BCF17EEA6A8D6EE2 /* OntoProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoProduct.swift; sourceTree = "<group>"; };
+		650445E0B2A85EE63F8E5929 /* OntoShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoShop.swift; sourceTree = "<group>"; };
+		65044688F21266B92C87F91D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		650446C09B788735878B8655 /* OntoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoResponse.swift; sourceTree = "<group>"; };
+		650446EC225688AC20CE20A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6504489D2D52AE231613650D /* OntoPet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoPet.swift; sourceTree = "<group>"; };
+		650448CEAE349AA28D858F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		650448E4C644A1108DBC319D /* OntoOffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoOffer.swift; sourceTree = "<group>"; };
+		65044ACE44A282B3BFD69D24 /* ONTOAppIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ONTOAppIOS.xcdatamodel; sourceTree = "<group>"; };
+		65044B7C56027334F643C010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		65044B7D4C7FBD3F4D6A3546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		65044C2789951299F0598D8B /* ONTOAppIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONTOAppIOSTests.swift; sourceTree = "<group>"; };
+		65044CCD868B83675D08A60A /* OntoAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoAddress.swift; sourceTree = "<group>"; };
+		65044DBB598B53EB7E91C4EE /* ArticlesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesService.swift; sourceTree = "<group>"; };
+		65044FC8AAB5F9D1DFFC78E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65044FCACB58CB218883D9E0 /* ONTOAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ONTOAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C161AA868C4E077C1FE345E4 /* Pods_ONTOAppIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C542A6DB8880403580351BB4 /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOS_ONTOAppIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D59794639619E3D9B915D56A /* Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS-ONTOAppIOSUITests/Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF5BDA32A497031E23E3CABC /* Pods_ONTOAppIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		650445B13F69A65FCB3E1206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF21935ABD96A9E301A6C6D /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6504499C36C067DFE26AD502 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C10AEF3125C956A597A43F7 /* Pods_ONTOAppIOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65044D0A1FE140A10C024608 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87BB72B071027667B3147083 /* Pods_ONTOAppIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12D88896B6E2A670C2C0DA3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C161AA868C4E077C1FE345E4 /* Pods_ONTOAppIOS.framework */,
+				C542A6DB8880403580351BB4 /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework */,
+				FF5BDA32A497031E23E3CABC /* Pods_ONTOAppIOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		650443A4C19A9DA32D2A985F /* ONTOAppIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				650442F4E3AF6A6FAD06F8CD /* Info.plist */,
+				650440F0BFF71124B7F9D0E3 /* ONTOAppIOSUITests.swift */,
+			);
+			path = ONTOAppIOSUITests;
+			sourceTree = "<group>";
+		};
+		650444375DC64C65A6409EAE = {
+			isa = PBXGroup;
+			children = (
+				650447504579E2785D696DC4 /* Products */,
+				65044FA8129A14D179A7D13A /* ONTOAppIOS */,
+				650444D0C7ED39C022B733BC /* ONTOAppIOSTests */,
+				650443A4C19A9DA32D2A985F /* ONTOAppIOSUITests */,
+				CC7121444F3E1BEA7C2B5A54 /* Pods */,
+				12D88896B6E2A670C2C0DA3E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		650444D0C7ED39C022B733BC /* ONTOAppIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				65044B7C56027334F643C010 /* Info.plist */,
+				65044C2789951299F0598D8B /* ONTOAppIOSTests.swift */,
+			);
+			path = ONTOAppIOSTests;
+			sourceTree = "<group>";
+		};
+		6504460997737A479DC04950 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				65044CCD868B83675D08A60A /* OntoAddress.swift */,
+				6504458145F52CB4BF26F500 /* OntoLocation.swift */,
+				6504409DEFC61B3C9056EAFF /* OntoPartner.swift */,
+				650445B4BCF17EEA6A8D6EE2 /* OntoProduct.swift */,
+				650445E0B2A85EE63F8E5929 /* OntoShop.swift */,
+				650444DD20327BECCD8A2A0C /* OntoPickPoint.swift */,
+				650444A94C34816CAA5B2801 /* OntoArticle.swift */,
+				650448E4C644A1108DBC319D /* OntoOffer.swift */,
+				6504489D2D52AE231613650D /* OntoPet.swift */,
+				6504458D43A663D2D97CEF2F /* OntoUser.swift */,
+				650446C09B788735878B8655 /* OntoResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		650446DEFE4A11E424872C89 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				6504422F5FCEA44D54DC8F5D /* ArticlesViewModel.swift */,
+				6504444E280CA8D1D1132EAF /* ArticlesView.swift */,
+				65044DBB598B53EB7E91C4EE /* ArticlesService.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		650447504579E2785D696DC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65044FCACB58CB218883D9E0 /* ONTOAppIOS.app */,
+				650444B32CBDC88F62E4E345 /* ONTOAppIOSTests.xctest */,
+				650442CC58A628EDA2AF353A /* ONTOAppIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65044AC9946761A52F2FD650 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				650446EC225688AC20CE20A9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		65044FA8129A14D179A7D13A /* ONTOAppIOS */ = {
+			isa = PBXGroup;
+			children = (
+				65044B7D4C7FBD3F4D6A3546 /* Info.plist */,
+				650448CEAE349AA28D858F82 /* Assets.xcassets */,
+				650443515D74FCF7CDB2AADE /* LaunchScreen.storyboard */,
+				65044FC8AAB5F9D1DFFC78E0 /* AppDelegate.swift */,
+				65044BC016ACC570DACCCEFC /* ONTOAppIOS.xcdatamodeld */,
+				6504432579FF908C0836C2D7 /* SceneDelegate.swift */,
+				650440C53F9896A8B73B5ABF /* ContentView.swift */,
+				65044AC9946761A52F2FD650 /* Preview Content */,
+				6504460997737A479DC04950 /* Entities */,
+				650446DEFE4A11E424872C89 /* Articles */,
+			);
+			path = ONTOAppIOS;
+			sourceTree = "<group>";
+		};
+		CC7121444F3E1BEA7C2B5A54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				394975BC9360D3988DB4E712 /* Pods-ONTOAppIOS.debug.xcconfig */,
+				4312FD2A337DDD5C629B7A74 /* Pods-ONTOAppIOS.release.xcconfig */,
+				D59794639619E3D9B915D56A /* Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig */,
+				1AC6FE313BC2F32B138C3EE0 /* Pods-ONTOAppIOS-ONTOAppIOSUITests.release.xcconfig */,
+				2C6351996D80CFFAAA070F48 /* Pods-ONTOAppIOSTests.debug.xcconfig */,
+				605F06C8AD1005CA9689A80A /* Pods-ONTOAppIOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65044A39BCA44DCDE97719D0 /* ONTOAppIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6504466B132614F4C93AA4A8 /* Build configuration list for PBXNativeTarget "ONTOAppIOS" */;
+			buildPhases = (
+				1477A9C3D4A3989F03A6EB95 /* [CP] Check Pods Manifest.lock */,
+				65044144F4DD5EC71B916BC5 /* Sources */,
+				65044D0A1FE140A10C024608 /* Frameworks */,
+				650444CBC61172F3B4DADA54 /* Resources */,
+				9F0964CB67C49AEA6B763BB4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ONTOAppIOS;
+			productName = ONTOAppIOS;
+			productReference = 65044FCACB58CB218883D9E0 /* ONTOAppIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65044D2C4D98C1F0EA683416 /* ONTOAppIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650446C90736BDEA8F699FB0 /* Build configuration list for PBXNativeTarget "ONTOAppIOSUITests" */;
+			buildPhases = (
+				D35EFBF3C0A359FF0C563D41 /* [CP] Check Pods Manifest.lock */,
+				65044711AF5673B98CF248AA /* Sources */,
+				650445B13F69A65FCB3E1206 /* Frameworks */,
+				650444474A0F461A043B919A /* Resources */,
+				8761F31F6FC2D0A3A2B5DA86 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65044D10CD3D758D0A85140D /* PBXTargetDependency */,
+			);
+			name = ONTOAppIOSUITests;
+			productName = ONTOAppIOSUITests;
+			productReference = 650442CC58A628EDA2AF353A /* ONTOAppIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		65044DE0523D797281C5812D /* ONTOAppIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650440FD1194843E4064DB07 /* Build configuration list for PBXNativeTarget "ONTOAppIOSTests" */;
+			buildPhases = (
+				78A9450516056E16107F6247 /* [CP] Check Pods Manifest.lock */,
+				65044054E5408FE9D01BB352 /* Sources */,
+				6504499C36C067DFE26AD502 /* Frameworks */,
+				650441DAAE3BBAD97222EBE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				650444B3CFC0EBF1B36B0560 /* PBXTargetDependency */,
+			);
+			name = ONTOAppIOSTests;
+			productName = ONTOAppIOSTests;
+			productReference = 650444B32CBDC88F62E4E345 /* ONTOAppIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		650449AE72B9FE86DDD35AA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+			};
+			buildConfigurationList = 6504484B201F1D4ED77B9B56 /* Build configuration list for PBXProject "ONTOAppIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 650444375DC64C65A6409EAE;
+			productRefGroup = 650447504579E2785D696DC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65044A39BCA44DCDE97719D0 /* ONTOAppIOS */,
+				65044DE0523D797281C5812D /* ONTOAppIOSTests */,
+				65044D2C4D98C1F0EA683416 /* ONTOAppIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		650441DAAE3BBAD97222EBE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650444474A0F461A043B919A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650444CBC61172F3B4DADA54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650448D82AC75D1992F9AA23 /* Assets.xcassets in Resources */,
+				650441D7561E269A3925E57F /* LaunchScreen.storyboard in Resources */,
+				650444AE8E85DCFFCB7D0C66 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1477A9C3D4A3989F03A6EB95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ONTOAppIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78A9450516056E16107F6247 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ONTOAppIOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8761F31F6FC2D0A3A2B5DA86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ONTOAppIOS-ONTOAppIOSUITests/Pods-ONTOAppIOS-ONTOAppIOSUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ONTOAppIOS-ONTOAppIOSUITests/Pods-ONTOAppIOS-ONTOAppIOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F0964CB67C49AEA6B763BB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D35EFBF3C0A359FF0C563D41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ONTOAppIOS-ONTOAppIOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65044054E5408FE9D01BB352 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65044334E7C6526C05535A49 /* ONTOAppIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65044144F4DD5EC71B916BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6504458443054033098E007A /* AppDelegate.swift in Sources */,
+				65044DB076CCF7484A04D499 /* ONTOAppIOS.xcdatamodeld in Sources */,
+				65044072671764F2A92BAEC7 /* SceneDelegate.swift in Sources */,
+				65044BD70345A689ED97BCE2 /* ContentView.swift in Sources */,
+				65044CFC94723F3E02FC3027 /* OntoAddress.swift in Sources */,
+				6504430383CBA4849AC83288 /* OntoLocation.swift in Sources */,
+				650449FD65631E76F39C066A /* OntoPartner.swift in Sources */,
+				6504468BFCF2F6034D6F5B14 /* OntoProduct.swift in Sources */,
+				650441AB53BCC0A5C3E3E9FA /* OntoShop.swift in Sources */,
+				650449AC498C3EB2D979B078 /* OntoPickPoint.swift in Sources */,
+				65044A86F2500E6328207386 /* OntoArticle.swift in Sources */,
+				650445203070DB69EC5EF057 /* OntoOffer.swift in Sources */,
+				650449B1BD87F132BE59F103 /* OntoPet.swift in Sources */,
+				650442A91E92F84809C046EA /* OntoUser.swift in Sources */,
+				65044E1854773DB9BBAD7C0F /* ArticlesViewModel.swift in Sources */,
+				65044FF86CDA96264BFD1FFC /* ArticlesView.swift in Sources */,
+				65044B275472E4490C8A9A76 /* ArticlesService.swift in Sources */,
+				650448EB4985E5D77F2459EA /* OntoResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65044711AF5673B98CF248AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650449F7C6A3D39CA9A0FC34 /* ONTOAppIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		650444B3CFC0EBF1B36B0560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65044A39BCA44DCDE97719D0 /* ONTOAppIOS */;
+			targetProxy = 65044F4595A450C83C1E7B61 /* PBXContainerItemProxy */;
+		};
+		65044D10CD3D758D0A85140D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65044A39BCA44DCDE97719D0 /* ONTOAppIOS */;
+			targetProxy = 65044CF415497E2A234968B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		650443515D74FCF7CDB2AADE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65044688F21266B92C87F91D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65044006EF8DA033EB44BB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AC6FE313BC2F32B138C3EE0 /* Pods-ONTOAppIOS-ONTOAppIOSUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = ONTOAppIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ONTO.ONTOAppIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ONTOAppIOS;
+			};
+			name = Release;
+		};
+		650444D0F5307B8CBA37EAD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 605F06C8AD1005CA9689A80A /* Pods-ONTOAppIOSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ONTOAppIOS.app/ONTOAppIOS";
+				INFOPLIST_FILE = ONTOAppIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ONTO.ONTOAppIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		650446AD6D30C473F80394B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4312FD2A337DDD5C629B7A74 /* Pods-ONTOAppIOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_ASSET_PATHS = "\"ONTOAppIOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ONTOAppIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ONTO.ONTOAppIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		650446D962FE01CECD96677E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 394975BC9360D3988DB4E712 /* Pods-ONTOAppIOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_ASSET_PATHS = "\"ONTOAppIOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ONTOAppIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ONTO.ONTOAppIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65044B82960298112418AD9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C6351996D80CFFAAA070F48 /* Pods-ONTOAppIOSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ONTOAppIOS.app/ONTOAppIOS";
+				INFOPLIST_FILE = ONTOAppIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ONTO.ONTOAppIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		65044C8BCB5996558CAC5FF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D59794639619E3D9B915D56A /* Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = ONTOAppIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ONTO.ONTOAppIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ONTOAppIOS;
+			};
+			name = Debug;
+		};
+		65044CCEE468970A430AEAE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65044DB326A80BB8A7FEE594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		650440FD1194843E4064DB07 /* Build configuration list for PBXNativeTarget "ONTOAppIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65044B82960298112418AD9C /* Debug */,
+				650444D0F5307B8CBA37EAD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6504466B132614F4C93AA4A8 /* Build configuration list for PBXNativeTarget "ONTOAppIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650446D962FE01CECD96677E /* Debug */,
+				650446AD6D30C473F80394B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		650446C90736BDEA8F699FB0 /* Build configuration list for PBXNativeTarget "ONTOAppIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65044C8BCB5996558CAC5FF5 /* Debug */,
+				65044006EF8DA033EB44BB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6504484B201F1D4ED77B9B56 /* Build configuration list for PBXProject "ONTOAppIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65044DB326A80BB8A7FEE594 /* Debug */,
+				65044CCEE468970A430AEAE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		65044BC016ACC570DACCCEFC /* ONTOAppIOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				65044ACE44A282B3BFD69D24 /* ONTOAppIOS.xcdatamodel */,
+			);
+			currentVersion = 65044ACE44A282B3BFD69D24 /* ONTOAppIOS.xcdatamodel */;
+			path = ONTOAppIOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 650449AE72B9FE86DDD35AA8 /* Project object */;
+}
