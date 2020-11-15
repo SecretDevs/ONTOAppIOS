@@ -15,16 +15,14 @@ struct VCardView: View {
    let url: URL
    
    var body: some View {
-       VStack {
+       ZStack(alignment: .bottom) {
+           URLImage(self.url, content: {image in
+               image.image.resizable().aspectRatio(contentMode: .fill)
+           })
            Text(self.text)
+                   .foregroundColor(.white)
                .layoutPriority(.greatestFiniteMagnitude)
-       }
-       .background(URLImage(self.url, content: {image in
-        image.image.resizable().aspectRatio(contentMode: .fill)
-       }))
+       }.frame(width: UIScreen.main.bounds.width, height: 200)
        .padding(5)
-       .gridCellOverlay { _ in
-           RoundedRectangle(cornerRadius: 5)
-       }
    }
 }
