@@ -33,6 +33,7 @@
 		65044FF86CDA96264BFD1FFC /* ArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504444E280CA8D1D1132EAF /* ArticlesView.swift */; };
 		87BB72B071027667B3147083 /* Pods_ONTOAppIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C161AA868C4E077C1FE345E4 /* Pods_ONTOAppIOS.framework */; };
 		8C10AEF3125C956A597A43F7 /* Pods_ONTOAppIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5BDA32A497031E23E3CABC /* Pods_ONTOAppIOSTests.framework */; };
+		ED7A39442561B245009CE2FA /* VCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A39432561B245009CE2FA /* VCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		C161AA868C4E077C1FE345E4 /* Pods_ONTOAppIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C542A6DB8880403580351BB4 /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOS_ONTOAppIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59794639619E3D9B915D56A /* Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS-ONTOAppIOSUITests/Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED7A39432561B245009CE2FA /* VCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCardView.swift; sourceTree = "<group>"; };
 		FF5BDA32A497031E23E3CABC /* Pods_ONTOAppIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 				6504422F5FCEA44D54DC8F5D /* ArticlesViewModel.swift */,
 				6504444E280CA8D1D1132EAF /* ArticlesView.swift */,
 				65044DBB598B53EB7E91C4EE /* ArticlesService.swift */,
+				ED7A39432561B245009CE2FA /* VCardView.swift */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -234,7 +237,6 @@
 				2C6351996D80CFFAAA070F48 /* Pods-ONTOAppIOSTests.debug.xcconfig */,
 				605F06C8AD1005CA9689A80A /* Pods-ONTOAppIOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -312,7 +314,9 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
+				Base,
 			);
 			mainGroup = 650444375DC64C65A6409EAE;
 			productRefGroup = 650447504579E2785D696DC4 /* Products */;
@@ -407,11 +411,15 @@
 				"${PODS_ROOT}/Target Support Files/Pods-ONTOAppIOS-ONTOAppIOSUITests/Pods-ONTOAppIOS-ONTOAppIOSUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ExyteGrid/ExyteGrid.framework",
+				"${BUILT_PRODUCTS_DIR}/URLImage/URLImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExyteGrid.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URLImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -427,11 +435,15 @@
 				"${PODS_ROOT}/Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ExyteGrid/ExyteGrid.framework",
+				"${BUILT_PRODUCTS_DIR}/URLImage/URLImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExyteGrid.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URLImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -487,6 +499,7 @@
 				650449AC498C3EB2D979B078 /* OntoPickPoint.swift in Sources */,
 				65044A86F2500E6328207386 /* OntoArticle.swift in Sources */,
 				650445203070DB69EC5EF057 /* OntoOffer.swift in Sources */,
+				ED7A39442561B245009CE2FA /* VCardView.swift in Sources */,
 				650449B1BD87F132BE59F103 /* OntoPet.swift in Sources */,
 				650442A91E92F84809C046EA /* OntoUser.swift in Sources */,
 				65044E1854773DB9BBAD7C0F /* ArticlesViewModel.swift in Sources */,
@@ -668,9 +681,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "\"-Xlinker -interposable\"";
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -729,6 +742,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "\"-Xlinker -interposable\"";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -745,6 +759,7 @@
 				650444D0F5307B8CBA37EAD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6504466B132614F4C93AA4A8 /* Build configuration list for PBXNativeTarget "ONTOAppIOS" */ = {
 			isa = XCConfigurationList;
@@ -753,6 +768,7 @@
 				650446AD6D30C473F80394B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		650446C90736BDEA8F699FB0 /* Build configuration list for PBXNativeTarget "ONTOAppIOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -761,6 +777,7 @@
 				65044006EF8DA033EB44BB81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6504484B201F1D4ED77B9B56 /* Build configuration list for PBXProject "ONTOAppIOS" */ = {
 			isa = XCConfigurationList;
