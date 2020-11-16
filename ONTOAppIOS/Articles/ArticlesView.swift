@@ -18,10 +18,18 @@ struct ArticlesView: View{
                     ForEach(0..<self.viewModel.articles.count) { i in
                         VCardView(text: self.viewModel.articles[i].name, url: URL(string: self.viewModel.articles[i].image)!)
                                 .gridSpan(column: i % 2 == 0 ? 2 : 1)
-                        Text("Article")
-                        Text("Article")
                     }
+                    VCardView(text: "Article", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!)
+                            .gridSpan(column: 1)
+                    VCardView(text: "Article", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!)
+                            .gridSpan(column: 1)
+                    VCardView(text: "Article", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!)
+                            .gridSpan(column: 2)
+
                 }
+                        .gridContentMode(.scroll)
+                        .gridPacking(.dense)
+                        .gridFlow(.rows)
 
     }
 
