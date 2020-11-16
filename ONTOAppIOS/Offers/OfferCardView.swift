@@ -14,25 +14,54 @@ struct OfferCardView: View {
     let url: URL
 
     var body: some View {
+
         VStack(alignment: .center) {
             URLImage(self.url, content: {image in
-                image.image.resizable().aspectRatio(contentMode: .fill)
-            })
-            Text(self.text)
-                    .foregroundColor(.white)
-                    .layoutPriority(.greatestFiniteMagnitude)
+                image.image.centerCropped()
+            }).frame(height: 180)
+                .cornerRadius(10)
+
+            VStack(alignment: .leading) {
+                Text(self.text)
+                        .foregroundColor(.black)
+                        .layoutPriority(.greatestFiniteMagnitude)
+            }.padding(.leading,10)
+                    .padding(.trailing)
             HStack{
-                Text("145P")
-                        .foregroundColor(.red)
-                        .layoutPriority(.greatestFiniteMagnitude)
-                Text("100P")
-                        .foregroundColor(.white)
-                        .layoutPriority(.greatestFiniteMagnitude)
-                Text("Button")
-                        .foregroundColor(.white)
-                        .layoutPriority(.greatestFiniteMagnitude)
+
+                HStack {
+                    Text("145P").fontWeight(.bold)
+                            .foregroundColor(.red)
+                            .layoutPriority(.greatestFiniteMagnitude)
+                            .font(.system(size: 20))
+                    Text("100P")
+                            .foregroundColor(.gray)
+                            .layoutPriority(.greatestFiniteMagnitude)
+                            .font(.system(size: 15))
+                }
+                        .padding(.all,5)
+                        .padding(.bottom,10)
+                        .padding(.leading)
+
+                Spacer()
+                VStack(alignment: .trailing) {
+                    Button(action: {
+                        print("Hey")
+                    }) {
+                        Text(" + ").font(.system(size: 20))
+                                .foregroundColor(.white)
+                                .background(Color.green)
+                                .cornerRadius(10)
+                    }
+                }.padding(5)
+
+
             }
-        }.frame(width: UIScreen.main.bounds.width, height: 200)
+
+        }.frame(alignment: .top)
+                .background(Color.white)
+                .cornerRadius(10)
+                .shadow(radius: 5)
                 .padding(5)
     }
 }
