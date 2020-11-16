@@ -11,10 +11,15 @@ import URLImage
 struct OfferCardView: View {
     let text: String
 
+    @State var selection: Int? = nil
+
     let url: URL
 
-    var body: some View {
+    let price: Float
+    let basePrice: Float
 
+
+    var body: some View {
         VStack(alignment: .center) {
             URLImage(self.url, content: {image in
                 image.image.centerCropped()
@@ -30,11 +35,11 @@ struct OfferCardView: View {
             HStack{
 
                 HStack {
-                    Text("145P").fontWeight(.bold)
+                    Text("\(self.price, specifier: "%.0f")").fontWeight(.bold)
                             .foregroundColor(.red)
                             .layoutPriority(.greatestFiniteMagnitude)
                             .font(.system(size: 20))
-                    Text("100P")
+                    Text("\(self.basePrice, specifier: "%.0f")")
                             .foregroundColor(.gray)
                             .layoutPriority(.greatestFiniteMagnitude)
                             .font(.system(size: 15))
@@ -45,15 +50,19 @@ struct OfferCardView: View {
 
                 Spacer()
                 VStack(alignment: .trailing) {
-                    Button(action: {
-                        print("Hey")
-                    }) {
-                        Text(" + ").font(.system(size: 20))
-                                .foregroundColor(.white)
-                                .background(Color.green)
-                                .cornerRadius(10)
+
+                        NavigationLink(destination: OfferView(), tag: 1, selection: $selection) {
+                            Button(action: {
+                                self.selection = 1
+                            }) {
+                                Text(" + ").font(.system(size: 20))
+                                        .foregroundColor(.white)
+                                        .background(Color.green)
+                                        .cornerRadius(10)
+                            }.padding(5)
+                        }
                     }
-                }.padding(5)
+
 
 
             }

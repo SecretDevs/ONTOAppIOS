@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		315F62B4E4573880F3A81440 /* OffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6DEF38B9128E9BEBD1F3 /* OffersService.swift */; };
+		315F6AC1F7F15771FDD83604 /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F63C8BECE1A850A6AE7A9 /* OfferView.swift */; };
 		315F6B7E9DABCCAE0FDF3807 /* OffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F60BFF435E467FD5EF18A /* OffersViewModel.swift */; };
 		315F6D5315A038F6E6F90B57 /* OffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6356B7659AFB6E044262 /* OffersView.swift */; };
 		315F6EEF58F975AFAF18D717 /* OfferCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F63D3C3ED5D2EF73E5789 /* OfferCardView.swift */; };
@@ -62,6 +63,7 @@
 		2C6351996D80CFFAAA070F48 /* Pods-ONTOAppIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOSTests/Pods-ONTOAppIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		315F60BFF435E467FD5EF18A /* OffersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewModel.swift; sourceTree = "<group>"; };
 		315F6356B7659AFB6E044262 /* OffersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersView.swift; sourceTree = "<group>"; };
+		315F63C8BECE1A850A6AE7A9 /* OfferView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
 		315F63D3C3ED5D2EF73E5789 /* OfferCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCardView.swift; sourceTree = "<group>"; };
 		315F6DEF38B9128E9BEBD1F3 /* OffersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersService.swift; sourceTree = "<group>"; };
 		394975BC9360D3988DB4E712 /* Pods-ONTOAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 				FF5BDA32A497031E23E3CABC /* Pods_ONTOAppIOSTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		315F614A3F55FE1BCC305B0B /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				315F63C8BECE1A850A6AE7A9 /* OfferView.swift */,
+			);
+			path = Offer;
 			sourceTree = "<group>";
 		};
 		315F6EB0E73EE73ABD434F1F /* Offers */ = {
@@ -243,6 +253,7 @@
 				6504460997737A479DC04950 /* Entities */,
 				650446DEFE4A11E424872C89 /* Articles */,
 				315F6EB0E73EE73ABD434F1F /* Offers */,
+				315F614A3F55FE1BCC305B0B /* Offer */,
 			);
 			path = ONTOAppIOS;
 			sourceTree = "<group>";
@@ -535,6 +546,7 @@
 				315F6B7E9DABCCAE0FDF3807 /* OffersViewModel.swift in Sources */,
 				315F6D5315A038F6E6F90B57 /* OffersView.swift in Sources */,
 				315F6EEF58F975AFAF18D717 /* OfferCardView.swift in Sources */,
+				315F6AC1F7F15771FDD83604 /* OfferView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
