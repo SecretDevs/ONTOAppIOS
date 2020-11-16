@@ -10,38 +10,26 @@ import Foundation
 import SwiftUI
 import URLImage
 
-extension Image {
-    func centerCropped() -> some View {
-        GeometryReader { geo in
-            self
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .scaledToFill()
-                    .frame(width: geo.size.width, height: geo.size.height)
-                    .clipped()
-        }
-    }
-}
-
-struct VCardView: View {
+struct ArticleCardView: View {
    let text: String
    let url: URL
    
    var body: some View {
             VStack{
                 Text(self.text)
+                        .font(.system(size: 16, weight: .medium))
                         .foregroundColor(Color.white)
+                        .padding(.all, 10)
                         .layoutPriority(.greatestFiniteMagnitude)
-                        .padding(.all, 50)
 
             }
-                    .frame(alignment: .bottom)
-                    .background(Color.black.opacity(0.3))
+                    .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: 200, alignment: .bottom)
+                    .background(Color.black.opacity(0.5))
                     .background(URLImage(self.url, content: {image in
                         image.image
                                 .centerCropped()
                     }))
-                    .cornerRadius(10)
+                    .cornerRadius(15)
                     .padding(.all, 5)
    }
 }
