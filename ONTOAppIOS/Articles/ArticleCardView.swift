@@ -16,6 +16,7 @@ struct ArticleCardView: View {
    
    var body: some View {
             VStack{
+                Spacer()
                 Text(self.text)
                         .font(.system(size: 16, weight: .medium))
                         .foregroundColor(Color.white)
@@ -23,7 +24,8 @@ struct ArticleCardView: View {
                         .layoutPriority(.greatestFiniteMagnitude)
 
             }
-                    .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: 200, alignment: .bottom)
+                    .frame(maxWidth: UIScreen.main.bounds.width, alignment: .bottom)
+                    .frame(height: 200)
                     .background(Color.black.opacity(0.5))
                     .background(URLImage(self.url, content: {image in
                         image.image
