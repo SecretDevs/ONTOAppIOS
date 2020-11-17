@@ -37,6 +37,7 @@
 		87BB72B071027667B3147083 /* Pods_ONTOAppIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C161AA868C4E077C1FE345E4 /* Pods_ONTOAppIOS.framework */; };
 		8C10AEF3125C956A597A43F7 /* Pods_ONTOAppIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5BDA32A497031E23E3CABC /* Pods_ONTOAppIOSTests.framework */; };
 		ED7A39442561B245009CE2FA /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A39432561B245009CE2FA /* ArticleCardView.swift */; };
+		ED7CC4CA256460AD0008019F /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7CC4C9256460AD0008019F /* StringUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		C542A6DB8880403580351BB4 /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOS_ONTOAppIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59794639619E3D9B915D56A /* Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS-ONTOAppIOSUITests/Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED7A39432561B245009CE2FA /* ArticleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
+		ED7CC4C9256460AD0008019F /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		FF5BDA32A497031E23E3CABC /* Pods_ONTOAppIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				65044B20D3504686CF6CECB6 /* ImageUtils.swift */,
+				ED7CC4C9256460AD0008019F /* StringUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				650449FD65631E76F39C066A /* OntoPartner.swift in Sources */,
 				6504468BFCF2F6034D6F5B14 /* OntoProduct.swift in Sources */,
 				650441AB53BCC0A5C3E3E9FA /* OntoShop.swift in Sources */,
+				ED7CC4CA256460AD0008019F /* StringUtils.swift in Sources */,
 				650449AC498C3EB2D979B078 /* OntoPickPoint.swift in Sources */,
 				65044A86F2500E6328207386 /* OntoArticle.swift in Sources */,
 				650445203070DB69EC5EF057 /* OntoOffer.swift in Sources */,

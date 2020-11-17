@@ -256,12 +256,12 @@
 		1FED37E7B1B83123AE372DE4E5CBB234 /* URLImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "URLImage-Info.plist"; sourceTree = "<group>"; };
 		20AE9AD069D0B4E11C7123D2CEFACDA4 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		212156AAEB2DE491FFF038192E905E89 /* CircleProgressShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleProgressShape.swift; path = Sources/URLImage/Views/ProgressView/Circle/CircleProgressShape.swift; sourceTree = "<group>"; };
-		21ABC8E0E965DFF5B7B8553678C4A712 /* Pods_ONTOAppIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ONTOAppIOSTests.framework; path = "Pods-ONTOAppIOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21ABC8E0E965DFF5B7B8553678C4A712 /* Pods_ONTOAppIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CE156DD937E4421499B7811B31DF86 /* RemoteFileCacheService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RemoteFileCacheService.swift; path = Sources/URLImage/ImageCache/RemoteFileCacheService.swift; sourceTree = "<group>"; };
 		241FB13F5A7A51E13BFCEA2F718C78C4 /* ExyteGrid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ExyteGrid.modulemap; sourceTree = "<group>"; };
 		28147567A78B1EBDA8785E83DE0E7C38 /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
 		2827465C62EADDB747E852EE669E0B01 /* DownloadService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownloadService.swift; path = Sources/URLImage/ImageLoader/Downloader/DownloadService.swift; sourceTree = "<group>"; };
-		2887F2E4A4C98BEF767A166683622593 /* URLImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = URLImage.framework; path = URLImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2887F2E4A4C98BEF767A166683622593 /* URLImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = URLImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1BF85327E04FEA264CEBE130452BEE /* Pods-ONTOAppIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ONTOAppIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B81376F225A5792E8D1AC65BF4A5944 /* Pods-ONTOAppIOS-ONTOAppIOSUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ONTOAppIOS-ONTOAppIOSUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2D9E11E0E3D279C8A44F650EADC13879 /* URLImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = URLImage.modulemap; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		57ACFDB4DD397B282C16B5A1065FAF7C /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/Configuration/Constants.swift; sourceTree = "<group>"; };
 		584A62C80BCA02D3BBF8E0522AA1F5D1 /* ExyteGrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ExyteGrid.release.xcconfig; sourceTree = "<group>"; };
 		5B3D019C95E9B8794BDCDC8111C83CD6 /* GridBackgroundPreference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GridBackgroundPreference.swift; path = Sources/Models/Preferences/GridBackgroundPreference.swift; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF9B5CE8B1DD77DA5BE43786A257E25 /* LayoutArrangement+description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LayoutArrangement+description.swift"; path = "Sources/Extensions/LayoutArrangement+description.swift"; sourceTree = "<group>"; };
 		61A9BFFAC9CFDD257BF53E779E91D960 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Sources/Cache/Cache.swift; sourceTree = "<group>"; };
 		634D4DA8DBDC37657767661FA039B13A /* Pods-ONTOAppIOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ONTOAppIOS-Info.plist"; sourceTree = "<group>"; };
@@ -338,13 +338,13 @@
 		96B912288D520EF8605C59444EBC38F7 /* ImageSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageSource.swift; path = Sources/URLImage/Utils/ImageSource.swift; sourceTree = "<group>"; };
 		9AB9836CD12CB0A3110691985F89DA88 /* Pods-ONTOAppIOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ONTOAppIOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		9B2A5631426F5DE029C68E063921E953 /* Pods-ONTOAppIOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ONTOAppIOSTests-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC316F2F9ABDD2E68FA53CA30230487 /* Grid+Inits_Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Grid+Inits_Data.swift"; path = "Sources/View/Inits/Grid+Inits_Data.swift"; sourceTree = "<group>"; };
 		A11375E7014A778070410325C6CACEDF /* ImageLoaderContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoaderContentView.swift; path = Sources/URLImage/ImageLoader/Views/ImageLoaderContentView.swift; sourceTree = "<group>"; };
 		A2A8551D04B7AF73A0B728CAD5832187 /* Pods-ONTOAppIOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ONTOAppIOSTests.modulemap"; sourceTree = "<group>"; };
 		A3B2B50560C6325117893A8078629C69 /* GridFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GridFlow.swift; path = Sources/Models/GridFlow.swift; sourceTree = "<group>"; };
 		AC00B03E26F5A255D0B08CDA84FA29BD /* Pods-ONTOAppIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ONTOAppIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		ACC379D2B90F5DCE253BA53FC72B2A97 /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ONTOAppIOS_ONTOAppIOSUITests.framework; path = "Pods-ONTOAppIOS-ONTOAppIOSUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC379D2B90F5DCE253BA53FC72B2A97 /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOS_ONTOAppIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1A411929B56A55DB5A33751F1CCD2C /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/URLImage/Views/AnimatedImageView.swift; sourceTree = "<group>"; };
 		AD65D352DD3F48FA80788502BA193189 /* Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADFBD59B3CE9EE10F6BFAF90D80B7650 /* GridGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GridGroup.swift; path = Sources/View/GridGroup.swift; sourceTree = "<group>"; };
@@ -357,7 +357,7 @@
 		B701F8009B1168AF4FAA801143CAD892 /* Pods-ONTOAppIOS-ONTOAppIOSUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ONTOAppIOS-ONTOAppIOSUITests-Info.plist"; sourceTree = "<group>"; };
 		B71223B2AE35A7E5354AD907236A98C4 /* ImageDownloadHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloadHandler.swift; path = Sources/URLImage/ImageLoader/ImageDownloadHandler.swift; sourceTree = "<group>"; };
 		B848CFA5FC5448D9914894A1BD079C8D /* Pods-ONTOAppIOS-ONTOAppIOSUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ONTOAppIOS-ONTOAppIOSUITests-dummy.m"; sourceTree = "<group>"; };
-		B86D83D171D0AB340828D36A9AB54F23 /* Pods_ONTOAppIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ONTOAppIOS.framework; path = "Pods-ONTOAppIOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B86D83D171D0AB340828D36A9AB54F23 /* Pods_ONTOAppIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONTOAppIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9175817F682D3072880B2550885EB56 /* ImageDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDecoder.swift; path = Sources/URLImage/Utils/ImageIO/ImageDecoder/ImageDecoder.swift; sourceTree = "<group>"; };
 		B973481C472A8466C38F396441390022 /* URLImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLImage.swift; path = Sources/URLImage/URLImage.swift; sourceTree = "<group>"; };
 		B9E3E470FCF5563619A7F441B00B9D59 /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/AlamofireExtended.swift; sourceTree = "<group>"; };
@@ -376,7 +376,7 @@
 		C62AB5335F19936B618561BD0660648D /* Pods-ONTOAppIOS-ONTOAppIOSUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ONTOAppIOS-ONTOAppIOSUITests-frameworks.sh"; sourceTree = "<group>"; };
 		C71868416B3FD3B463886013CD2F6063 /* Pods-ONTOAppIOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ONTOAppIOS-frameworks.sh"; sourceTree = "<group>"; };
 		C7917BDE175BB28F96C0CA45DB402CE9 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
-		C8498160B5D29EF2745E4D41F2D971B5 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlamofireImage.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8498160B5D29EF2745E4D41F2D971B5 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D115625F57956C0F6461BB5365716C /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
 		CF2639EE09E32B28E59FFF5C5D1A30A8 /* PositionedItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PositionedItem.swift; path = Sources/Models/PositionedItem.swift; sourceTree = "<group>"; };
 		CF3D0C78D8D487356CD852832212817A /* DownloadObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownloadObserver.swift; path = Sources/URLImage/ImageLoader/Downloader/DownloadObserver.swift; sourceTree = "<group>"; };
@@ -396,7 +396,7 @@
 		E577042B60EC19A15B0F9C0C9EA16D52 /* CoreDataFetchIndexDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreDataFetchIndexDescription.swift; path = Sources/URLImage/Utils/CoreData/CoreDataFetchIndexDescription.swift; sourceTree = "<group>"; };
 		EC884DED61F57AD803AA9520435C6C95 /* ImageProcessorClosure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessorClosure.swift; path = Sources/URLImage/ImageProcessing/Processors/ImageProcessorClosure.swift; sourceTree = "<group>"; };
 		ED534048444989D065F8875AB7B6BBAF /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		EF009666101FD31C817A17F203415F3C /* ExyteGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ExyteGrid.framework; path = ExyteGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF009666101FD31C817A17F203415F3C /* ExyteGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExyteGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF871AB3AF1B92178CF5F8477EAF1C39 /* ExyteGrid-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ExyteGrid-Info.plist"; sourceTree = "<group>"; };
 		F0C7CD53A369F9B4A9A1A6C022BC5E58 /* URLImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = URLImage.release.xcconfig; sourceTree = "<group>"; };
 		F24DCFC90480198598A6FAD3C5E9C3B2 /* AFIError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFIError.swift; path = Source/AFIError.swift; sourceTree = "<group>"; };
@@ -562,7 +562,6 @@
 				D32757C696E6A3D40C5932E79C998AE3 /* View+GridPreferences.swift */,
 				DB994C80EA41B038D5D4E69F498562E2 /* Support Files */,
 			);
-			name = ExyteGrid;
 			path = ExyteGrid;
 			sourceTree = "<group>";
 		};
@@ -606,7 +605,6 @@
 				20AE9AD069D0B4E11C7123D2CEFACDA4 /* Validation.swift */,
 				BB0610045EB0352D5A847B29045B6D56 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -684,7 +682,6 @@
 				0D22E72D3FFDD4F9B2B2D9533A8849C3 /* Version.swift */,
 				B39B7DB3F2A688A8DC214DB84D527288 /* Support Files */,
 			);
-			name = URLImage;
 			path = URLImage;
 			sourceTree = "<group>";
 		};
@@ -702,7 +699,6 @@
 				530D0062D2EF35EBCF01C0BE83189AE8 /* UIImageView+AlamofireImage.swift */,
 				0971625490A1FDECC28B338FAADEA30A /* Support Files */,
 			);
-			name = AlamofireImage;
 			path = AlamofireImage;
 			sourceTree = "<group>";
 		};
@@ -1007,7 +1003,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1220;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1331,7 +1327,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6F7C95A040AA0240C97E3BEACC900FA0 /* AlamofireImage.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1344,7 +1339,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AlamofireImage/AlamofireImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AlamofireImage/AlamofireImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AlamofireImage/AlamofireImage.modulemap";
 				PRODUCT_MODULE_NAME = AlamofireImage;
@@ -1364,7 +1359,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A646AD9A682AA63C8BA0D7B1FA36A28 /* URLImage.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1377,7 +1371,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/URLImage/URLImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/URLImage/URLImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/URLImage/URLImage.modulemap";
 				PRODUCT_MODULE_NAME = URLImage;
@@ -1396,7 +1390,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 17E4DB7E5E0495BD4D1658928672D7C6 /* ExyteGrid.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1428,7 +1421,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4ADE90EFB1E82B97FB7C9F0D9F61D318 /* Alamofire.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1441,7 +1433,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
@@ -1461,7 +1453,6 @@
 			baseConfigurationReference = AC00B03E26F5A255D0B08CDA84FA29BD /* Pods-ONTOAppIOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1495,7 +1486,6 @@
 			baseConfigurationReference = C07DF3C11C8354584FBC5C51CF866654 /* Pods-ONTOAppIOS-ONTOAppIOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1530,7 +1520,6 @@
 			baseConfigurationReference = 2A1BF85327E04FEA264CEBE130452BEE /* Pods-ONTOAppIOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1565,7 +1554,6 @@
 			baseConfigurationReference = AD65D352DD3F48FA80788502BA193189 /* Pods-ONTOAppIOS-ONTOAppIOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1598,7 +1586,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C454EF46684A48D12F4F4B1B8A4E3F6F /* Alamofire.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1611,7 +1598,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
@@ -1631,7 +1618,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 584A62C80BCA02D3BBF8E0522AA1F5D1 /* ExyteGrid.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1781,8 +1767,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1792,7 +1777,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0C7CD53A369F9B4A9A1A6C022BC5E58 /* URLImage.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1805,7 +1789,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/URLImage/URLImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/URLImage/URLImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/URLImage/URLImage.modulemap";
 				PRODUCT_MODULE_NAME = URLImage;
@@ -1826,7 +1810,6 @@
 			baseConfigurationReference = C5298B300C1D90A54227CE2CFEB6039D /* Pods-ONTOAppIOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1861,7 +1844,6 @@
 			baseConfigurationReference = FB060D8DD043C6B9A2C7CCD134EF20C1 /* Pods-ONTOAppIOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1894,7 +1876,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D638F7D181DE638725C50C726F91ABE1 /* AlamofireImage.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1907,7 +1888,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AlamofireImage/AlamofireImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AlamofireImage/AlamofireImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AlamofireImage/AlamofireImage.modulemap";
 				PRODUCT_MODULE_NAME = AlamofireImage;

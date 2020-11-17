@@ -13,6 +13,13 @@ class ArticleViewModel: ObservableObject{
     let service = ArticlesService()
 
     func getArticle(id: Int32) {
-        //cancellation = service
+        cancellation = service.fetch()
+        .mapError({ (error) -> Error in
+            print(error)
+            return error
+        })
+        .sink(receiveCompletion: {_ in}, receiveValue: { ontoResponse in
+            self.article = ontoResponse.data.articles[Int(id) - 1]
+        })
     }
 }
