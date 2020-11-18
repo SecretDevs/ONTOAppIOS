@@ -51,7 +51,7 @@ struct OfferCardView: View {
                 Spacer()
                 VStack(alignment: .trailing) {
 
-                        NavigationLink(destination: OfferView(), tag: 1, selection: $selection) {
+                        NavigationLink(destination: OfferView(text : self.text, url: self.url, price : self.price,basePrice : self.basePrice), tag: 1, selection: $selection) {
                             Button(action: {
                                 self.selection = 1
                             }) {
