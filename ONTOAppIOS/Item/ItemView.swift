@@ -6,12 +6,6 @@
 import Foundation
 import SwiftUI
 import URLImage
-import ExyteGrid
-
-
-func getSpan(n : Int) -> Int {
- 
-}
 
 struct OfferView: View {
     let text: String
@@ -36,8 +30,8 @@ struct OfferView: View {
             VStack(alignment: .leading) {
                 Text("Подходит для").font(.title)
             }
-
-            Grid(tracks: 5) {
+            TagCloudView(tags: tags, tagBackgroundColor: .tagBackgroundColor, tagTextColor: .tagTextColor, tagRadius: 15)
+            /*Grid(tracks: 5) {
                 ForEach(0..<self.tags.count) { i in
                     Text(tags[i])
                             .background(Color.green.opacity(0.5))
@@ -47,7 +41,8 @@ struct OfferView: View {
             }
                     .gridContentMode(.scroll)
                     .gridPacking(.dense)
-                    .gridFlow(.rows)
+                    .gridFlow(.rows)*/
+            
         }
     }
 }
