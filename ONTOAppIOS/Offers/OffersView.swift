@@ -16,28 +16,27 @@ struct OffersView: View{
 
     var body: some View {
         NavigationView {
-            Grid(tracks: 2) {
-                ForEach(0..<self.viewModel.offers.count) { i in
-                    OfferCardView(text: self.viewModel.offers[i].name, url: URL(string: self.viewModel.offers[i].image)!,
-                            price: self.viewModel.offers[i].price , basePrice: self.viewModel.offers[i].basePrice)
+                Grid(tracks: 2) {
+                    ForEach(0..<self.viewModel.offers.count) { i in
+                        OfferCardView(text: self.viewModel.offers[i].name, url: URL(string: self.viewModel.offers[i].image)!,
+                                price: self.viewModel.offers[i].price , basePrice: self.viewModel.offers[i].basePrice)
+                                .gridSpan(column: 1)
+                    }
+                    OfferCardView(text: "Offer", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: 100.0 , basePrice: 150.0)
                             .gridSpan(column: 1)
-                }
-                OfferCardView(text: "Offer", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: 100.0 , basePrice: 150.0)
-                        .gridSpan(column: 1)
-                OfferCardView(text: "Offer", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price : 100.0 , basePrice : 150.0)
-                        .gridSpan(column: 1)
-
-            }
-                    .gridContentMode(.scroll)
-                    .gridPacking(.dense)
-                    .gridFlow(.rows)
-                    .navigationBarTitle("Акции")
-                    .navigationBarItems(trailing:
-                HStack(alignment: .center){
-                    Text("Корзина")
-                }
-            )
-
+                    OfferCardView(text: "Offer", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price : 100.0 , basePrice : 150.0)
+                            .gridSpan(column: 1)
+                    
+                }.gridContentMode(.scroll)
+                .gridPacking(.dense)
+                .gridFlow(.rows)
+                .navigationBarTitle("Акции")
+                .navigationBarItems(trailing:
+                                        HStack(alignment: .center){
+                                            Text("Корзина")
+                                        }
+                )
+            
         }
     }
 

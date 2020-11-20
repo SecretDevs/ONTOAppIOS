@@ -9,7 +9,6 @@ import URLImage
 import ExyteGrid
 
 
-
 struct OfferView: View {
     let text: String
     var tags = ["Ежи", "Грызуны", "Птицы", "Рептилии","Рыбы","Млекопитающие"]
@@ -38,6 +37,9 @@ struct OfferView: View {
                 DropDownView(text: self.text, title: "Описание")
                 DropDownView(text: self.text, title: "Преимущества")
             }
+                    .gridContentMode(.scroll)
+                    .gridPacking(.dense)
+                    .gridFlow(.rows)
         }
     }
 
