@@ -11,6 +11,7 @@
 		315F613695352431939FC166 /* ItemViewInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F63C1349C7AC957BB6C90 /* ItemViewInstructions.swift */; };
 		315F62B4E4573880F3A81440 /* OffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6DEF38B9128E9BEBD1F3 /* OffersService.swift */; };
 		315F630C0B7A9FE438631878 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6A88265C3771AC0F3831 /* ItemView.swift */; };
+		315F661A8D5E022A7351AAB5 /* DropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6AD43CAADC11E56732BD /* DropDownItem.swift */; };
 		315F6B7E9DABCCAE0FDF3807 /* OffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F60BFF435E467FD5EF18A /* OffersViewModel.swift */; };
 		315F6D5315A038F6E6F90B57 /* OffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6356B7659AFB6E044262 /* OffersView.swift */; };
 		315F6EEF58F975AFAF18D717 /* OfferCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F63D3C3ED5D2EF73E5789 /* OfferCardView.swift */; };
@@ -69,6 +70,7 @@
 		315F63C1349C7AC957BB6C90 /* ItemViewInstructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewInstructions.swift; sourceTree = "<group>"; };
 		315F63D3C3ED5D2EF73E5789 /* OfferCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCardView.swift; sourceTree = "<group>"; };
 		315F6A88265C3771AC0F3831 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		315F6AD43CAADC11E56732BD /* DropDownItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownItem.swift; sourceTree = "<group>"; };
 		315F6DEF38B9128E9BEBD1F3 /* OffersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersService.swift; sourceTree = "<group>"; };
 		394975BC9360D3988DB4E712 /* Pods-ONTOAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4312FD2A337DDD5C629B7A74 /* Pods-ONTOAppIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS.release.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			path = Offer;
 			sourceTree = "<group>";
 		};
+		315F6393F08EA4AFF766590D /* DropDownView */ = {
+			isa = PBXGroup;
+			children = (
+				315F6AD43CAADC11E56732BD /* DropDownItem.swift */,
+			);
+			path = DropDownView;
+			sourceTree = "<group>";
+		};
 		315F6EB0E73EE73ABD434F1F /* Offers */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 				315F63C1349C7AC957BB6C90 /* ItemViewInstructions.swift */,
 				315F6A88265C3771AC0F3831 /* ItemView.swift */,
 				315F63B8A5F656C867F1BDB5 /* ItemViewModel.swift */,
+				315F6393F08EA4AFF766590D /* DropDownView */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -563,6 +574,7 @@
 				315F613695352431939FC166 /* ItemViewInstructions.swift in Sources */,
 				315F630C0B7A9FE438631878 /* ItemView.swift in Sources */,
 				315F60E476FAB4EB7848707D /* ItemViewModel.swift in Sources */,
+				315F661A8D5E022A7351AAB5 /* DropDownItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
