@@ -8,7 +8,7 @@ import Foundation
 import SwiftUI
 import URLImage
 
-struct ItemView: View {
+struct ItemViewInstructions: View {
     let text: String
 
     let instructions = [15, 9, 0.4, 185]
@@ -43,7 +43,7 @@ struct ItemView: View {
 }
 
 
-struct ItemView_Previews: PreviewProvider {
+struct ItemViewInstructions_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
