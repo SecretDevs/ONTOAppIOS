@@ -33,6 +33,7 @@ struct ArticleView: View {
                 self.viewModel.getArticle(id: self.id ?? 0)
             }
         }
+                .navigationBarTitle("", displayMode: .inline)
     }
 
 }
