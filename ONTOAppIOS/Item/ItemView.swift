@@ -10,6 +10,27 @@ import ExyteGrid
 
 
 struct ItemView: View {
+
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State var selectionB: Int? = nil
+
+    var btnBack : some View {
+        NavigationLink(destination: MainView(), tag: 1, selection: $selectionB) {
+            Button(action: {
+                self.selectionB = 1
+                self.presentationMode.wrappedValue.dismiss()
+
+            }) {
+                HStack {
+                    Image("chevron.left") // set image here
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.black)
+                    Text("Go back")
+                }
+            }
+        }
+    }
+
     let text: String
     var similarProducts: [OntoProduct] = [OntoProduct(id: 3, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", description: "Вкусеый сочный таракан", isInStock: true),
                                           OntoProduct(id: 4, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", description: "Вкусеый сочный таракан", isInStock: true),
@@ -58,13 +79,18 @@ struct ItemView: View {
                     }
                 }
             }
-        }
+        }.navigationBarTitle("", displayMode: .inline)
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading: btnBack)
+
     }
 }
-
 
 struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
+
+

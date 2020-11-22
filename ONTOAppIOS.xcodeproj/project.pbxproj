@@ -12,6 +12,7 @@
 		315F62B4E4573880F3A81440 /* OffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6DEF38B9128E9BEBD1F3 /* OffersService.swift */; };
 		315F630C0B7A9FE438631878 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6A88265C3771AC0F3831 /* ItemView.swift */; };
 		315F661A8D5E022A7351AAB5 /* DropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6AD43CAADC11E56732BD /* DropDownItem.swift */; };
+		315F6993B87A950124D77C6F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F633A8CC7B00E77798FA1 /* MainView.swift */; };
 		315F6B7E9DABCCAE0FDF3807 /* OffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F60BFF435E467FD5EF18A /* OffersViewModel.swift */; };
 		315F6D5315A038F6E6F90B57 /* OffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6356B7659AFB6E044262 /* OffersView.swift */; };
 		315F6EEF58F975AFAF18D717 /* OfferCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F63D3C3ED5D2EF73E5789 /* OfferCardView.swift */; };
@@ -67,6 +68,7 @@
 		1AC6FE313BC2F32B138C3EE0 /* Pods-ONTOAppIOS-ONTOAppIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS-ONTOAppIOSUITests.release.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS-ONTOAppIOSUITests/Pods-ONTOAppIOS-ONTOAppIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C6351996D80CFFAAA070F48 /* Pods-ONTOAppIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOSTests/Pods-ONTOAppIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		315F60BFF435E467FD5EF18A /* OffersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewModel.swift; sourceTree = "<group>"; };
+		315F633A8CC7B00E77798FA1 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		315F6356B7659AFB6E044262 /* OffersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersView.swift; sourceTree = "<group>"; };
 		315F63B8A5F656C867F1BDB5 /* ItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		315F63C1349C7AC957BB6C90 /* ItemViewInstructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewInstructions.swift; sourceTree = "<group>"; };
@@ -166,6 +168,14 @@
 				315F6AD43CAADC11E56732BD /* DropDownItem.swift */,
 			);
 			path = DropDownView;
+			sourceTree = "<group>";
+		};
+		315F6E72AA5A199193060EBE /* MainUI */ = {
+			isa = PBXGroup;
+			children = (
+				315F633A8CC7B00E77798FA1 /* MainView.swift */,
+			);
+			path = MainUI;
 			sourceTree = "<group>";
 		};
 		315F6EB0E73EE73ABD434F1F /* Offers */ = {
@@ -284,6 +294,7 @@
 				315F6EB0E73EE73ABD434F1F /* Offers */,
 				315F614A3F55FE1BCC305B0B /* Offer */,
 				315F6FADF082E092B998B52B /* Item */,
+				315F6E72AA5A199193060EBE /* MainUI */,
 			);
 			path = ONTOAppIOS;
 			sourceTree = "<group>";
@@ -591,6 +602,7 @@
 				315F630C0B7A9FE438631878 /* ItemView.swift in Sources */,
 				315F60E476FAB4EB7848707D /* ItemViewModel.swift in Sources */,
 				315F661A8D5E022A7351AAB5 /* DropDownItem.swift in Sources */,
+				315F6993B87A950124D77C6F /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

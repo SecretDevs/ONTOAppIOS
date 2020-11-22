@@ -15,7 +15,6 @@ struct OffersView: View{
     @ObservedObject var viewModel = OffersViewModel()
 
     var body: some View {
-        NavigationView {
                 Grid(tracks: 2) {
                     ForEach(0..<self.viewModel.offers.count) { i in
                         OfferCardView(text: self.viewModel.offers[i].name, url: URL(string: self.viewModel.offers[i].image)!,
@@ -36,11 +35,9 @@ struct OffersView: View{
                                             Text("Корзина")
                                         }
                 )
-            
-        }
+    }
     }
 
-}
 
 struct OffersView_Previews: PreviewProvider{
     static var previews: some View{
