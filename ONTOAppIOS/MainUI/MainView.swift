@@ -10,7 +10,6 @@ struct MainView: View {
     @State var tag = 0
 
     var body: some View {
-        NavigationView {
         TabView (selection: $tag){
                 OffersView()
                         .tabItem {
@@ -29,7 +28,6 @@ struct MainView: View {
                 UITabBar.appearance().unselectedItemTintColor = .black
                 UITabBar.appearance().shadowImage = UIImage()
             }
-        }.accentColor(Color.black)
     }
 }
 

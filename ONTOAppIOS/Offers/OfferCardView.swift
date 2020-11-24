@@ -11,8 +11,6 @@ import URLImage
 struct OfferCardView: View {
     let text: String
 
-    @State var selection: Int? = nil
-
     let url: URL
 
     let price: Float
@@ -50,20 +48,15 @@ struct OfferCardView: View {
 
                 Spacer()
                 VStack(alignment: .trailing) {
-
-                        NavigationLink(destination: ItemView(text : self.text, url: self.url, price : self.price,basePrice : self.basePrice), tag: 1, selection: $selection) {
-                            Button(action: {
-                                self.selection = 1
-                            }) {
-                                Text(" + ").font(.system(size: 20))
-                                        .foregroundColor(.white)
-                                        .background(Color.green)
-                                        .cornerRadius(10)
-                            }.padding(5)
-                        }
-                    }
-
-
+                    Button(action: {
+                        //TODO
+                    }) {
+                        Text(" + ").font(.system(size: 20))
+                                .foregroundColor(.white)
+                                .background(Color.green)
+                                .cornerRadius(10)
+                    }.padding(5)
+                }
 
             }
 

@@ -11,14 +11,11 @@ import ExyteGrid
 
 struct ItemView: View {
 
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var selectionB: Int? = nil
+    @Binding var shouldPopToRootView : Bool
 
     var btnBack : some View {
-        NavigationLink(destination: MainView(), tag: 1, selection: $selectionB) {
             Button(action: {
-                self.selectionB = 1
-                self.presentationMode.wrappedValue.dismiss()
+                self.shouldPopToRootView = false
 
             }) {
                 HStack {
@@ -28,7 +25,6 @@ struct ItemView: View {
                     Text("Go back")
                 }
             }
-        }
     }
 
     let text: String
@@ -73,7 +69,11 @@ struct ItemView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack() {
                             ForEach(0..<self.similarProducts.count) { i in
-                                OfferCardView(text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price, basePrice: similarProducts[i].price)
+                                let offerCard = OfferCardView(text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price, basePrice: similarProducts[i].price)
+                                NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, text : similarProducts[i].info,  url: URL(string: similarProducts[i].image)!, price : similarProducts[i].price,basePrice : similarProducts[i].price)) {
+                                    offerCard
+                                }.isDetailLink(false)
+
                             }
                         }
                     }
