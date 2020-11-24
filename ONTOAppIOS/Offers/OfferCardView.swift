@@ -10,9 +10,7 @@ import URLImage
 
 struct OfferCardView: View {
     let text: String
-
     let url: URL
-
     let price: Float
     let basePrice: Float
 

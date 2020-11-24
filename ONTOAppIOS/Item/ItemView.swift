@@ -31,12 +31,8 @@ struct ItemView: View {
     var similarProducts: [OntoProduct] = [OntoProduct(id: 3, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", description: "Вкусеый сочный таракан", isInStock: true),
                                           OntoProduct(id: 4, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", description: "Вкусеый сочный таракан", isInStock: true),
                                           OntoProduct(id: 5, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", description: "Вкусеый сочный таракан", isInStock: true)]
-
     var tags = ["Ежи", "Грызуны", "Птицы", "Рептилии", "Рыбы", "Млекопитающие", "Коты"]
-    @State var selection: Int? = nil
-
     let url: URL
-
     let price: Float
     let basePrice: Float
 
