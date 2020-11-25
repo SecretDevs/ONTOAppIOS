@@ -294,13 +294,13 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
-		65044A94BBF38DE97846C4B3 /* Home */ = {
+		65044A94BBF38DE97846C4B3 /* Root */ = {
 			isa = PBXGroup;
 			children = (
 				65044369B61A1A55B3E24C8B /* ViewRouter.swift */,
 				650445542BAF8679E301F387 /* RootView.swift */,
 			);
-			path = Home;
+			path = Root;
 			sourceTree = "<group>";
 		};
 		65044AC9946761A52F2FD650 /* Preview Content */ = {
@@ -330,7 +330,7 @@
 				315F6E72AA5A199193060EBE /* MainUI */,
 				650449610632B1CAC04627FC /* Welcome */,
 				650445A1CB7E5738CE7A29DF /* Assets */,
-				65044A94BBF38DE97846C4B3 /* Home */,
+				65044A94BBF38DE97846C4B3 /* Root */,
 			);
 			path = ONTOAppIOS;
 			sourceTree = "<group>";

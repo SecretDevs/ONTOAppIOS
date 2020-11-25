@@ -9,6 +9,7 @@ import SwiftUIPager
 
 struct WelcomeView: View {
     @State var pageIndex = 0
+    @EnvironmentObject var viewRouter: ViewRouter
 
     var indexes: [Int]  = [0, 1, 2]
     var images_svg: [String] = [
@@ -25,10 +26,13 @@ struct WelcomeView: View {
                     id: \.self) {index in
                 VStack{
                     self.pageView(index)
-                    NavigationLink(destination: MainView(), label: {
                         Button(action: {
                             withAnimation(.easeOut){
-                                self.pageIndex = min(self.images_svg.count - 1, self.pageIndex + 1)
+                                if self.pageIndex >= self.images_svg.count - 1{
+                                    viewRouter.currentPage = "main"
+                                }else{
+                                    self.pageIndex = min(self.images_svg.count - 1, self.pageIndex + 1)
+                                }
                             }
                         }, label: {
                             Text("ДАЛЕЕ")
@@ -38,14 +42,17 @@ struct WelcomeView: View {
                                     .background(LinearGradient(gradient: Gradient(colors: [.buttonStartColor, .buttonEndColor]), startPoint: .topLeading, endPoint: .bottomTrailing))
                                     .cornerRadius(12.0)
                                     .shadow(color: .buttonShadowColor, radius: 9, y: 3)
-                        }).disabled(self.pageIndex >= self.images_svg.count - 1)
-                    }).padding(.top, 10)
-                    NavigationLink(destination: MainView()){
+                        }).padding(.top, 10)
+                    Button(action: {
+                        withAnimation(.easeOut){
+                            viewRouter.currentPage = "main"
+                        }
+                    }, label: {
                         Text("ПРОПУСТИТЬ")
                                 .padding([.top, .bottom], 16)
                                 .padding([.leading, .trailing], 65)
                                 .foregroundColor(.black)
-                    }
+                    }).padding(.top, 10)
                 }
             }
                     .contentLoadingPolicy(.eager)
