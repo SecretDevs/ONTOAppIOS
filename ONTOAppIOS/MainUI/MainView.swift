@@ -29,7 +29,7 @@ struct MainView: View {
                         }.tag(2)
 
 
-
+//
             }.accentColor(Color.green)
                 .navigationBarTitle(getTitle(number: tag))
             .onAppear() {
