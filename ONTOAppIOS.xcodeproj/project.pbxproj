@@ -19,26 +19,32 @@
 		5DF21935ABD96A9E301A6C6D /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C542A6DB8880403580351BB4 /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework */; };
 		65044072671764F2A92BAEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504432579FF908C0836C2D7 /* SceneDelegate.swift */; };
 		6504408326C68095835D2061 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044C09BF4BC8A0586CD744 /* ArticleView.swift */; };
+		6504414693798E7426C4233B /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504404A4F7F55EB9478DE72 /* CustomAnnotationView.swift */; };
 		650441AB53BCC0A5C3E3E9FA /* OntoShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650445E0B2A85EE63F8E5929 /* OntoShop.swift */; };
 		650441D7561E269A3925E57F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650443515D74FCF7CDB2AADE /* LaunchScreen.storyboard */; };
 		6504424D92FB4B57BC47D01C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044AE8E2CC837DD774D6AE /* WelcomeView.swift */; };
 		650442A91E92F84809C046EA /* OntoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504458D43A663D2D97CEF2F /* OntoUser.swift */; };
+		650442E7CC5026820C07AEC9 /* ShopsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650440863A5C5157D1522F1F /* ShopsService.swift */; };
 		6504430383CBA4849AC83288 /* OntoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504458145F52CB4BF26F500 /* OntoLocation.swift */; };
 		65044334E7C6526C05535A49 /* ONTOAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044C2789951299F0598D8B /* ONTOAppIOSTests.swift */; };
 		650444AE8E85DCFFCB7D0C66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650446EC225688AC20CE20A9 /* Preview Assets.xcassets */; };
+		650444D9AFB53E4FD7171ECE /* CalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044E67D5CAAC3133575F3D /* CalloutView.swift */; };
 		650445082FF150E99CC6B179 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650447BAF302656E1603BD6F /* Color.swift */; };
 		650445203070DB69EC5EF057 /* OntoOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650448E4C644A1108DBC319D /* OntoOffer.swift */; };
 		6504458443054033098E007A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044FC8AAB5F9D1DFFC78E0 /* AppDelegate.swift */; };
 		6504467E6027879430B2D5FB /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044E8FE75D19BD9B003E2F /* ArticleCardView.swift */; };
 		6504468BFCF2F6034D6F5B14 /* OntoProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650445B4BCF17EEA6A8D6EE2 /* OntoProduct.swift */; };
+		65044691E368B111AB7ED19A /* ExampleCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044418843060BE5995F159 /* ExampleCalloutView.swift */; };
 		650448D82AC75D1992F9AA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650448CEAE349AA28D858F82 /* Assets.xcassets */; };
 		650448EB4985E5D77F2459EA /* OntoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650446C09B788735878B8655 /* OntoResponse.swift */; };
 		650448EC5DCA4C2150150274 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650448472930843BD9BA3EC3 /* ImageUtils.swift */; };
 		650449271D4D5ED370494BDA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650445542BAF8679E301F387 /* RootView.swift */; };
+		6504495F5DD68407FC0D9C78 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504480DE1A711BF37DBEC4D /* MapView.swift */; };
 		650449AC498C3EB2D979B078 /* OntoPickPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650444DD20327BECCD8A2A0C /* OntoPickPoint.swift */; };
 		650449B1BD87F132BE59F103 /* OntoPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504489D2D52AE231613650D /* OntoPet.swift */; };
 		650449F7C6A3D39CA9A0FC34 /* ONTOAppIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650440F0BFF71124B7F9D0E3 /* ONTOAppIOSUITests.swift */; };
 		650449FD65631E76F39C066A /* OntoPartner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504409DEFC61B3C9056EAFF /* OntoPartner.swift */; };
+		65044A0D4DDE534CCB063296 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650440D985A5E09D87B0B04A /* MapViewModel.swift */; };
 		65044A86F2500E6328207386 /* OntoArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650444A94C34816CAA5B2801 /* OntoArticle.swift */; };
 		65044A9A959AF5236015F911 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044171D5ED24EF4DA2FCEE /* StringUtils.swift */; };
 		65044B275472E4490C8A9A76 /* ArticlesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044DBB598B53EB7E91C4EE /* ArticlesService.swift */; };
@@ -46,6 +52,7 @@
 		65044BD70345A689ED97BCE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650440C53F9896A8B73B5ABF /* ContentView.swift */; };
 		65044C6AD34F8231F5F844A9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044369B61A1A55B3E24C8B /* ViewRouter.swift */; };
 		65044CFC94723F3E02FC3027 /* OntoAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044CCD868B83675D08A60A /* OntoAddress.swift */; };
+		65044D0689BC712DFB1847C0 /* ShopPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650442C632A9DE3977B7B8AA /* ShopPointAnnotation.swift */; };
 		65044DB076CCF7484A04D499 /* ONTOAppIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65044BC016ACC570DACCCEFC /* ONTOAppIOS.xcdatamodeld */; };
 		65044E1854773DB9BBAD7C0F /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504422F5FCEA44D54DC8F5D /* ArticlesViewModel.swift */; };
 		65044FF86CDA96264BFD1FFC /* ArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504444E280CA8D1D1132EAF /* ArticlesView.swift */; };
@@ -86,15 +93,20 @@
 		394975BC9360D3988DB4E712 /* Pods-ONTOAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4312FD2A337DDD5C629B7A74 /* Pods-ONTOAppIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS.release.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS.release.xcconfig"; sourceTree = "<group>"; };
 		605F06C8AD1005CA9689A80A /* Pods-ONTOAppIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOSTests.release.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOSTests/Pods-ONTOAppIOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		6504404A4F7F55EB9478DE72 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		650440863A5C5157D1522F1F /* ShopsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsService.swift; sourceTree = "<group>"; };
 		6504409DEFC61B3C9056EAFF /* OntoPartner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoPartner.swift; sourceTree = "<group>"; };
 		650440C53F9896A8B73B5ABF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		650440D985A5E09D87B0B04A /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		650440F0BFF71124B7F9D0E3 /* ONTOAppIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONTOAppIOSUITests.swift; sourceTree = "<group>"; };
 		65044171D5ED24EF4DA2FCEE /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		6504422F5FCEA44D54DC8F5D /* ArticlesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
+		650442C632A9DE3977B7B8AA /* ShopPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopPointAnnotation.swift; sourceTree = "<group>"; };
 		650442CC58A628EDA2AF353A /* ONTOAppIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ONTOAppIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		650442F4E3AF6A6FAD06F8CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		6504432579FF908C0836C2D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		65044369B61A1A55B3E24C8B /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		65044418843060BE5995F159 /* ExampleCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCalloutView.swift; sourceTree = "<group>"; };
 		6504444E280CA8D1D1132EAF /* ArticlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesView.swift; sourceTree = "<group>"; };
 		650444A94C34816CAA5B2801 /* OntoArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoArticle.swift; sourceTree = "<group>"; };
 		650444B32CBDC88F62E4E345 /* ONTOAppIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ONTOAppIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +120,7 @@
 		650446C09B788735878B8655 /* OntoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoResponse.swift; sourceTree = "<group>"; };
 		650446EC225688AC20CE20A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		650447BAF302656E1603BD6F /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		6504480DE1A711BF37DBEC4D /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		650448472930843BD9BA3EC3 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		6504489D2D52AE231613650D /* OntoPet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoPet.swift; sourceTree = "<group>"; };
 		650448CEAE349AA28D858F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +133,7 @@
 		65044C2789951299F0598D8B /* ONTOAppIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONTOAppIOSTests.swift; sourceTree = "<group>"; };
 		65044CCD868B83675D08A60A /* OntoAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OntoAddress.swift; sourceTree = "<group>"; };
 		65044DBB598B53EB7E91C4EE /* ArticlesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesService.swift; sourceTree = "<group>"; };
+		65044E67D5CAAC3133575F3D /* CalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalloutView.swift; sourceTree = "<group>"; };
 		65044E8FE75D19BD9B003E2F /* ArticleCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
 		65044EDC18C589C3D9BA6B45 /* ArticleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		65044FC8AAB5F9D1DFFC78E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -311,6 +325,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		65044D36975013F0D42680A0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6504480DE1A711BF37DBEC4D /* MapView.swift */,
+				650440863A5C5157D1522F1F /* ShopsService.swift */,
+				650440D985A5E09D87B0B04A /* MapViewModel.swift */,
+				65044E67D5CAAC3133575F3D /* CalloutView.swift */,
+				65044418843060BE5995F159 /* ExampleCalloutView.swift */,
+				6504404A4F7F55EB9478DE72 /* CustomAnnotationView.swift */,
+				650442C632A9DE3977B7B8AA /* ShopPointAnnotation.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		65044FA8129A14D179A7D13A /* ONTOAppIOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +359,7 @@
 				650449610632B1CAC04627FC /* Welcome */,
 				650445A1CB7E5738CE7A29DF /* Assets */,
 				65044A94BBF38DE97846C4B3 /* Root */,
+				65044D36975013F0D42680A0 /* Map */,
 			);
 			path = ONTOAppIOS;
 			sourceTree = "<group>";
@@ -651,6 +680,13 @@
 				650445082FF150E99CC6B179 /* Color.swift in Sources */,
 				65044C6AD34F8231F5F844A9 /* ViewRouter.swift in Sources */,
 				650449271D4D5ED370494BDA /* RootView.swift in Sources */,
+				6504495F5DD68407FC0D9C78 /* MapView.swift in Sources */,
+				650442E7CC5026820C07AEC9 /* ShopsService.swift in Sources */,
+				65044A0D4DDE534CCB063296 /* MapViewModel.swift in Sources */,
+				650444D9AFB53E4FD7171ECE /* CalloutView.swift in Sources */,
+				65044691E368B111AB7ED19A /* ExampleCalloutView.swift in Sources */,
+				6504414693798E7426C4233B /* CustomAnnotationView.swift in Sources */,
+				65044D0689BC712DFB1847C0 /* ShopPointAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

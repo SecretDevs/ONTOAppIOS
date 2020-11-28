@@ -11,16 +11,20 @@ struct MainView: View {
 
     var body: some View {
         TabView (selection: $tag){
-                OffersView()
+            MapView()
+                    .tabItem{
+                        Image(systemName: "map.fill")
+                    }.tag(0)
+            OffersView()
                         .tabItem {
                             Image(systemName: "phone.fill")
-                        }.tag(0)
+                        }.tag(1)
 
 
             ArticlesView()
                         .tabItem {
                             Image(systemName: "tv.fill")
-                        }.tag(1)
+                        }.tag(2)
             }.accentColor(Color.green)
                 .navigationBarTitle(getTitle(number: tag))
             .onAppear() {
