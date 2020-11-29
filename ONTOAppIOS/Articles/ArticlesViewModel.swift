@@ -15,14 +15,8 @@ class ArticlesViewModel: ObservableObject{
     }
 
     @Published private(set) var state = State.idle
-    //@Published var articles: [OntoArticle] = []
-
     var cancellation: AnyCancellable?
     let service = ArticlesService()
-
-    /*init(){
-        fetchArticles()
-    }*/
 
     func fetchArticles() {
         state = .loading
