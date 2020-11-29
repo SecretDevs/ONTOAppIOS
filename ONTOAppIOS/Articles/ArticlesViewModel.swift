@@ -7,22 +7,33 @@ import Foundation
 import Combine
 
 class ArticlesViewModel: ObservableObject{
-    @Published var articles: [OntoArticle] = []
+    enum State{
+        case idle
+        case loading
+        case failed(Error)
+        case loaded([OntoArticle])
+    }
+
+    @Published private(set) var state = State.idle
+    //@Published var articles: [OntoArticle] = []
+
     var cancellation: AnyCancellable?
     let service = ArticlesService()
 
-    init(){
+    /*init(){
         fetchArticles()
-    }
+    }*/
 
-    private func fetchArticles() {
+    func fetchArticles() {
+        state = .loading
+
         cancellation = service.fetch()
         .mapError ({ (error) -> Error in
-            print(error)
+            self.state = .failed(error)
             return error
         })
         .sink(receiveCompletion: {_ in}, receiveValue: { ontoResponse in
-            self.articles = ontoResponse.data.articles
+            self.state = .loaded(ontoResponse.data.articles)
         })
     }
 }
