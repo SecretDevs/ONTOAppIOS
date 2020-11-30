@@ -36,3 +36,19 @@ struct OntoResponseOffers: Codable{
         case data
     }
 }
+
+struct DataProducts: Codable{
+    let products: [OntoProduct]
+
+    enum CodingKeys: String, CodingKey{
+        case products
+    }
+}
+
+struct OntoResponseProducts: Codable{
+    let data: DataProducts
+
+    enum CodingKeys: String, CodingKey{
+        case data
+    }
+}

@@ -13,23 +13,29 @@ struct MainView: View {
         TabView (selection: $tag){
 
                 OffersView()
+
                         .tabItem {
                             Image(systemName: "percent") .font(Font.system(.largeTitle).bold())
                         }.tag(0)
 
 
+                CatalogView()
+                        .tabItem {
+                            Image(systemName: "bag") .font(Font.system(.largeTitle).bold())
+                        }.tag(1)
+
+
                 ArticlesView()
                     .tabItem {
                             Image(systemName: "magnifyingglass").font(Font.title.weight(.bold))
-                        }.tag(1)
+                        }.tag(2)
 
                 ProfileView()
                     .tabItem {
                             Image(systemName: "person").font(Font.title.weight(.bold))
-                        }.tag(2)
+                        }.tag(3)
 
 
-//
             }.accentColor(Color.green)
                 .navigationBarTitle(getTitle(number: tag))
             .onAppear() {

@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		315F60E476FAB4EB7848707D /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F63B8A5F656C867F1BDB5 /* ItemViewModel.swift */; };
+		315F60F2FDC403C7CD9DB6E1 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6528B51D069D5F122AF9 /* CatalogView.swift */; };
 		315F60FD361F670158798069 /* TagCloudButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F63FB8D3BD24B82A17555 /* TagCloudButtonView.swift */; };
 		315F613695352431939FC166 /* ItemViewInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F63C1349C7AC957BB6C90 /* ItemViewInstructions.swift */; };
 		315F62B4E4573880F3A81440 /* OffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6DEF38B9128E9BEBD1F3 /* OffersService.swift */; };
 		315F630C0B7A9FE438631878 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6A88265C3771AC0F3831 /* ItemView.swift */; };
 		315F661A8D5E022A7351AAB5 /* DropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6AD43CAADC11E56732BD /* DropDownItem.swift */; };
+		315F66AD45AF9B5AFC504840 /* CatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F665D8D8BC50DF7E92BAA /* CatalogService.swift */; };
 		315F67F746BEC4561C0F4F2D /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6EC63357A41CCA1D83D9 /* RadioButton.swift */; };
 		315F6993B87A950124D77C6F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F633A8CC7B00E77798FA1 /* MainView.swift */; };
+		315F6A249950E45F75CFB99A /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F613242AB8DD360E2942E /* ProductCardView.swift */; };
 		315F6B7E9DABCCAE0FDF3807 /* OffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F60BFF435E467FD5EF18A /* OffersViewModel.swift */; };
 		315F6D5315A038F6E6F90B57 /* OffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6356B7659AFB6E044262 /* OffersView.swift */; };
 		315F6EEF58F975AFAF18D717 /* OfferCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F63D3C3ED5D2EF73E5789 /* OfferCardView.swift */; };
 		315F6FB734E73805DF6B75D0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F607E10DB6C7F25A3B596 /* ProfileView.swift */; };
+		315F6FC4E42905C3ADE0506D /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6DCE77C6FFC5F4907781 /* CatalogViewModel.swift */; };
 		5DF21935ABD96A9E301A6C6D /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C542A6DB8880403580351BB4 /* Pods_ONTOAppIOS_ONTOAppIOSUITests.framework */; };
 		65044072671764F2A92BAEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504432579FF908C0836C2D7 /* SceneDelegate.swift */; };
 		6504408326C68095835D2061 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044C09BF4BC8A0586CD744 /* ArticleView.swift */; };
@@ -79,14 +83,18 @@
 		2C6351996D80CFFAAA070F48 /* Pods-ONTOAppIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOSTests/Pods-ONTOAppIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		315F607E10DB6C7F25A3B596 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		315F60BFF435E467FD5EF18A /* OffersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewModel.swift; sourceTree = "<group>"; };
+		315F613242AB8DD360E2942E /* ProductCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 		315F633A8CC7B00E77798FA1 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		315F6356B7659AFB6E044262 /* OffersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersView.swift; sourceTree = "<group>"; };
 		315F63B8A5F656C867F1BDB5 /* ItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		315F63C1349C7AC957BB6C90 /* ItemViewInstructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewInstructions.swift; sourceTree = "<group>"; };
 		315F63D3C3ED5D2EF73E5789 /* OfferCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCardView.swift; sourceTree = "<group>"; };
 		315F63FB8D3BD24B82A17555 /* TagCloudButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCloudButtonView.swift; sourceTree = "<group>"; };
+		315F6528B51D069D5F122AF9 /* CatalogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		315F665D8D8BC50DF7E92BAA /* CatalogService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogService.swift; sourceTree = "<group>"; };
 		315F6A88265C3771AC0F3831 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		315F6AD43CAADC11E56732BD /* DropDownItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownItem.swift; sourceTree = "<group>"; };
+		315F6DCE77C6FFC5F4907781 /* CatalogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
 		315F6DEF38B9128E9BEBD1F3 /* OffersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersService.swift; sourceTree = "<group>"; };
 		315F6EC63357A41CCA1D83D9 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		394975BC9360D3988DB4E712 /* Pods-ONTOAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONTOAppIOS.debug.xcconfig"; path = "Target Support Files/Pods-ONTOAppIOS/Pods-ONTOAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +189,25 @@
 				315F6EC63357A41CCA1D83D9 /* RadioButton.swift */,
 			);
 			path = RadioButton;
+			sourceTree = "<group>";
+		};
+		315F61EE5BE576C9E1D0171F /* ProductCard */ = {
+			isa = PBXGroup;
+			children = (
+				315F613242AB8DD360E2942E /* ProductCardView.swift */,
+			);
+			path = ProductCard;
+			sourceTree = "<group>";
+		};
+		315F6306357F0A61CD1B1BE2 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				315F6DCE77C6FFC5F4907781 /* CatalogViewModel.swift */,
+				315F6528B51D069D5F122AF9 /* CatalogView.swift */,
+				315F665D8D8BC50DF7E92BAA /* CatalogService.swift */,
+				315F61EE5BE576C9E1D0171F /* ProductCard */,
+			);
+			path = Catalog;
 			sourceTree = "<group>";
 		};
 		315F6393F08EA4AFF766590D /* DropDownView */ = {
@@ -364,6 +391,7 @@
 				650445A1CB7E5738CE7A29DF /* Assets */,
 				65044A94BBF38DE97846C4B3 /* Root */,
 				315F69902068A0744D529E7D /* Profile */,
+				315F6306357F0A61CD1B1BE2 /* Catalog */,
 			);
 			path = ONTOAppIOS;
 			sourceTree = "<group>";
@@ -687,6 +715,10 @@
 				315F6FB734E73805DF6B75D0 /* ProfileView.swift in Sources */,
 				315F67F746BEC4561C0F4F2D /* RadioButton.swift in Sources */,
 				315F60FD361F670158798069 /* TagCloudButtonView.swift in Sources */,
+				315F6FC4E42905C3ADE0506D /* CatalogViewModel.swift in Sources */,
+				315F60F2FDC403C7CD9DB6E1 /* CatalogView.swift in Sources */,
+				315F66AD45AF9B5AFC504840 /* CatalogService.swift in Sources */,
+				315F6A249950E45F75CFB99A /* ProductCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
