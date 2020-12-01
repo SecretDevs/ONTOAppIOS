@@ -8,22 +8,25 @@ import Foundation
 import Combine
 
 class OffersViewModel: ObservableObject{
-    @Published var offers: [OntoOffer] = []
+    enum State{
+        case idle
+        case loading
+        case failed(Error)
+        case loaded([OntoOffer])
+    }
+
+    @Published private(set) var state = State.idle
     var cancellation: AnyCancellable?
     let service = OffersService()
 
-    init(){
-        fetchOffers()
-    }
-
-    private func fetchOffers() {
+    func fetchOffers() {
         cancellation = service.fetch()
                 .mapError ({ (error) -> Error in
-                    print(error)
+                    self.state = .failed(error)
                     return error
                 })
                 .sink(receiveCompletion: {_ in}, receiveValue: { ontoResponse in
-                    self.offers = ontoResponse.data.offers
+                    self.state = .loaded(ontoResponse.data.offers)
                 })
     }
 }

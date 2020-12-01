@@ -11,31 +11,20 @@ struct MainView: View {
 
     var body: some View {
         TabView (selection: $tag){
-
-                OffersView()
-
+            MapView()
+                    .tabItem{
+                        Image(systemName: "map.fill")
+                    }.tag(0)
+            OffersView()
                         .tabItem {
-                            Image(systemName: "percent") .font(Font.system(.largeTitle).bold())
-                        }.tag(0)
-
-
-                CatalogView()
-                        .tabItem {
-                            Image(systemName: "bag") .font(Font.system(.largeTitle).bold())
+                            Image(systemName: "phone.fill")
                         }.tag(1)
 
 
-                ArticlesView()
-                    .tabItem {
-                            Image(systemName: "magnifyingglass").font(Font.title.weight(.bold))
+            ArticlesView()
+                        .tabItem {
+                            Image(systemName: "tv.fill")
                         }.tag(2)
-
-                ProfileView()
-                    .tabItem {
-                            Image(systemName: "person").font(Font.title.weight(.bold))
-                        }.tag(3)
-
-
             }.accentColor(Color.green)
                 .navigationBarTitle(getTitle(number: tag))
             .onAppear() {

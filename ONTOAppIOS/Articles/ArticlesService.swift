@@ -13,6 +13,7 @@ class ArticlesService{
 
     func fetch() -> AnyPublisher<OntoResponseArticles, AFError> {
         let publisher = AF.request(url + "articles").publishDecodable(type: OntoResponseArticles.self)
-        return publisher.value()
+        let result = publisher.value()
+        return result
     }
 }
