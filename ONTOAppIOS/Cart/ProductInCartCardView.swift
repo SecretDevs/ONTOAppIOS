@@ -1,41 +1,41 @@
 //
-// Created by Илья Разработчик on 28.11.2020.
+// Created by Ivanov Ivan on 01.12.2020.
 // Copyright (c) 2020 ___FULLUSERNAME___. All rights reserved.
 //
-
-import Foundation
-
-
-//
-// Created by Илья Разработчик on 16.11.2020.
-// Copyright (c) 2020 ___FULLUSERNAME___. All rights reserved.
-//
-
 
 import Foundation
 import SwiftUI
 import URLImage
 
-struct ProductCardView: View {
+struct ProductInCartCardView: View {
     let text: String
     let url: URL
     let price: Float
+    let count: Int
 
 
     var body: some View {
-        VStack(alignment: .center) {
+        HStack(alignment: .center) {
             URLImage(self.url, content: {image in
                 image.image.centerCropped()
-            }).frame(height: 180)
+            }).frame(height: 90)
                     .cornerRadius(10)
 
             VStack(alignment: .leading) {
                 Text(self.text)
                         .foregroundColor(.black)
                         .layoutPriority(.greatestFiniteMagnitude)
-            }.padding(.leading,10)
+                HStack{
+                    Spacer()
+                    Text("\(self.count, specifier: "%.0f")")
+                            .foregroundColor(.black)
+                            .layoutPriority(.greatestFiniteMagnitude)
+                }
+            }
+                    .padding(.leading)
                     .padding(.trailing)
-            HStack{
+            VStack{
+                Spacer()
 
                 HStack {
                     Text("\(self.price, specifier: "%.0f")").fontWeight(.bold)
@@ -46,15 +46,9 @@ struct ProductCardView: View {
                         .padding(.all,5)
                         .padding(.bottom,10)
                         .padding(.leading)
-
-                Spacer()
             }
 
-        }.frame(alignment: .top)
+        }
                 .background(Color.white)
-                .cornerRadius(10)
-                .shadow(radius: 5)
-                .padding(5)
     }
 }
-

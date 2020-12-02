@@ -12,6 +12,7 @@ struct CatalogView: View {
 
     @State var selected = ""
     @ObservedObject var viewModel = CatalogViewModel()
+    @ObservedObject var cartViewModel = CartViewModel()
     @State var isActive: Bool = false
     var tags = ["Кошка", "Собака", "Грызун", "Мышь", "Крыса", "Хомяк", "Дегу"]
 
@@ -51,9 +52,18 @@ struct CatalogView: View {
                 Grid(tracks: 2) {
                     ForEach(0..<self.viewModel.products.count) { i in
                         let productCard = ProductCardView(text: self.viewModel.products[i].name, url: URL(string: self.viewModel.products[i].image)!, price: self.viewModel.products[i].price)
-                        NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, text: "Offer", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: self.viewModel.products[i].price, basePrice: 150.0), isActive: self.$isActive) {
-                            productCard.gridSpan(column: 1)
-                        }.isDetailLink(false)
+                        ZStack(alignment: .bottomTrailing){
+                            NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, text: "Offer", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: self.viewModel.products[i].price, basePrice: 150.0), isActive: self.$isActive) {
+                                productCard.gridSpan(column: 1)
+                            }.isDetailLink(false)
+                            Button(action: {
+                                cartViewModel.addProductToCart(product: self.viewModel.products[i])
+                            }) {
+                                HStack {
+                                    Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
+                                }.frame(width: 30)
+                            }.padding(5)
+                        }
                     }
                     ProductCardView(text: "Offer1", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: 100.0)
                             .gridSpan(column: 1)

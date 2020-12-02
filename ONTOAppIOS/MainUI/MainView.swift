@@ -10,40 +10,49 @@ struct MainView: View {
     @State var tag = 0
 
     var body: some View {
-        TabView (selection: $tag){
-            MapView()
-                    .tabItem{
-                        Image(systemName: "map.fill")
-                    }.tag(0)
-            OffersView()
+        NavigationView{
+            ZStack(alignment: .topTrailing){
+                TabView (selection: $tag){
+                    MapView()
+                            .tabItem{
+                                Image(systemName: "map.fill")
+                            }.tag(0)
+                    OffersView()
 
-                    .tabItem {
-                        Image(systemName: "percent") .font(Font.system(.largeTitle).bold())
-                    }.tag(1)
-
-
-            CatalogView()
-                    .tabItem {
-                        Image(systemName: "bag") .font(Font.system(.largeTitle).bold())
-                    }.tag(2)
+                            .tabItem {
+                                Image(systemName: "percent") .font(Font.system(.largeTitle).bold())
+                            }.tag(1)
 
 
-            ArticlesView()
-                    .tabItem {
-                        Image(systemName: "magnifyingglass").font(Font.title.weight(.bold))
-                    }.tag(3)
+                    CatalogView()
+                            .tabItem {
+                                Image(systemName: "bag") .font(Font.system(.largeTitle).bold())
+                            }.tag(2)
 
-            ProfileView()
-                    .tabItem {
-                        Image(systemName: "person").font(Font.title.weight(.bold))
-                    }.tag(4)
-            }.accentColor(Color.green)
-                .navigationBarTitle(getTitle(number: tag))
-            .onAppear() {
-                UITabBar.appearance().barTintColor = .white
-                UITabBar.appearance().unselectedItemTintColor = .black
-                UITabBar.appearance().shadowImage = UIImage()
-            }
+
+                    ArticlesView()
+                            .tabItem {
+                                Image(systemName: "magnifyingglass").font(Font.title.weight(.bold))
+                            }.tag(3)
+
+                    ProfileView()
+                            .tabItem {
+                                Image(systemName: "person").font(Font.title.weight(.bold))
+                            }.tag(4)
+                }.accentColor(Color.green)
+                        .navigationBarTitle(getTitle(number: tag))
+                        .onAppear() {
+                            UITabBar.appearance().barTintColor = .white
+                            UITabBar.appearance().unselectedItemTintColor = .black
+                            UITabBar.appearance().shadowImage = UIImage()
+                        }
+                //NavigationView{
+                NavigationLink(destination: CartView()){
+                    Text("Корзина")
+                }
+                //}
+            }.navigationBarTitle("", displayMode: .inline)
+        }
     }
 }
 
