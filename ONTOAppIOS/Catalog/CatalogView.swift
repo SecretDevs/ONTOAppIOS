@@ -6,13 +6,14 @@
 import Foundation
 import SwiftUI
 import ExyteGrid
+import os
 
 
 struct CatalogView: View {
 
     @State var selected = ""
     @ObservedObject var viewModel = CatalogViewModel()
-    @ObservedObject var cartViewModel = CartViewModel()
+    @EnvironmentObject var cartViewModel : ViewRouter
     @State var isActive: Bool = false
     var tags = ["Кошка", "Собака", "Грызун", "Мышь", "Крыса", "Хомяк", "Дегу"]
 
@@ -57,7 +58,13 @@ struct CatalogView: View {
                                 productCard.gridSpan(column: 1)
                             }.isDetailLink(false)
                             Button(action: {
-                                cartViewModel.addProductToCart(product: self.viewModel.products[i])
+                                self.cartViewModel.addProductToCart(product: self.viewModel.products[i])
+                                if #available(iOS 14.0, *) {
+                                    let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "observable")
+                                    logger.log("\(self.cartViewModel.selectedProducts)")
+                                } else {
+                                    // Fallback on earlier versions
+                                }
                             }) {
                                 HStack {
                                     Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
@@ -80,6 +87,12 @@ struct CatalogView: View {
                         })
             }
         }
+    }
+}
+
+struct CatalogView_Previews: PreviewProvider {
+    static var previews: some View {
+        CatalogView().environmentObject(ViewRouter())
     }
 }
 

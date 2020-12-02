@@ -6,20 +6,31 @@
 import Foundation
 
 import SwiftUI
+import os
 
 struct CartView: View {
 
-    @ObservedObject var viewModel = CartViewModel()
+    @EnvironmentObject var viewModel : ViewRouter
 
     var body: some View {
-        NavigationView {
-            ScrollView {
-                List(viewModel.selectedProducts){ pair in
-                    let product = pair.product
-                    ProductInCartCardView(text: product.name, url: URL(string: product.image)!, price: product.price, count: pair.count)
+        //ScrollView {
+            Button(action: {
+                if #available(iOS 14.0, *) {
+                    let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "observable")
+                    logger.log("\(self.viewModel.selectedProducts)")
+                } else {
+                    // Fallback on earlier versions
                 }
-                        .navigationBarTitle("Корзина")}
-        }
+            }) {
+                HStack {
+                    Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
+                }.frame(width: 30)
+            }.padding(5)
+            List(self.viewModel.selectedProducts) { pair in
+                ProductInCartCardView(text: pair.product.name, url: URL(string: pair.product.image)!, price: pair.product.price, count: pair.count)
+            }
+                    .navigationBarTitle("Корзина")
+        //}
 
     }
 }
@@ -27,6 +38,6 @@ struct CartView: View {
 
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-        CartView()
+        CartView().environmentObject(ViewRouter())
     }
 }
