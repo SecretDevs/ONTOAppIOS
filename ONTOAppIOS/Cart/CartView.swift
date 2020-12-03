@@ -13,10 +13,36 @@ struct CartView: View {
     @EnvironmentObject var viewModel : ViewRouter
 
     var body: some View {
-            List(self.viewModel.selectedProducts) { pair in
-                ProductInCartCardView(text: pair.product.name, url: URL(string: pair.product.image)!, price: pair.product.price, count: pair.count)
+        if (viewModel.selectedProducts.isEmpty){
+            VStack{
+                if #available(iOS 14.0, *){
+                    Image("background_empty_cart_svg").resizable().aspectRatio(contentMode: .fit).frame(maxWidth: 300).padding(.bottom, 30)
+                }else{
+                    Image("background_empty_cart_png").resizable().aspectRatio(contentMode: .fit).frame(maxWidth: 300).padding(.bottom, 30)
+                }
+                Text("Корзина пуста").font(.system(size: 20)).fontWeight(.bold).padding(.bottom, 20)
+                if #available(iOS 14.0, *){
+                    Image("ic_down_arrow_svg").resizable().aspectRatio(contentMode: .fit).frame(maxHeight: 16).padding(.bottom, 20)
+                }else{
+                    Image("ic_down_arrow_png").resizable().aspectRatio(contentMode: .fit).frame(maxHeight: 16).padding(.bottom, 20)
+                }
+                NavigationLink(destination: CatalogView()){
+                    Text("ПЕРЕЙТИ В КАТАЛОГ")
+                            .padding([.top, .bottom], 16)
+                            .padding([.leading, .trailing], 65)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [.buttonStartColor, .buttonEndColor]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .cornerRadius(12.0)
+                            .shadow(color: .buttonShadowColor, radius: 9, y: 3)
+                }
             }
+        }else{
+            List(self.viewModel.selectedProducts) { productInCart in
+                ProductInCartCardView(productInCart: productInCart)
+            }
+                    .buttonStyle(PlainButtonStyle())
                     .navigationBarTitle("Корзина")
+        }
     }
 }
 

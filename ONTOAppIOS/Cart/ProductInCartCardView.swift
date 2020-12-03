@@ -8,32 +8,29 @@ import SwiftUI
 import URLImage
 
 struct ProductInCartCardView: View {
-    let text: String
-    let url: URL
-    let price: Float
-    let count: Int
-
+    let productInCart: ProductInCart
+    @EnvironmentObject var cartViewModel : ViewRouter
 
     var body: some View {
         HStack(alignment: .center) {
             Spacer()
 
-            URLImage(self.url, content: {image in
+            URLImage(URL(string: self.productInCart.product.image)!, content: {image in
                 image.image.centerCropped()
             })
-                    .frame(maxWidth: 90,maxHeight: 90)
+                    .frame(maxWidth: 90, maxHeight: 90)
                     .cornerRadius(10)
                     .padding([.top, .bottom], 10)
 
             Spacer()
 
             VStack(alignment: .leading) {
-                Text(self.text)
+                Text(self.productInCart.product.name)
                         .foregroundColor(.black)
                         .layoutPriority(.greatestFiniteMagnitude)
                 HStack{
                     Button(action: {
-                        //self.cartViewModel.addProductToCart(product: self.viewModel.products[i])
+                        self.cartViewModel.decreaseProductCount(product: self.productInCart.product)
                     }) {
                         HStack {
                             if #available(iOS 14.0, *){
@@ -44,10 +41,10 @@ struct ProductInCartCardView: View {
                         }.frame(width: 30)
                     }.padding(20)
                     Spacer()
-                    Text("\(count)")
+                    Text("\(self.productInCart.count)")
                     Spacer()
                     Button(action: {
-                        //self.cartViewModel.addProductToCart(product: self.viewModel.products[i])
+                        self.cartViewModel.increaseProductCount(product: self.productInCart.product)
                     }) {
                         HStack {
                             if #available(iOS 14.0, *){
@@ -62,7 +59,7 @@ struct ProductInCartCardView: View {
                     .padding(.top, 10)
             VStack{
                 Button(action: {
-                    //self.cartViewModel.deleteProductFromCart(productIndex: i)
+                    self.cartViewModel.deleteProductFromCart(product: productInCart.product)
                 }) {
                     HStack {
                         if #available(iOS 14.0, *){
@@ -76,7 +73,7 @@ struct ProductInCartCardView: View {
                 Spacer()
 
                 HStack {
-                    Text("\(self.price, specifier: "%.0f") ₽")
+                    Text("\(self.productInCart.product.price, specifier: "%.0f") ₽")
                             .fontWeight(.bold)
                             .layoutPriority(.greatestFiniteMagnitude)
                             .font(.system(size: 20))

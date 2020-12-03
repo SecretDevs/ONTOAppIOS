@@ -28,8 +28,24 @@ class ViewRouter: ObservableObject{
         }
     }
 
-    func deleteProductFromCart(productIndex: Int){
-        selectedProducts.remove(at: productIndex)
+    func deleteProductFromCart(product: OntoProduct){
+        selectedProducts.remove(at: selectedProducts.firstIndex(where: {$0.product.id == product.id})!)
+    }
+
+    func increaseProductCount(product: OntoProduct){
+        let index = selectedProducts.firstIndex(where: {$0.product.id == product.id})!
+        if (selectedProducts[index].count < 1000){
+            selectedProducts[index].count += 1
+        }
+    }
+
+    func decreaseProductCount(product: OntoProduct){
+        let index = selectedProducts.firstIndex(where: {$0.product.id == product.id})!
+        if (selectedProducts[index].count > 1){
+            selectedProducts[index].count -= 1
+        }else{
+            selectedProducts.remove(at: index)
+        }
     }
 
     func getSum() -> Int{
