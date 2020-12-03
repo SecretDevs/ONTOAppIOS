@@ -13,25 +13,10 @@ struct CartView: View {
     @EnvironmentObject var viewModel : ViewRouter
 
     var body: some View {
-        //ScrollView {
-            Button(action: {
-                if #available(iOS 14.0, *) {
-                    let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "observable")
-                    logger.log("\(self.viewModel.selectedProducts)")
-                } else {
-                    // Fallback on earlier versions
-                }
-            }) {
-                HStack {
-                    Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
-                }.frame(width: 30)
-            }.padding(5)
             List(self.viewModel.selectedProducts) { pair in
                 ProductInCartCardView(text: pair.product.name, url: URL(string: pair.product.image)!, price: pair.product.price, count: pair.count)
             }
                     .navigationBarTitle("Корзина")
-        //}
-
     }
 }
 

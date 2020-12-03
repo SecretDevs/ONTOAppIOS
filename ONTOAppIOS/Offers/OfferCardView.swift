@@ -45,16 +45,6 @@ struct OfferCardView: View {
                         .padding(.leading)
 
                 Spacer()
-                VStack(alignment: .trailing) {
-                    Button(action: {
-                        //TODO
-                    }) {
-                        Text(" + ").font(.system(size: 20))
-                                .foregroundColor(.white)
-                                .background(Color.green)
-                                .cornerRadius(10)
-                    }.padding(5)
-                }
 
             }
 

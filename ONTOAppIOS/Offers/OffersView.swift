@@ -13,6 +13,7 @@ import URLImage
 
 struct OffersView: View{
     @ObservedObject var viewModel = OffersViewModel()
+    @EnvironmentObject var cartViewModel : ViewRouter
     @State var isActive: Bool = false
 
     var body: some View {
@@ -39,9 +40,18 @@ struct OffersView: View{
                 Grid(tracks: 2) {
                     ForEach(0..<offers.count) { i in
                         let offerCard = OfferCardView(text: offers[i].name, url: URL(string: offers[i].image)!, price: offers[i].price, basePrice: offers[i].basePrice)
-                        NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, text : "Offer",  url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: offers[i].price, basePrice: offers[i].basePrice), isActive: self.$isActive) {
-                            offerCard.gridSpan(column: 1)
-                        }.isDetailLink(false)
+                        ZStack(alignment: .bottomTrailing){
+                            NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, text : "Offer",  url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: offers[i].price, basePrice: offers[i].basePrice), isActive: self.$isActive) {
+                                offerCard.gridSpan(column: 1)
+                            }.isDetailLink(false)
+                            Button(action: {
+                                self.cartViewModel.addProductToCart(product: OntoProduct(id: offers[i].id, name: offers[i].name, price: offers[i].price, image: offers[i].image, info: offers[i].offerInfo, description: offers[i].description, isInStock: false))
+                            }) {
+                                HStack {
+                                    Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
+                                }.frame(width: 30)
+                            }.padding(20)
+                        }
                     }
                     OfferCardView(text: "Offer", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: 100.0 , basePrice: 150.0)
                             .gridSpan(column: 1)
@@ -52,11 +62,6 @@ struct OffersView: View{
                         .gridPacking(.dense)
                         .gridFlow(.rows)
                         .navigationBarTitle("Акции")
-                        .navigationBarItems(trailing:
-                        HStack(alignment: .center){
-                            Text("Корзина")
-                        }
-                        )
             }
         }
 

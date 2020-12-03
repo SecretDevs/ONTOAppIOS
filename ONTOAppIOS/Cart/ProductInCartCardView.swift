@@ -16,36 +16,72 @@ struct ProductInCartCardView: View {
 
     var body: some View {
         HStack(alignment: .center) {
+            Spacer()
+
             URLImage(self.url, content: {image in
                 image.image.centerCropped()
-            }).frame(height: 90)
+            })
+                    .frame(maxWidth: 90,maxHeight: 90)
                     .cornerRadius(10)
+                    .padding([.top, .bottom], 10)
+
+            Spacer()
 
             VStack(alignment: .leading) {
                 Text(self.text)
                         .foregroundColor(.black)
                         .layoutPriority(.greatestFiniteMagnitude)
                 HStack{
+                    Button(action: {
+                        //self.cartViewModel.addProductToCart(product: self.viewModel.products[i])
+                    }) {
+                        HStack {
+                            if #available(iOS 14.0, *){
+                                Image("ic_cart_minus_svg").resizable().aspectRatio(contentMode: .fit)
+                            }else{
+                                Image("ic_cart_minus_png").resizable().aspectRatio(contentMode: .fit)
+                            }
+                        }.frame(width: 30)
+                    }.padding(20)
                     Spacer()
-                    Text("\(self.count, specifier: "%.0f")")
-                            .foregroundColor(.black)
-                            .layoutPriority(.greatestFiniteMagnitude)
+                    Text("\(count)")
+                    Spacer()
+                    Button(action: {
+                        //self.cartViewModel.addProductToCart(product: self.viewModel.products[i])
+                    }) {
+                        HStack {
+                            if #available(iOS 14.0, *){
+                                Image("ic_cart_plus_svg").resizable().aspectRatio(contentMode: .fit)
+                            }else{
+                                Image("ic_cart_plus_png").resizable().aspectRatio(contentMode: .fit)
+                            }
+                        }.frame(width: 30)
+                    }.padding(20)
                 }
             }
-                    .padding(.leading)
-                    .padding(.trailing)
+                    .padding(.top, 10)
             VStack{
+                Button(action: {
+                    //self.cartViewModel.deleteProductFromCart(productIndex: i)
+                }) {
+                    HStack {
+                        if #available(iOS 14.0, *){
+                            Image("ic_cart_cross_svg").resizable().aspectRatio(contentMode: .fit)
+                        }else{
+                            Image("ic_cart_cross_png").resizable().aspectRatio(contentMode: .fit)
+                        }
+                    }.frame(width: 30)
+                }.padding(20)
+
                 Spacer()
 
                 HStack {
-                    Text("\(self.price, specifier: "%.0f")").fontWeight(.bold)
-                            .foregroundColor(.red)
+                    Text("\(self.price, specifier: "%.0f") ₽")
+                            .fontWeight(.bold)
                             .layoutPriority(.greatestFiniteMagnitude)
                             .font(.system(size: 20))
                 }
-                        .padding(.all,5)
-                        .padding(.bottom,10)
-                        .padding(.leading)
+
             }
 
         }

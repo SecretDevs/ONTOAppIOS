@@ -21,14 +21,30 @@ class ViewRouter: ObservableObject{
     }
 
     func addProductToCart(product: OntoProduct){
-        //if (selectedProducts.contains{$0.product.id == product.id}){
+        if (!selectedProducts.contains{$0.product.id == product.id}){
             selectedProducts.append(ProductInCart(product: product, count: 1))
-        //}else{
-        //    selectedProducts[selectedProducts.firstIndex(where: {$0.product.id == product.id})!].count += 1
-        //}
+        }else{
+            selectedProducts[selectedProducts.firstIndex(where: {$0.product.id == product.id})!].count += 1
+        }
     }
 
     func deleteProductFromCart(productIndex: Int){
         selectedProducts.remove(at: productIndex)
+    }
+
+    func getSum() -> Int{
+        var result = 0
+        for product in selectedProducts{
+            result += Int(product.product.price * Float(product.count))
+        }
+        return result
+    }
+
+    func getCount() -> Int{
+        var result = 0
+        for product in selectedProducts{
+            result += product.count
+        }
+        return result
     }
 }

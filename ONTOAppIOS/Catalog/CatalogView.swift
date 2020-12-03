@@ -27,7 +27,6 @@ struct CatalogView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(0..<self.tags.count) { i in
-
                                 Button(action: {
                                     self.selected = tags[i]
                                 }) {
@@ -59,17 +58,11 @@ struct CatalogView: View {
                             }.isDetailLink(false)
                             Button(action: {
                                 self.cartViewModel.addProductToCart(product: self.viewModel.products[i])
-                                if #available(iOS 14.0, *) {
-                                    let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "observable")
-                                    logger.log("\(self.cartViewModel.selectedProducts)")
-                                } else {
-                                    // Fallback on earlier versions
-                                }
                             }) {
                                 HStack {
                                     Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
                                 }.frame(width: 30)
-                            }.padding(5)
+                            }.padding(20)
                         }
                     }
                     ProductCardView(text: "Offer1", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: 100.0)
@@ -80,11 +73,11 @@ struct CatalogView: View {
                 }.gridContentMode(.scroll)
                         .gridPacking(.dense)
                         .gridFlow(.rows)
-                        .navigationBarTitle("Каталог")
-                        .navigationBarItems(trailing:
+                        .navigationBarTitle("Каталог", displayMode: .large)
+                        /*.navigationBarItems(trailing:
                         HStack(alignment: .center) {
                             Text("Корзина")
-                        })
+                        })*/
             }
         }
     }

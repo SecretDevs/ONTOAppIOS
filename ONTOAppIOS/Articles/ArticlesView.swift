@@ -54,7 +54,7 @@ struct ArticlesView: View{
                         .gridPacking(.dense)
                         .gridFlow(.rows)
                         .navigationBarTitle("Материалы")
-                        .navigationBarItems(trailing: HStack(alignment: .center){Text("Корзина")})
+                        //.navigationBarItems(trailing: HStack(alignment: .center){Text("Корзина")})
 
             }
         }
