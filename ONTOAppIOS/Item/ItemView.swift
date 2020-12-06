@@ -12,6 +12,8 @@ import ExyteGrid
 struct ItemView: View {
 
     @Binding var shouldPopToRootView : Bool
+    @EnvironmentObject var cartViewModel : ViewRouter
+
 
     var btnBack : some View {
             Button(action: {
@@ -35,6 +37,7 @@ struct ItemView: View {
     let url: URL
     let price: Float
     let basePrice: Float
+    let description: String
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -54,8 +57,8 @@ struct ItemView: View {
                     }
 
                     VStack{
-                        DropDownView(text: self.text, title: "Описание")
-                        DropDownView(text: self.text, title: "Преимущества")
+                        DropDownView(text: self.description, title: "Описание")
+                        DropDownView(text: self.description, title: "Преимущества")
                     }
 
                     VStack(alignment: .leading) {
@@ -65,17 +68,34 @@ struct ItemView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack() {
                             ForEach(0..<self.similarProducts.count) { i in
-                                let offerCard = OfferCardView(text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price, basePrice: similarProducts[i].price)
-                                NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, text : similarProducts[i].info,  url: URL(string: similarProducts[i].image)!, price : similarProducts[i].price,basePrice : similarProducts[i].price)) {
-                                    offerCard
-                                }.isDetailLink(false)
+                                let productCard = ProductCardView(text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price)
+                                ZStack(alignment: .bottomTrailing) {
+                                    NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price, basePrice: similarProducts[i].price, description: similarProducts[i].description)) {
+                                        productCard
+                                    }.isDetailLink(false)
+
+                                    Button(action: {
+                                        self.cartViewModel.addProductToCart(product: OntoProduct(id: similarProducts[i].id, name: similarProducts[i].name, price: similarProducts[i].price, image: similarProducts[i].image, info: similarProducts[i].info, description: similarProducts[i].description, isInStock: false))
+                                    }) {
+                                        HStack {
+                                            Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
+                                        }.frame(width: 40)
+                                    }.padding(.bottom, 12)
+                                            .padding(.trailing, 12)
+                                            .padding(.leading,20)
+                                }
 
                             }
                         }
                     }
                 }
             }
-        }.navigationBarTitle("", displayMode: .inline)
+        }.background(NavigationConfigurator { nc in
+                    nc.hidesBarsOnSwipe = true
+                    nc.navigationBar.barTintColor = .white
+
+                })
+                .navigationBarTitle("", displayMode: .inline)
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading: btnBack)
 

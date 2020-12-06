@@ -41,7 +41,7 @@ struct OffersView: View{
                     ForEach(0..<offers.count) { i in
                         let offerCard = OfferCardView(text: offers[i].name, url: URL(string: offers[i].image)!, price: offers[i].price, basePrice: offers[i].basePrice)
                         ZStack(alignment: .bottomTrailing){
-                            NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, text : "Offer",  url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: offers[i].price, basePrice: offers[i].basePrice), isActive: self.$isActive) {
+                            NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, text : offers[i].name,  url: URL(string: offers[i].image)!, price: offers[i].price, basePrice: offers[i].basePrice, description: offers[i].description), isActive: self.$isActive) {
                                 offerCard.gridSpan(column: 1)
                             }.isDetailLink(false)
                             Button(action: {
@@ -49,15 +49,12 @@ struct OffersView: View{
                             }) {
                                 HStack {
                                     Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
-                                }.frame(width: 30)
-                            }.padding(20)
+                                }.frame(width: 40)
+                            }.padding(.bottom, 12)
+                            .padding(.trailing, 12)
+                            .padding(.leading,20)
                         }
                     }
-                    OfferCardView(text: "Offer", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price: 100.0 , basePrice: 150.0)
-                            .gridSpan(column: 1)
-                    OfferCardView(text: "Offer", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, price : 100.0 , basePrice : 150.0)
-                            .gridSpan(column: 1)
-
                 }.gridContentMode(.scroll)
                         .gridPacking(.dense)
                         .gridFlow(.rows)

@@ -15,40 +15,53 @@ struct OfferCardView: View {
     let basePrice: Float
 
 
+
     var body: some View {
         VStack(alignment: .center) {
             URLImage(self.url, content: {image in
                 image.image.centerCropped()
             }).frame(height: 180)
-                .cornerRadius(10)
+                    .cornerRadius(10)
 
             VStack(alignment: .leading) {
-                Text(self.text)
-                        .foregroundColor(.black)
-                        .layoutPriority(.greatestFiniteMagnitude)
-            }.padding(.leading,10)
-                    .padding(.trailing)
-            HStack{
-
                 HStack {
-                    Text("\(self.price, specifier: "%.0f")").fontWeight(.bold)
+                    Text(self.text)
+                            .foregroundColor(.black)
+                            .layoutPriority(.greatestFiniteMagnitude)
+                            .font(.system(size: 15))
+                            .fixedSize(horizontal: false, vertical: true)
+                    Spacer()
+                }
+                Spacer()
+            }.padding(.leading, 12)
+                    .padding(.trailing)
+                    .frame(height: 70)
+
+
+
+
+
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("\(self.price, specifier: "%.0f") ₽").fontWeight(.bold)
                             .foregroundColor(.red)
                             .layoutPriority(.greatestFiniteMagnitude)
                             .font(.system(size: 20))
-                    Text("\(self.basePrice, specifier: "%.0f")")
-                            .foregroundColor(.gray)
-                            .layoutPriority(.greatestFiniteMagnitude)
-                            .font(.system(size: 15))
+
+                        Text("\(self.basePrice, specifier: "%.0f") ₽")
+                                .foregroundColor(.black)
+                                .strikethrough()
+                                .layoutPriority(.greatestFiniteMagnitude)
+                                .font(.system(size: 14))
+
+                    Spacer()
                 }
-                        .padding(.all,5)
-                        .padding(.bottom,10)
-                        .padding(.leading)
+            }.padding(.all, 5)
+                    .padding(.bottom)
+                    .padding(.leading,10)
+                    .frame(height: 40)
 
-                Spacer()
-
-            }
-
-        }.frame(alignment: .top)
+        }.frame(height: 290, alignment: .top)
                 .background(Color.white)
                 .cornerRadius(10)
                 .shadow(radius: 5)
