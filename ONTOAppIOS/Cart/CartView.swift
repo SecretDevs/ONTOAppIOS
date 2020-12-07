@@ -35,7 +35,7 @@ struct CartView: View {
                             .cornerRadius(12.0)
                             .shadow(color: .buttonShadowColor, radius: 9, y: 3)
                 }
-            }
+            }.navigationBarTitle("Корзина")
         }else{
             List(self.viewModel.selectedProducts) { productInCart in
                 ProductInCartCardView(productInCart: productInCart)

@@ -5,6 +5,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class CatalogViewModel: ObservableObject{
     @Published var products: [OntoProduct] = []

@@ -59,6 +59,59 @@ struct OffersView: View{
                         .gridPacking(.dense)
                         .gridFlow(.rows)
                         .navigationBarTitle("Акции")
+                        .navigationBarItems(trailing:
+                        NavigationLink(destination: CartView()){
+                            HStack{
+                                let sum = self.cartViewModel.getSum()
+                                if(sum > 0){
+                                    VStack{
+                                        Text("\(sum) ₽")
+                                                .foregroundColor(Color(.black))
+                                                .padding(5)
+                                                .frame(width: 75)
+                                    }
+                                            .background(Color.cartButtonSumColor)
+                                            .cornerRadius(10)
+                                            .padding(.top, 10)
+                                            .padding(.leading, 10)
+                                            .padding(.bottom, 10)
+                                }
+                                ZStack(alignment: .topTrailing){
+                                    if #available(iOS 14.0, *){
+                                        Image("ic_cart_svg")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .padding(.top, 10)
+                                                .padding(.trailing, 10)
+                                                .padding(.bottom, 10)
+                                                .padding(.leading, 10)
+                                                .frame(height: 50)
+                                    }else{
+                                        Image("ic_cart_png")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .padding(.all, 10)
+                                                .frame(height: 50)
+                                    }
+                                    let count = self.cartViewModel.getCount()
+                                    if(sum > 0) {
+                                        VStack {
+                                            Text("\(count)")
+                                                    .foregroundColor(Color(.white))
+                                                    .padding(5)
+                                                    .font(.system(size: 10))
+                                        }
+                                                .background(Color.cartButtonCountColor)
+                                                .border(Color.white, width: 1)
+                                                .cornerRadius(50)
+                                                .padding(.top, 5)
+                                                .padding(.trailing, 5)
+                                    }
+                                }
+                            }
+                                    .background(Color(.white))
+                                    .cornerRadius(30).padding(.all, 10)
+                        })
             }
         }
 
