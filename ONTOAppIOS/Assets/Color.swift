@@ -22,4 +22,7 @@ extension Color {
     public static var cartButtonCountColor: Color{
         return Color(UIColor(red: 235/255, green: 87/255, blue: 87/255, alpha: 1.0))
     }
+    public static var discountsPagerDotColor: Color{
+        return Color(UIColor(red: 239/255, green: 239/255, blue: 239/255, alpha: 1.0))
+    }
 }

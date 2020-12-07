@@ -73,7 +73,7 @@ struct MainView: View {
                 OffersView()
 
                         .tabItem {
-                            Image(systemName: "percent") .font(Font.system(.largeTitle).bold())
+                            Image(systemName: "percent").renderingMode(.template)
                         }.tag(1).navigationBarHidden(true)
 
 

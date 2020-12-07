@@ -29,20 +29,22 @@ struct CatalogView: View {
         NavigationView {
 
             VStack(alignment: .leading) {
-                /*ZStack(alignment: .bottom){
+                VStack{
                     Pager(page: self.$pageIndex,
                             data: self.indexes,
                             id: \.self) {index in
+                        VStack{
                             self.pageView(index)
+                        }
                     }
                             .contentLoadingPolicy(.eager)
                             .onPageChanged({ page in
                                 withAnimation(.easeOut) {
                                     self.pageIndex = page
                                 }
-                            })
+                            }).frame(maxHeight: 150)
                     PageControl(index: self.$pageIndex, maxIndex: offers_png.count - 1)
-                }*/
+                }
                 VStack {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
@@ -152,9 +154,9 @@ struct CatalogView: View {
 
     func pageView(_ index: Int) -> some View {
         if #available(iOS 14.0, *){
-            return Image(self.offers_svg[index]).resizable().aspectRatio(contentMode: .fit).padding([.leading, .trailing], 20).frame(maxWidth: 400)
+            return Image(self.offers_png[index]).resizable().centerCropped().padding([.leading, .trailing], 20).cornerRadius(40.0)
         }else{
-            return Image(self.offers_png[index]).resizable().aspectRatio(contentMode: .fit).padding([.leading, .trailing], 20).frame(maxWidth: 400)
+            return Image(self.offers_png[index]).resizable().centerCropped().padding([.leading, .trailing], 20).cornerRadius(40.0)
         }
     }
 }
@@ -173,7 +175,7 @@ struct PageControl: View {
         HStack(spacing: 8) {
             ForEach(0...maxIndex, id: \.self) { index in
                 Circle()
-                        .fill(index == self.index ? Color.white : Color.gray)
+                        .fill(index == self.index ? Color.buttonEndColor : Color.discountsPagerDotColor)
                         .frame(width: 8, height: 8)
             }
         }
