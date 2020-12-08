@@ -68,29 +68,29 @@ struct MainView: View {
                     }
                 }
                         .tabItem{
-                            Image(systemName: "map.fill")
+                            Image("ic_map").renderingMode(.template)
                         }.tag(0).navigationBarHidden(true)
                 OffersView()
 
                         .tabItem {
-                            Image(systemName: "percent").renderingMode(.template)
+                            Image("ic_discount").renderingMode(.template)
                         }.tag(1).navigationBarHidden(true)
 
 
                 CatalogView()
                         .tabItem {
-                            Image(systemName: "bag") .font(Font.system(.largeTitle).bold())
+                            Image("ic_store").renderingMode(.template)
                         }.tag(2).navigationBarHidden(true)
 
 
                 ArticlesView()
                         .tabItem {
-                            Image(systemName: "magnifyingglass").font(Font.title.weight(.bold))
+                            Image("ic_articles").renderingMode(.template)
                         }.tag(3).navigationBarHidden(true)
 
                 ProfileView()
                         .tabItem {
-                            Image(systemName: "person").font(Font.title.weight(.bold))
+                            Image("ic_profile").renderingMode(.template)
                         }.tag(4).navigationBarHidden(true)
             }.accentColor(Color.green)
                     .onAppear() {
