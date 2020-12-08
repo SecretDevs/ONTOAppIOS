@@ -201,22 +201,9 @@ struct ProfileView: View {
                                         .padding(.bottom, 10)
                             }
                             ZStack(alignment: .topTrailing){
-                                if #available(iOS 14.0, *){
-                                    Image("ic_cart_svg")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .padding(.top, 10)
-                                            .padding(.trailing, 10)
-                                            .padding(.bottom, 10)
-                                            .padding(.leading, 10)
-                                            .frame(height: 50)
-                                }else{
-                                    Image("ic_cart_png")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .padding(.all, 10)
-                                            .frame(height: 50)
-                                }
+                                Image("ic_cart")
+                                        .padding(.all, 10)
+                                        .foregroundColor(Color.buttonEndColor)
                                 let count = self.cartViewModel.getCount()
                                 if(sum > 0) {
                                     VStack {
@@ -233,7 +220,6 @@ struct ProfileView: View {
                                 }
                             }
                         }
-                                .background(Color(.white))
                                 .cornerRadius(30).padding(.all, 10)
                     })
         }
