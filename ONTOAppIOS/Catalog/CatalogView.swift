@@ -25,9 +25,7 @@ struct CatalogView: View {
 
     var body: some View {
 
-
         NavigationView {
-
             VStack(alignment: .leading) {
                 VStack{
                     Pager(page: self.$pageIndex,
@@ -91,7 +89,7 @@ struct CatalogView: View {
                         }
                     }
 
-                }.gridContentMode(.scroll)
+                }
                         .gridPacking(.dense)
                         .gridFlow(.rows)
                         .navigationBarTitle("Каталог", displayMode: .large)
