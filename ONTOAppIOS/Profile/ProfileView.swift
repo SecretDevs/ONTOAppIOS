@@ -212,8 +212,7 @@ struct ProfileView: View {
                                                 .padding(5)
                                                 .font(.system(size: 10))
                                     }
-                                            .background(Color.cartButtonCountColor)
-                                            .border(Color.white, width: 1)
+                                            .background(Circle().foregroundColor(Color.cartButtonCountColor).border(Color.white, width: 1))
                                             .cornerRadius(50)
                                             .padding(.top, 5)
                                             .padding(.trailing, 5)
