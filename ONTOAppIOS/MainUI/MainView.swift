@@ -62,7 +62,6 @@ struct MainView: View {
                             Image("ic_discount").renderingMode(.template)
                         }.tag(1).navigationBarHidden(true)
 
-
                 CatalogView()
                         .tabItem {
                             Image("ic_store").renderingMode(.template)

@@ -21,11 +21,11 @@ struct ItemView: View {
 
             }) {
                 HStack {
-                    Image("chevron.left") // set image here
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.black)
-                    Text("Go back")
-                }
+                    Image(systemName: "chevron.left").resizable().frame(width: 12, height: 20).foregroundColor(Color.black)
+                    Spacer()
+                    Text("Товар").font(.system(size: 23)).fontWeight(.bold).foregroundColor(Color.black)
+
+                }.frame(width: 100)
             }
     }
 
@@ -91,8 +91,9 @@ struct ItemView: View {
                 }
             }
         }.background(NavigationConfigurator { nc in
-                    nc.hidesBarsOnSwipe = true
-                    nc.navigationBar.barTintColor = .white
+                   nc.hidesBarsOnSwipe = true
+                    //nc.isNavigationBarHidden = true
+                    //nc.navigationBar.barTintColor = .white
 
                 })
                 .navigationBarTitle("", displayMode: .inline)

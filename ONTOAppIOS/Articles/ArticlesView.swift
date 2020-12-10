@@ -54,6 +54,12 @@ struct ArticlesView: View{
                         .gridContentMode(.scroll)
                         .gridPacking(.dense)
                         .gridFlow(.rows)
+                        .background(NavigationConfigurator { nc in
+                            nc.hidesBarsOnSwipe = true
+                            //nc.isNavigationBarHidden = true
+                            //nc.navigationBar.barTintColor = .white
+
+                        })
                         .navigationBarTitle("Материалы")
                         .navigationBarItems(trailing:
                         NavigationLink(destination: CartView()){
