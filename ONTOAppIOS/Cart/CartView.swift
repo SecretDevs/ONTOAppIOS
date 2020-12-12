@@ -26,7 +26,7 @@ struct CartView: View {
                 }else{
                     Image("ic_down_arrow_png").resizable().aspectRatio(contentMode: .fit).frame(maxHeight: 16).padding(.bottom, 20)
                 }
-                NavigationLink(destination: CatalogView()){
+                NavigationLink(destination: CatalogView(viewModel: CatalogViewModel())){
                     Text("ПЕРЕЙТИ В КАТАЛОГ")
                             .padding([.top, .bottom], 16)
                             .padding([.leading, .trailing], 65)
