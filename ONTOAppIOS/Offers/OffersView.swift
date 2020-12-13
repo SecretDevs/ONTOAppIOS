@@ -60,12 +60,13 @@ struct OffersView: View{
                         .gridFlow(.rows)
                         .background(NavigationConfigurator { nc in
                             nc.hidesBarsOnSwipe = true
-                            //nc.isNavigationBarHidden = true
-                            //nc.navigationBar.barTintColor = .white
+                            nc.navigationBar.barTintColor = .white
+                            nc.navigationBar.shadowImage = UIImage()
 
                         })
-                        .navigationBarTitle("Акции")
-                        .navigationBarItems(trailing:
+                        .navigationBarTitle("", displayMode: .inline)
+                        .navigationBarItems(leading: Text("Акции").font(.system(size: 26))
+                        .fontWeight(.bold).foregroundColor(Color.black), trailing:
                         NavigationLink(destination: CartView()){
                             HStack{
                                 let sum = self.cartViewModel.getSum()
@@ -101,8 +102,9 @@ struct OffersView: View{
                                     }
                                 }
                             }
-                                    .cornerRadius(30).padding(.all, 10)
-                        })
+                                    .cornerRadius(30)
+                        }
+                        )
             }
         }
 

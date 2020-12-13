@@ -39,8 +39,8 @@ struct ProfileView: View {
 
                     VStack(alignment: .leading) {
                         Text("Какой у вас питомец?").font(.body).padding()
-                        TagCloudButtonView(selected: $selcted, tags: tags, tagBackgroundColor: Color.green.opacity(0.3),tagBackgroundColorSelected: Color.green,
-                                tagTextColor: Color.green, tagTextColorSelected : Color.white,
+                        TagCloudButtonView(selected: $selcted, tags: tags, tagBackgroundColor: Color.buttonEndColor.opacity(0.13),tagBackgroundColorSelected: Color.buttonEndColor,
+                                tagTextColor: Color.buttonEndColor, tagTextColorSelected : Color.white,
                                 tagRadius: 10)
                     }.padding(.bottom).padding(.horizontal)
 
@@ -55,7 +55,7 @@ struct ProfileView: View {
                         }
                                 .textFieldStyle(PlainTextFieldStyle())
                         Divider().frame(height: 2)
-                                .background(isEditingName ? Color.green : Color.gray)
+                                .background(isEditingName ? Color.buttonEndColor : Color.gray)
                                 .padding(.top, 5)
                     }.padding()
 
@@ -70,7 +70,7 @@ struct ProfileView: View {
                         }
                                 .textFieldStyle(PlainTextFieldStyle())
                         Divider().frame(height: 2)
-                                .background(isEditingLastName ? Color.green : Color.gray)
+                                .background(isEditingLastName ? Color.buttonEndColor : Color.gray)
                                 .padding(.top, 5)
                     }.padding()
 
@@ -84,7 +84,7 @@ struct ProfileView: View {
                         }
                                 .textFieldStyle(PlainTextFieldStyle())
                         Divider().frame(height: 2)
-                                .background(isEditingEmail ? Color.green : Color.gray)
+                                .background(isEditingEmail ? Color.buttonEndColor : Color.gray)
                                 .padding(.top, 5)
                     }.padding()
 
@@ -98,7 +98,7 @@ struct ProfileView: View {
                         }
                                 .textFieldStyle(PlainTextFieldStyle())
                         Divider().frame(height: 2)
-                                .background(isEditingNumber ? Color.green : Color.gray)
+                                .background(isEditingNumber ? Color.buttonEndColor : Color.gray)
                                 .padding(.top, 5)
                     }.padding()
 
@@ -117,7 +117,7 @@ struct ProfileView: View {
                         }
                                 .textFieldStyle(PlainTextFieldStyle())
                         Divider().frame(height: 2)
-                                .background(isEditingCity ? Color.green : Color.gray)
+                                .background(isEditingCity ? Color.buttonEndColor : Color.gray)
                                 .padding(.top, 5)
                     }.padding()
 
@@ -133,7 +133,7 @@ struct ProfileView: View {
                         }
                                 .textFieldStyle(PlainTextFieldStyle())
                         Divider().frame(height: 2)
-                                .background(isEditingStreet ? Color.green : Color.gray)
+                                .background(isEditingStreet ? Color.buttonEndColor : Color.gray)
                                 .padding(.top, 5)
                     }.padding()
 
@@ -148,7 +148,7 @@ struct ProfileView: View {
                             }
                                     .textFieldStyle(PlainTextFieldStyle())
                             Divider().frame(height: 2)
-                                    .background(isEditingHouse ? Color.green : Color.gray)
+                                    .background(isEditingHouse ? Color.buttonEndColor : Color.gray)
                                     .padding(.top, 5)
                         }.padding()
 
@@ -162,7 +162,7 @@ struct ProfileView: View {
                             }
                                     .textFieldStyle(PlainTextFieldStyle())
                             Divider().frame(height: 2)
-                                    .background(isEditingK ? Color.green : Color.gray)
+                                    .background(isEditingK ? Color.buttonEndColor : Color.gray)
                                     .padding(.top, 5)
                         }.padding()
 
@@ -176,14 +176,20 @@ struct ProfileView: View {
                             }
                                     .textFieldStyle(PlainTextFieldStyle())
                             Divider().frame(height: 2)
-                                    .background(isEditingRoom ? Color.green : Color.gray)
+                                    .background(isEditingRoom ? Color.buttonEndColor : Color.gray)
                                     .padding(.top, 5)
                         }.padding()
                     }
 
                 }
-            .navigationBarTitle("Личный кабинет")}
-                    .navigationBarItems(trailing:
+            }.background(NavigationConfigurator { nc in
+                        nc.hidesBarsOnSwipe = true
+                        nc.navigationBar.barTintColor = .white
+                        nc.navigationBar.shadowImage = UIImage()
+                    })
+                    .navigationBarTitle("", displayMode: .inline)
+                    .navigationBarItems(leading: Text("Личный кабинет").font(.system(size: 26))
+                            .fontWeight(.bold).foregroundColor(Color.black), trailing:
                     NavigationLink(destination: CartView()){
                         HStack{
                             let sum = self.cartViewModel.getSum()
@@ -219,7 +225,7 @@ struct ProfileView: View {
                                 }
                             }
                         }
-                                .cornerRadius(30).padding(.all, 10)
+                                .cornerRadius(30)
                     })
         }
 

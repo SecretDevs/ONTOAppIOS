@@ -38,6 +38,7 @@ struct CatalogView: View {
                 GeometryReader { gp in
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack(spacing: 0) {
+                            header()
                             //FriendsHorizontalScrollView()
 
                             VStack(spacing: 0) {
@@ -45,6 +46,9 @@ struct CatalogView: View {
 
                                 VStack(alignment: .leading) {
                                     pagerView()
+                                    VStack(alignment: .leading){
+                                        Text("Каталог").font(.system(size: 23)).fontWeight(.bold).foregroundColor(Color.black).padding(.horizontal, 10)
+                                    }
                                     VStack {
                                         ScrollView(.horizontal, showsIndicators: false) {
                                             HStack {
@@ -56,10 +60,10 @@ struct CatalogView: View {
                                                                 .padding(.all, 5)
                                                                 .font(.body)
                                                                 .background(
-                                                                        (self.selected != "") && (self.selected == tags[i]) ? Color.green : Color.green.opacity(0.3))
+                                                                        (self.selected != "") && (self.selected == tags[i]) ? Color.buttonEndColor : Color.buttonEndColor.opacity(0.13))
                                                                 .foregroundColor(
                                                                         (self.selected != "") && (self.selected == tags[i]) ? Color.white
-                                                                                : Color.green)
+                                                                                : Color.buttonEndColor)
                                                                 .cornerRadius(10)
                                                     }
                                                 }
@@ -85,68 +89,59 @@ struct CatalogView: View {
                             }
                 }
 
-            } .background(NavigationConfigurator { nc in
-                       // nc.hidesBarsOnSwipe = true
-                        //nc.isNavigationBarHidden = true
-                        //nc.navigationBar.barTintColor = .white
+            }
+                    .navigationBarHidden(true)
 
-                    })
-                    .navigationBarTitle("Каталог", displayMode: .large)
-                    .navigationBarItems(trailing:
-                    NavigationLink(destination: CartView()) {
-                        HStack {
-                            let sum = self.cartViewModel.getSum()
-                            if (sum > 0) {
-                                VStack {
-                                    Text("\(sum) ₽")
-                                            .foregroundColor(Color(.black))
-                                            .padding(5)
-                                            .frame(width: 75)
-                                }
-                                        .background(Color.cartButtonSumColor)
-                                        .cornerRadius(10)
-                                        .padding(.top, 10)
-                                        .padding(.leading, 10)
-                                        .padding(.bottom, 10)
-                            }
-                            ZStack(alignment: .topTrailing) {
-                                if #available(iOS 14.0, *) {
-                                    Image("ic_cart_svg")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .padding(.top, 10)
-                                            .padding(.trailing, 10)
-                                            .padding(.bottom, 10)
-                                            .padding(.leading, 10)
-                                            .frame(height: 50)
-                                } else {
-                                    Image("ic_cart_png")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .padding(.all, 10)
-                                            .frame(height: 50)
-                                }
-                                let count = self.cartViewModel.getCount()
-                                if (sum > 0) {
-                                    VStack {
-                                        Text("\(count)")
-                                                .foregroundColor(Color(.white))
-                                                .padding(5)
-                                                .font(.system(size: 10))
-                                    }
-                                            .background(Color.cartButtonCountColor)
-                                            .border(Color.white, width: 1)
-                                            .cornerRadius(50)
-                                            .padding(.top, 5)
-                                            .padding(.trailing, 5)
-                                }
-                            }
-                        }
-                                .background(Color(.white))
-                                .cornerRadius(30).padding(.all, 10)
-                    })
         }
                 .navigationBarHidden(true)
+    }
+
+    func header() -> some View {
+        
+        return  HStack(alignment: .center){
+            Image("ic_catalog_ONTO")
+                        .padding(.all, 10)
+                        .foregroundColor(Color.buttonEndColor)
+
+            Spacer()
+            NavigationLink(destination: CartView()){
+                HStack{
+                    let sum = self.cartViewModel.getSum()
+                    if(sum > 0){
+                        VStack{
+                            Text("\(sum) ₽")
+                                    .foregroundColor(Color(.black))
+                                    .padding(5)
+                                    .frame(width: 75)
+                        }
+                                .background(Color.cartButtonSumColor)
+                                .cornerRadius(10)
+                                .padding(.top, 10)
+                                .padding(.leading, 10)
+                                .padding(.bottom, 10)
+                    }
+                    ZStack(alignment: .topTrailing){
+                        Image("ic_cart")
+                                .padding(.all, 10)
+                                .foregroundColor(Color.buttonEndColor)
+                        let count = self.cartViewModel.getCount()
+                        if(sum > 0) {
+                            VStack {
+                                Text("\(count)")
+                                        .foregroundColor(Color(.white))
+                                        .padding(5)
+                                        .font(.system(size: 10))
+                            }
+                                    .background(Circle().foregroundColor(Color.cartButtonCountColor).border(Color.white, width: 1))
+                                    .cornerRadius(50)
+                                    .padding(.top, 5)
+                                    .padding(.trailing, 5)
+                        }
+                    }
+                }
+                        .cornerRadius(30).padding(.all, 10)
+            }
+        }
     }
 
     func gridView () -> some View {
