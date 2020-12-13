@@ -171,12 +171,6 @@ struct CatalogView: View {
     }
 }
 
-struct CatalogView_Previews: PreviewProvider {
-    static var previews: some View {
-        CatalogView().environmentObject(ViewRouter())
-    }
-}
-
 struct PageControl: View {
     @Binding var index: Int
     let maxIndex: Int

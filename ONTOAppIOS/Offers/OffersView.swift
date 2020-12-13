@@ -78,9 +78,3 @@ struct OffersView: View{
     }
 }
 
-
-struct OffersView_Previews: PreviewProvider{
-    static var previews: some View{
-        OffersView()
-    }
-}

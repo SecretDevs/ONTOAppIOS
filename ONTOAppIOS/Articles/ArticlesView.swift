@@ -69,17 +69,10 @@ struct ArticlesView: View{
                         }, trailing:
                         NavigationLink(destination: CartView(tabViewTag: self.$tabViewTag)){
                             CartButton()
-                        }
                         })
 
             }
         }
     }
 
-}
-
-struct ArticlesView_Previews: PreviewProvider{
-    static var previews: some View{
-        ArticlesView()
-    }
 }
