@@ -12,6 +12,7 @@ import URLImage
 
 
 struct OffersView: View{
+    @Binding var tabViewTag : Int
     @ObservedObject var viewModel = OffersViewModel()
     @EnvironmentObject var cartViewModel : ViewRouter
     @State var isActive: Bool = false
@@ -67,42 +68,8 @@ struct OffersView: View{
                         .navigationBarTitle("", displayMode: .inline)
                         .navigationBarItems(leading: Text("Акции").font(.system(size: 26))
                         .fontWeight(.bold).foregroundColor(Color.black), trailing:
-                        NavigationLink(destination: CartView()){
-                            HStack{
-                                let sum = self.cartViewModel.getSum()
-                                if(sum > 0){
-                                    VStack{
-                                        Text("\(sum) ₽")
-                                                .foregroundColor(Color(.black))
-                                                .padding(5)
-                                                .frame(width: 75)
-                                    }
-                                            .background(Color.cartButtonSumColor)
-                                            .cornerRadius(10)
-                                            .padding(.top, 10)
-                                            .padding(.leading, 10)
-                                            .padding(.bottom, 10)
-                                }
-                                ZStack(alignment: .topTrailing){
-                                    Image("ic_cart")
-                                            .padding(.all, 10)
-                                            .foregroundColor(Color.buttonEndColor)
-                                    let count = self.cartViewModel.getCount()
-                                    if(sum > 0) {
-                                        VStack {
-                                            Text("\(count)")
-                                                    .foregroundColor(Color(.white))
-                                                    .padding(5)
-                                                    .font(.system(size: 10))
-                                        }
-                                                .background(Circle().foregroundColor(Color.cartButtonCountColor).border(Color.white, width: 1))
-                                                .cornerRadius(50)
-                                                .padding(.top, 5)
-                                                .padding(.trailing, 5)
-                                    }
-                                }
-                            }
-                                    .cornerRadius(30)
+                        NavigationLink(destination: CartView(tabViewTag: self.$tabViewTag)){
+                            CartButton()
                         }
                         )
             }
