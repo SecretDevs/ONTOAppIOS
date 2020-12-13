@@ -12,10 +12,10 @@ import SwiftUIPager
 
 struct CatalogView: View {
 
-
+    @Binding var tabViewTag : Int
     @State var selected = ""
     @State var pageIndex = 0
-    @ObservedObject var viewModel : CatalogViewModel
+    @ObservedObject var viewModel = CatalogViewModel()
     @EnvironmentObject var cartViewModel : ViewRouter
     @State var isActive: Bool = false
     var tags = ["Кошка", "Собака", "Грызун", "Мышь", "Крыса", "Хомяк", "Дегу"]
@@ -94,7 +94,7 @@ struct CatalogView: View {
                         .gridFlow(.rows)
                         .navigationBarTitle("Каталог", displayMode: .large)
                         .navigationBarItems(trailing:
-                        NavigationLink(destination: CartView()){
+                        NavigationLink(destination: CartView(tabViewTag: self.$tabViewTag)){
                             CartButton()
                         })
             }

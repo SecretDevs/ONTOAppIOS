@@ -12,29 +12,29 @@ struct MainView: View {
     var body: some View {
         NavigationView{
             TabView (selection: $tag){
-                MapWrapperView()
+                MapWrapperView(tabViewTag: self.$tag)
                         .tabItem{
                             Image("ic_map").renderingMode(.template)
                         }.tag(0).navigationBarHidden(true)
 
-                OffersView()
+                OffersView(tabViewTag: self.$tag)
                         .tabItem {
                             Image("ic_discount").renderingMode(.template)
                         }.tag(1).navigationBarHidden(true)
 
 
-                CatalogView(viewModel: CatalogViewModel())
+                CatalogView(tabViewTag: self.$tag)
                         .tabItem {
                             Image("ic_store").renderingMode(.template)
                         }.tag(2).navigationBarHidden(true)
 
 
-                ArticlesView()
+                ArticlesView(tabViewTag: self.$tag)
                         .tabItem {
                             Image("ic_articles").renderingMode(.template)
                         }.tag(3).navigationBarHidden(true)
 
-                ProfileView()
+                ProfileView(tabViewTag: self.$tag)
                         .tabItem {
                             Image("ic_profile").renderingMode(.template)
                         }.tag(4).navigationBarHidden(true)
