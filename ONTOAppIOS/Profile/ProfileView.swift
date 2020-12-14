@@ -79,7 +79,7 @@ struct ProfileView: View {
                         Text("E-mail")
                                 .font(.callout)
                                 .bold()
-                        TextField("Введите e-mail...", text: $lastname) {
+                        TextField("Введите e-mail...", text: $email) {
                             isEditing in
                             self.isEditingEmail = isEditing
                         }
@@ -93,7 +93,7 @@ struct ProfileView: View {
                         Text("Телефон")
                                 .font(.callout)
                                 .bold()
-                        TextField("Введите телефон...", text: $lastname) {
+                        TextField("Введите телефон...", text: $number) {
                             isEditing in
                             self.isEditingNumber = isEditing
                         }
@@ -143,7 +143,7 @@ struct ProfileView: View {
                             Text("Дом")
                                     .font(.callout)
                                     .bold()
-                            TextField("1...", text: $house) {
+                            TextField("1", text: $house) {
                                 isEditing in
                                 self.isEditingHouse = isEditing
                             }
@@ -157,7 +157,7 @@ struct ProfileView: View {
                             Text("Корпус")
                                     .font(.callout)
                                     .bold()
-                            TextField("2...", text: $k) {
+                            TextField("1", text: $k) {
                                 isEditing in
                                 self.isEditingK = isEditing
                             }
@@ -171,7 +171,7 @@ struct ProfileView: View {
                             Text("Квартира")
                                     .font(.callout)
                                     .bold()
-                            TextField("111...", text: $room) {
+                            TextField("111", text: $room) {
                                 isEditing in
                                 self.isEditingRoom = isEditing
                             }
@@ -184,16 +184,18 @@ struct ProfileView: View {
 
                 }
             }.background(NavigationConfigurator { nc in
-                        nc.hidesBarsOnSwipe = true
                         nc.navigationBar.barTintColor = .white
                         nc.navigationBar.shadowImage = UIImage()
                     })
                     .navigationBarTitle("", displayMode: .inline)
-                    .navigationBarItems(leading: Text("Личный кабинет").font(.system(size: 26))
-                            .fontWeight(.bold).foregroundColor(Color.black), trailing:
-                    NavigationLink(destination: CartView(tabViewTag: self.$tabViewTag)){
-                        CartButton()
-                    })
+                    .navigationBarItems(leading:HStack(alignment: .bottom){
+                        Text("Личный кабинет").font(.system(size: 23))
+                                .fontWeight(.bold).foregroundColor(Color.black)}
+                            , trailing:
+                         NavigationLink(destination: CartView(tabViewTag: self.$tabViewTag)){
+                                 CartButton()
+                    }
+                    )
         }
 
     }

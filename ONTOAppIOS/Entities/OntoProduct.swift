@@ -11,8 +11,10 @@ struct OntoProduct: Codable, Identifiable{
     let price: Float
     let image: String
     let info: String
+    let parameters : [[String:String]]
     let description: String
-    let isInStock: Bool
+    let inStock: Int32
+    let similarProducts: [Int32]
 
     enum CodingKeys: String, CodingKey{
         case id = "product_id"
@@ -20,7 +22,9 @@ struct OntoProduct: Codable, Identifiable{
         case price
         case image
         case info
+        case parameters
         case description
-        case isInStock = "is_in_stock"
+        case inStock = "in_stock"
+        case similarProducts = "similar_products"
     }
 }

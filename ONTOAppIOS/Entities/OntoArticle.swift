@@ -13,7 +13,7 @@ struct OntoArticle: Codable, Identifiable{
     let date: String
 
     enum CodingKeys: String, CodingKey{
-        case id = "article_id"
+        case id
         case name
         case image
         case text

@@ -46,7 +46,7 @@ struct OffersView: View{
                                 offerCard.gridSpan(column: 1)
                             }.isDetailLink(false)
                             Button(action: {
-                                self.cartViewModel.addProductToCart(product: OntoProduct(id: offers[i].id, name: offers[i].name, price: offers[i].price, image: offers[i].image, info: offers[i].offerInfo, description: offers[i].description, isInStock: false))
+                                self.cartViewModel.addProductToCart(product: OntoProduct(id: offers[i].id, name: offers[i].name, price: offers[i].price, image: offers[i].image, info: offers[i].offerInfo,parameters: [["Белки":"Жиры"]], description: offers[i].description, inStock: 1, similarProducts: [1,2,3]))
                             }) {
                                 HStack {
                                     Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
@@ -60,7 +60,6 @@ struct OffersView: View{
                         .gridPacking(.dense)
                         .gridFlow(.rows)
                         .background(NavigationConfigurator { nc in
-                            nc.hidesBarsOnSwipe = true
                             nc.navigationBar.barTintColor = .white
                             nc.navigationBar.shadowImage = UIImage()
 
