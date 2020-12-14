@@ -26,7 +26,7 @@ struct CartButton: View {
                         .padding(.top, 10)
                         .padding(.bottom, 10)
             }
-            ZStack(alignment: .topTrailing){
+            ZStack(alignment: .topTrailing){//
                 Image("ic_cart")
                         .padding(.top, 5)
                         .padding(.bottom,5)
