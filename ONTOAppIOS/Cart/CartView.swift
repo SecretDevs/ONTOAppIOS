@@ -10,6 +10,7 @@ import os
 
 struct CartView: View {
 
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Binding var tabViewTag : Int
     @EnvironmentObject var viewModel : ViewRouter
 
@@ -28,6 +29,7 @@ struct CartView: View {
                     Image("ic_down_arrow_png").resizable().aspectRatio(contentMode: .fit).frame(maxHeight: 16).padding(.bottom, 20)
                 }
                 Button(action: {
+                    self.mode.wrappedValue.dismiss()
                     self.tabViewTag = 2
                 }) {
                     Text("ПЕРЕЙТИ В КАТАЛОГ")
@@ -38,15 +40,6 @@ struct CartView: View {
                             .cornerRadius(12.0)
                             .shadow(color: .buttonShadowColor, radius: 9, y: 3)
                 }
-                /*NavigationLink(destination: CatalogView()){
-                    Text("ПЕРЕЙТИ В КАТАЛОГ")
-                            .padding([.top, .bottom], 16)
-                            .padding([.leading, .trailing], 65)
-                            .foregroundColor(.white)
-                            .background(LinearGradient(gradient: Gradient(colors: [.buttonStartColor, .buttonEndColor]), startPoint: .topLeading, endPoint: .bottomTrailing))
-                            .cornerRadius(12.0)
-                            .shadow(color: .buttonShadowColor, radius: 9, y: 3)
-                }*/
             }.navigationBarTitle("Корзина")
         }else{
             List(self.viewModel.selectedProducts) { productInCart in

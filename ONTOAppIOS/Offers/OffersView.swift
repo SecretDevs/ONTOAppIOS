@@ -13,9 +13,9 @@ import URLImage
 
 struct OffersView: View{
     @Binding var tabViewTag : Int
+    @State var isActive: Bool = false
     @ObservedObject var viewModel = OffersViewModel()
     @EnvironmentObject var cartViewModel : ViewRouter
-    @State var isActive: Bool = false
 
     var body: some View {
         switch viewModel.state {
