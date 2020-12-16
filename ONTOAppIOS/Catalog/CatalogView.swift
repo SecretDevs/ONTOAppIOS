@@ -38,7 +38,6 @@ struct CatalogView: View {
                 GeometryReader { gp in
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack(spacing: 0) {
-                            header()
                             //FriendsHorizontalScrollView()
 
                             VStack(spacing: 0) {
@@ -89,26 +88,23 @@ struct CatalogView: View {
                             }
                 }
 
-            }
-                    .navigationBarHidden(true)
+            }.navigationBarTitle("", displayMode: .inline)
+                    .background(NavigationConfigurator { nc in
+                        nc.navigationBar.barTintColor = .white
+                        nc.navigationBar.shadowImage = UIImage()
 
+                    })
+                    .navigationBarItems(leading:  Image("ic_catalog_ONTO")
+                            .padding(.all, 10)
+                            .foregroundColor(Color.buttonEndColor), trailing:
+                    NavigationLink(destination: CartView(tabViewTag: self.$tabViewTag)){
+                        CartButton()
+                    })
         }
                 .navigationBarHidden(true)
     }
 
-    func header() -> some View {
 
-        return  HStack(alignment: .center){
-            Image("ic_catalog_ONTO")
-                        .padding(.all, 10)
-                        .foregroundColor(Color.buttonEndColor)
-
-            Spacer()
-            NavigationLink(destination: CartView(tabViewTag: self.$tabViewTag)){
-                CartButton()
-            }
-        }
-    }
 
     func gridView () -> some View {
         let value = ceil(Double(self.viewModel.products.count / 2))

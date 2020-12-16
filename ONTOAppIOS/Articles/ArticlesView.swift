@@ -57,7 +57,6 @@ struct ArticlesView: View{
                         .gridPacking(.dense)
                         .gridFlow(.rows)
                         .background(NavigationConfigurator { nc in
-                            nc.hidesBarsOnSwipe = true
                             nc.navigationBar.barTintColor = .white
                             nc.navigationBar.shadowImage = UIImage()
 

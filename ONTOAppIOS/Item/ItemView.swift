@@ -30,9 +30,9 @@ struct ItemView: View {
     }
 
     let text: String
-    var similarProducts: [OntoProduct] = [OntoProduct(id: 3, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", description: "Вкусеый сочный таракан", isInStock: true),
-                                          OntoProduct(id: 4, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", description: "Вкусеый сочный таракан", isInStock: true),
-                                          OntoProduct(id: 5, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", description: "Вкусеый сочный таракан", isInStock: true)]
+    var similarProducts: [OntoProduct] = [OntoProduct(id: 10, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 2, similarProducts: [1,2,3]),
+                                          OntoProduct(id: 11, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 1, similarProducts: [1,2,3]),
+                                          OntoProduct(id: 12, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 1, similarProducts: [1,2,3])]
     var tags = ["Ежи", "Грызуны", "Птицы", "Рептилии", "Рыбы", "Млекопитающие", "Коты"]
     let url: URL
     let price: Float
@@ -65,29 +65,8 @@ struct ItemView: View {
                         Text("Похожие товары").font(.body).padding()
 
                     }
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack() {
-                            ForEach(0..<self.similarProducts.count) { i in
-                                let productCard = ProductCardView(text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price)
-                                ZStack(alignment: .bottomTrailing) {
-                                    NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price, basePrice: similarProducts[i].price, description: similarProducts[i].description)) {
-                                        productCard
-                                    }.isDetailLink(false)
 
-                                    Button(action: {
-                                        self.cartViewModel.addProductToCart(product: OntoProduct(id: similarProducts[i].id, name: similarProducts[i].name, price: similarProducts[i].price, image: similarProducts[i].image, info: similarProducts[i].info, description: similarProducts[i].description, isInStock: false))
-                                    }) {
-                                        HStack {
-                                            Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
-                                        }.frame(width: 40)
-                                    }.padding(.bottom, 12)
-                                            .padding(.trailing, 12)
-                                            .padding(.leading,20)
-                                }
 
-                            }
-                        }
-                    }
                 }
             }
         }.background(NavigationConfigurator { nc in
@@ -100,6 +79,32 @@ struct ItemView: View {
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading: btnBack)
 
+    }
+
+    func scroll() -> some View {
+        return  ScrollView(.horizontal, showsIndicators: false) {
+            HStack() {
+                ForEach(0..<self.similarProducts.count) { i in
+                    let productCard = ProductCardView(text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price)
+                    ZStack(alignment: .bottomTrailing) {
+                        NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price, basePrice: similarProducts[i].price, description: similarProducts[i].description)) {
+                            productCard
+                        }.isDetailLink(false)
+
+                        Button(action: {
+                            self.cartViewModel.addProductToCart(product: OntoProduct(id: similarProducts[i].id, name: similarProducts[i].name, price: similarProducts[i].price, image: similarProducts[i].image, info: similarProducts[i].info, parameters: [["Белки":"Жиры"]], description: similarProducts[i].description, inStock:1, similarProducts: [1,2,3]))
+                        }) {
+                            HStack {
+                                Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
+                            }.frame(width: 40)
+                        }.padding(.bottom, 12)
+                                .padding(.trailing, 12)
+                                .padding(.leading,20)
+                    }
+
+                }
+            }
+        }
     }
 }
 

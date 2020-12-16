@@ -12,22 +12,20 @@ struct ProductInCartCardView: View {
     @EnvironmentObject var cartViewModel : ViewRouter
 
     var body: some View {
-        HStack(alignment: .center) {
-            Spacer()
+        HStack(alignment: .top) {
 
             URLImage(URL(string: self.productInCart.product.image)!, content: {image in
                 image.image.centerCropped()
             })
-                    .frame(maxWidth: 90, maxHeight: 90)
+                    .frame(width: 110, height: 110)
                     .cornerRadius(10)
                     .padding([.top, .bottom], 10)
-
-            Spacer()
 
             VStack(alignment: .leading) {
                 Text(self.productInCart.product.name)
                         .foregroundColor(.black)
                         .layoutPriority(.greatestFiniteMagnitude)
+                Spacer()
                 HStack{
                     Button(action: {
                         self.cartViewModel.decreaseProductCount(product: self.productInCart.product)
@@ -38,10 +36,11 @@ struct ProductInCartCardView: View {
                             }else{
                                 Image("ic_cart_minus_png").resizable().aspectRatio(contentMode: .fit)
                             }
-                        }.frame(width: 30)
-                    }.padding(20)
+                        }.frame(width: 40)
+                    }
                     Spacer()
-                    Text("\(self.productInCart.count)")
+                    Text("\(self.productInCart.count)").font(.system(size: 18))
+                            .fontWeight(.bold).foregroundColor(Color.black)
                     Spacer()
                     Button(action: {
                         self.cartViewModel.increaseProductCount(product: self.productInCart.product)
@@ -52,12 +51,16 @@ struct ProductInCartCardView: View {
                             }else{
                                 Image("ic_cart_plus_png").resizable().aspectRatio(contentMode: .fit)
                             }
-                        }.frame(width: 30)
-                    }.padding(20)
-                }
-            }
-                    .padding(.top, 10)
-            VStack{
+                        }.frame(width: 40)
+                    }
+                }.frame(maxWidth: 120)
+                        .padding(.bottom,10)
+            }.frame(minWidth: 140)
+                    .padding(.horizontal, 10)
+                    .padding(.top,10)
+
+            Spacer()
+            VStack(alignment: .trailing){
                 Button(action: {
                     self.cartViewModel.deleteProductFromCart(product: productInCart.product)
                 }) {
@@ -67,8 +70,8 @@ struct ProductInCartCardView: View {
                         }else{
                             Image("ic_cart_cross_png").resizable().aspectRatio(contentMode: .fit)
                         }
-                    }.frame(width: 30)
-                }.padding(20)
+                    }.frame(width: 22)
+                }.padding([.top, .bottom], 10)
 
                 Spacer()
 
@@ -77,6 +80,7 @@ struct ProductInCartCardView: View {
                             .fontWeight(.bold)
                             .layoutPriority(.greatestFiniteMagnitude)
                             .font(.system(size: 20))
+                            .padding([.top, .bottom], 20)
                 }
 
             }

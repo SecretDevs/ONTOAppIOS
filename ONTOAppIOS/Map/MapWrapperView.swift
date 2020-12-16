@@ -24,12 +24,11 @@ struct MapWrapperView: View {
                                 Text("\(sum) ₽")
                                         .foregroundColor(Color(.black))
                                         .padding(5)
+                                        .frame(width: 83)
                             }
                                     .background(Color.cartButtonSumColor)
                                     .cornerRadius(10)
-                                    .padding(.top, 10)
-                                    .padding(.leading, 10)
-                                    .padding(.bottom, 10)
+                                    .padding(.all, 10)
                         }
                         ZStack(alignment: .topTrailing){
                             Image("ic_cart")
@@ -42,9 +41,10 @@ struct MapWrapperView: View {
                                             .foregroundColor(Color(.white))
                                             .padding(5)
                                             .font(.system(size: 10))
-                                }
-                                        .background(Circle().foregroundColor(Color.cartButtonCountColor).border(Color.white, width: 1))
-                                        .cornerRadius(50)
+                                }.frame(width: 5 * CGFloat(cartViewModel.getCount()/10) + 17, height: 17)
+                                        .background(Capsule()
+                                                .strokeBorder(Color.white,lineWidth: 1)
+                                                .background(Capsule().foregroundColor(Color.cartButtonCountColor)))
                                         .padding(.top, 5)
                                         .padding(.trailing, 5)
                             }

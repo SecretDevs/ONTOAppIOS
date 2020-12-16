@@ -12,8 +12,27 @@ struct ArticleView: View {
     var id: Int32?
 
     @ObservedObject var viewModel = ArticleViewModel()
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
+
+    var btnBack : some View {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            VStack(alignment: .center) {
+                HStack {
+                    Image(systemName: "chevron.left").resizable().frame(width: 12, height: 20).foregroundColor(Color.black)
+                    Spacer()
+                    Text("Подробнее").font(.system(size: 23)).fontWeight(.bold).foregroundColor(Color.black)
+
+                }.frame(width: 150)
+            }
+        }
+    }
 
     var body: some View{
+
+
         ScrollView{
             VStack{
                 URLImage(URL(string: viewModel.article?.image ?? "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!,content: {image in
@@ -34,6 +53,8 @@ struct ArticleView: View {
             }
         }
                 .navigationBarTitle("", displayMode: .inline)
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading: btnBack)
     }
 
 }

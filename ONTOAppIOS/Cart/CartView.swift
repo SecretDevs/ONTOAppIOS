@@ -18,9 +18,9 @@ struct CartView: View {
         if (viewModel.selectedProducts.isEmpty){
             VStack{
                 if #available(iOS 14.0, *){
-                    Image("background_empty_cart_svg").resizable().aspectRatio(contentMode: .fit).frame(maxWidth: 300).padding(.bottom, 30)
+                    Image("background_empty_cart_svg").resizable().aspectRatio(contentMode: .fit).frame(maxWidth: 300).padding(.bottom, 50)
                 }else{
-                    Image("background_empty_cart_png").resizable().aspectRatio(contentMode: .fit).frame(maxWidth: 300).padding(.bottom, 30)
+                    Image("background_empty_cart_png").resizable().aspectRatio(contentMode: .fit).frame(maxWidth: 300).padding(.bottom, 50)
                 }
                 Text("Корзина пуста").font(.system(size: 20)).fontWeight(.bold).padding(.bottom, 20)
                 if #available(iOS 14.0, *){
