@@ -3,6 +3,7 @@ PODS:
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
   - ExyteGrid (0.1.0)
+  - Introspect (0.0.6)
   - SwiftUIPager (1.13.0)
   - URLImage (0.9.19)
 
@@ -10,6 +11,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.4.0)
   - AlamofireImage (~> 4.1.0)
   - ExyteGrid (~> 0.1.0)
+  - Introspect (~> 0.0.5)
   - SwiftUIPager (~> 1.13.0)
   - URLImage (~> 0.9.16)
 
@@ -18,6 +20,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - ExyteGrid
+    - Introspect
     - SwiftUIPager
     - URLImage
 
@@ -25,9 +28,10 @@ SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   ExyteGrid: a38c2c758e70e35a0c9f59592b073df21427e6cf
+  Introspect: 3575a13dbece038e564e4375eeac2117e64a0242
   SwiftUIPager: 022f9043921d75053c4a8f3eea0b298b6846ee3e
   URLImage: 107320dff147321cceb201af24e8a154f24e6aed
 
-PODFILE CHECKSUM: c62324471c54e80902bcc7d82cad74e56ff84c46
+PODFILE CHECKSUM: 2b6d0afaab49705a7e1967e9ac7be80aab77c3c2
 
 COCOAPODS: 1.10.0

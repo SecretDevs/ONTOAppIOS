@@ -12,6 +12,7 @@ struct CartView: View {
 
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Binding var tabViewTag : Int
+    @State private var tabBar: UITabBar?
     @EnvironmentObject var viewModel : ViewRouter
 
     var body: some View {
@@ -40,13 +41,28 @@ struct CartView: View {
                             .cornerRadius(12.0)
                             .shadow(color: .buttonShadowColor, radius: 9, y: 3)
                 }
-            }.navigationBarTitle("Корзина")
+            }
+                    .navigationBarTitle("Корзина")
+                    .introspectTabBarController{ controller in
+                        self.tabBar = controller.tabBar
+                        self.tabBar?.isHidden = true
+                    }
+                    .onDisappear{
+                        self.tabBar?.isHidden = false
+                    }
         }else{
             List(self.viewModel.selectedProducts) { productInCart in
                 ProductInCartCardView(productInCart: productInCart)
             }
                     .buttonStyle(PlainButtonStyle())
                     .navigationBarTitle("Корзина")
+                    .introspectTabBarController{ controller in
+                        self.tabBar = controller.tabBar
+                        self.tabBar?.isHidden = true
+                    }
+                    .onDisappear{
+                        self.tabBar?.isHidden = false
+                    }
         }
     }
 }

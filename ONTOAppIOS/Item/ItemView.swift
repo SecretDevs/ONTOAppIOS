@@ -12,6 +12,7 @@ import ExyteGrid
 struct ItemView: View {
 
     @Binding var shouldPopToRootView : Bool
+    @State private var tabBar: UITabBar?
     @EnvironmentObject var cartViewModel : ViewRouter
 
 
@@ -78,6 +79,13 @@ struct ItemView: View {
                 .navigationBarTitle("", displayMode: .inline)
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading: btnBack)
+                .introspectTabBarController{ controller in
+                    self.tabBar = controller.tabBar
+                    self.tabBar?.isHidden = true
+                }
+                .onDisappear{
+                    self.tabBar?.isHidden = false
+                }
 
     }
 

@@ -178,6 +178,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ExyteGrid/ExyteGrid.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Introspect/Introspect.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftUIPager/SwiftUIPager.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/URLImage/URLImage.framework"
 fi
@@ -185,6 +186,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ExyteGrid/ExyteGrid.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Introspect/Introspect.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftUIPager/SwiftUIPager.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/URLImage/URLImage.framework"
 fi

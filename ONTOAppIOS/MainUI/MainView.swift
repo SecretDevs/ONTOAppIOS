@@ -5,6 +5,7 @@
 
 import Foundation
 import SwiftUI
+import Introspect
 
 struct MainView: View {
     @State var tag = 2
@@ -43,6 +44,9 @@ struct MainView: View {
                         UITabBar.appearance().barTintColor = .white
                         UITabBar.appearance().unselectedItemTintColor = .black
                         UITabBar.appearance().shadowImage = UIImage()
+                    }
+                    .introspectTabBarController{ controller in
+                        controller.tabBar.isHidden = false
                     }
         }.navigationBarHidden(true)
     }

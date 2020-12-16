@@ -102,6 +102,9 @@ struct CatalogView: View {
                     })
         }
                 .navigationBarHidden(true)
+                .introspectTabBarController{ controller in
+                    controller.tabBar.isHidden = false
+                }
     }
 
 

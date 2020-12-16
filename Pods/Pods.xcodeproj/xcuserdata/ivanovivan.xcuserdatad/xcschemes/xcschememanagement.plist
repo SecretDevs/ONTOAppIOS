@@ -25,40 +25,47 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>Pods-ONTOAppIOS-ONTOAppIOSUITests.xcscheme</key>
+		<key>Introspect.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>Pods-ONTOAppIOS.xcscheme</key>
+		<key>Pods-ONTOAppIOS-ONTOAppIOSUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>Pods-ONTOAppIOSTests.xcscheme</key>
+		<key>Pods-ONTOAppIOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>SwiftUIPager.xcscheme</key>
+		<key>Pods-ONTOAppIOSTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>URLImage.xcscheme</key>
+		<key>SwiftUIPager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>9</integer>
+		</dict>
+		<key>URLImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

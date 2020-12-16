@@ -14,6 +14,7 @@ target 'ONTOAppIOS' do
   pod 'ExyteGrid', '~> 0.1.0'
   pod 'URLImage', '~> 0.9.16'
   pod 'SwiftUIPager', '~> 1.13.0'
+  pod 'Introspect', '~> 0.0.5'
 
   target 'ONTOAppIOSTests' do
     inherit! :search_paths
