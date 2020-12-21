@@ -41,16 +41,10 @@ struct ArticlesView: View{
                     ForEach(0..<articles.count) { i in
                         NavigationLink(destination: ArticleView(id: articles[i].id)){
                             ArticleCardView(text: articles[i].name, url: URL(string: articles[i].image)!)
-                                    .gridSpan(column: i % 2 == 0 ? 2 : 1)
+                                    .gridSpan(column: i % 3 == 0 ? 2 : 1)
                         }
 
                     }
-                    ArticleCardView(text: "Article", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!)
-                            .gridSpan(column: 1)
-                    ArticleCardView(text: "Article", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!)
-                            .gridSpan(column: 1)
-                    ArticleCardView(text: "Article", url: URL(string: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!)
-                            .gridSpan(column: 2)
 
                 }
                         .gridContentMode(.scroll)
@@ -59,7 +53,6 @@ struct ArticlesView: View{
                         .background(NavigationConfigurator { nc in
                             nc.navigationBar.barTintColor = .white
                             nc.navigationBar.shadowImage = UIImage()
-
                         })
                         .navigationBarTitle("", displayMode: .inline)
                         .navigationBarItems(leading: HStack(alignment: .bottom) {

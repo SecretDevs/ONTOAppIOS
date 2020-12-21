@@ -11,11 +11,12 @@ struct MapWrapperView: View {
 
     @Binding var tabViewTag : Int
     @EnvironmentObject var cartViewModel : ViewRouter
+    @State private var isCreated = false
 
     var body: some View {
         NavigationView{
             ZStack(alignment: .topTrailing){
-                MapView()
+                MapView(isCreated: self.$isCreated)
                 NavigationLink(destination: CartView(tabViewTag: self.$tabViewTag)){
                     HStack{
                         let sum = self.cartViewModel.getSum()

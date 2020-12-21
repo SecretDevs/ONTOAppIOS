@@ -9,28 +9,48 @@ import SwiftUI
 
 struct MapView: UIViewRepresentable {
     @ObservedObject var viewModel = MapViewModel()
+    let locationManager = CLLocationManager()
+    static private var currentView : MKMapView? = nil
+    @Binding var isCreated : Bool
 
     func makeUIView(context: Context) -> MKMapView {
+        if MapView.currentView != nil {
+            return MapView.currentView!
+        }
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
+        mapView.showsUserLocation = true
+        MapView.currentView = mapView
         return mapView
     }
 
     func updateUIView(_ view: MKMapView, context: Context) {
-        view.delegate = context.coordinator
-        /*let annotation = ShopPointAnnotation(address: "address", phone: "+7-999-888-77-33")
-        annotation.title = "ONTO pet shop"
-        let latitude = 59.986117
-        let longitude = 30.392396
-        annotation.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
-        view.addAnnotation(annotation)*/
-        for shop in viewModel.shops {
-            let annotation = ShopPointAnnotation(address: "address", phone: "+7-999-888-77-33")
-            annotation.title = shop.name
-            let latitude = shop.location.latitude
-            let longitude = shop.location.longitude
-            annotation.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
-            view.addAnnotation(annotation)
+        if !self.isCreated{
+            view.delegate = context.coordinator
+            for shop in viewModel.shops {
+                let annotation = ShopPointAnnotation(address: "address", phone: "+7-999-888-77-33")
+                annotation.title = shop.name
+                let latitude = shop.location.latitude
+                let longitude = shop.location.longitude
+                annotation.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
+                view.addAnnotation(annotation)
+            }
+            if !viewModel.shops.isEmpty {
+                self.isCreated = true
+            }
+        }
+        view.showsUserLocation = true
+        let status = CLLocationManager.authorizationStatus()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+            let location: CLLocationCoordinate2D = locationManager.location!.coordinate
+            let span = MKCoordinateSpan(latitudeDelta: 0.009, longitudeDelta: 0.009)
+            let region = MKCoordinateRegion(center: location, span: span)
+            view.setRegion(region, animated: true)
         }
     }
 
@@ -67,10 +87,4 @@ struct MapView: UIViewRepresentable {
     }
 
 
-}
-
-struct MapView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapView()
-    }
 }
