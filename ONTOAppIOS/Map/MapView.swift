@@ -25,8 +25,8 @@ struct MapView: UIViewRepresentable {
     }
 
     func updateUIView(_ view: MKMapView, context: Context) {
+        view.delegate = context.coordinator
         if !self.isCreated{
-            view.delegate = context.coordinator
             for shop in viewModel.shops {
                 let annotation = ShopPointAnnotation(address: "address", phone: "+7-999-888-77-33")
                 annotation.title = shop.name
@@ -48,7 +48,7 @@ struct MapView: UIViewRepresentable {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
             let location: CLLocationCoordinate2D = locationManager.location!.coordinate
-            let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+            let span = MKCoordinateSpan(latitudeDelta: 0.9, longitudeDelta: 0.9)
             let region = MKCoordinateRegion(center: location, span: span)
             view.setRegion(region, animated: true)
         }
@@ -70,6 +70,8 @@ struct MapView: UIViewRepresentable {
             if annotation is MKUserLocation { return nil }
 
             if #available(iOS 11.0, *) {
+                let view = mapView.view(for: annotation)
+                view?.prepareForDisplay()
                 if annotation is MKClusterAnnotation { return nil }
             }
 
