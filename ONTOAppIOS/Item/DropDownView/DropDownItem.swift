@@ -14,7 +14,7 @@ struct DropDownView: View {
     var body: some View {
         VStack{
             HStack{
-                Text(self.title).fontWeight(.heavy)
+                Text(self.title).fontWeight(.bold)
                 Spacer()
 
                 if (expand){

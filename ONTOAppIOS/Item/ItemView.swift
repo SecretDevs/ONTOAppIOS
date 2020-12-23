@@ -11,7 +11,7 @@ import ExyteGrid
 
 struct ItemView: View {
 
-    @Binding var shouldPopToRootView : Bool
+   @Binding var shouldPopToRootView : Bool
     @State private var tabBar: UITabBar?
     @EnvironmentObject var cartViewModel : ViewRouter
 
@@ -31,7 +31,7 @@ struct ItemView: View {
     }
 
     let text: String
-    var similarProducts: [OntoProduct] = [OntoProduct(id: 10, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 2, similarProducts: [1,2,3]),
+   var similarProducts: [OntoProduct] = [OntoProduct(id: 10, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 2, similarProducts: [1,2,3]),
                                           OntoProduct(id: 11, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 1, similarProducts: [1,2,3]),
                                           OntoProduct(id: 12, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 1, similarProducts: [1,2,3])]
     var tags = ["Ежи", "Грызуны", "Птицы", "Рептилии", "Рыбы", "Млекопитающие", "Коты"]
@@ -49,12 +49,13 @@ struct ItemView: View {
                             image.image.centerCropped()
                         }).frame(height: 180)
                                 .cornerRadius(10)
+                        .padding(4)
                         ItemViewInstructions(text: self.text, price: self.price, basePrice: self.basePrice)
                     }
 
                     VStack(alignment: .leading) {
-                        Text("Подходит для").font(.body).padding()
-                        TagCloudView(tags: tags, tagBackgroundColor: Color.green.opacity(0.3), tagTextColor: Color.green, tagRadius: 10)
+                        Text("Подходит для").font(.system(size: 17)).fontWeight(.bold).padding()
+                        TagCloudView(tags: tags, tagBackgroundColor: Color.buttonEndColor.opacity(0.13), tagTextColor: Color.buttonEndColor, tagRadius: 10)
                     }
 
                     VStack{
@@ -63,10 +64,10 @@ struct ItemView: View {
                     }
 
                     VStack(alignment: .leading) {
-                        Text("Похожие товары").font(.body).padding()
+                        Text("Похожие товары").font(.system(size: 17)).fontWeight(.bold).padding()
 
                     }
-
+                    scroll()
 
                 }
             }

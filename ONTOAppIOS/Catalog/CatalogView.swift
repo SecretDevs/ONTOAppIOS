@@ -110,15 +110,18 @@ struct CatalogView: View {
 
 
     func gridView () -> some View {
-        let value = ceil(Double(self.viewModel.products.count / 2))
-        let value3 = value * 310
-        let value4 = value3
-        return Grid(tracks: 2) {
-            ForEach(0..<self.viewModel.products.count) { i in
-                let productCard = ProductCardView(text: self.viewModel.products[i].name, url: URL(string: self.viewModel.products[i].image)!, price: self.viewModel.products[i].price)
+
+        if (self.viewModel.products.count > 0) {
+            let value = ceil(Double(self.viewModel.products.count / 2))
+            let value3 = value * 310
+            let value4 = value3
+
+            return AnyView(Grid(tracks: 2) {
+                ForEach(0..<self.viewModel.products.count) { i in
                 ZStack(alignment: .bottomTrailing) {
                     NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, text: self.viewModel.products[i].name, url: URL(string: self.viewModel.products[i].image)!, price: self.viewModel.products[i].price, basePrice: 150.0, description: self.viewModel.products[i].description), isActive: self.$isActive) {
-                        productCard.gridSpan(column: 1)
+                        ProductCardView(text: self.viewModel.products[i].name, url: URL(string: self.viewModel.products[i].image)!, price: self.viewModel.products[i].price)
+                                .gridSpan(column: 1)
                     }.isDetailLink(false)
                     Button(action: {
                         self.cartViewModel.addProductToCart(product: self.viewModel.products[i])
@@ -131,11 +134,17 @@ struct CatalogView: View {
                             .padding(.trailing, 12)
                             .padding(.bottom, 12)
                 }
-            }
-        }.frame(height: CGFloat(value4))
-                .gridContentMode(.fill)
-                .gridPacking(.dense)
-                .gridFlow(.rows)
+                }
+            }.frame(height: CGFloat(value4))
+                    .gridContentMode(.fill)
+                    .gridPacking(.dense)
+                    .gridFlow(.rows))
+        }
+        else {
+            return AnyView( VStack(alignment: .center) {
+                Text("Loading...")
+            })
+        }
 
     }
 

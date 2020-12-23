@@ -40,7 +40,7 @@ struct ProductCardView: View {
                 }
                 Spacer()
                 }.padding(.leading, 12)
-                        .padding(.trailing)
+                        .padding(.trailing,5)
                     .frame(height: 70)
 
 
@@ -60,7 +60,7 @@ struct ProductCardView: View {
                     .padding(.leading,10)
                     .frame(height: 40)
 
-        }.frame(height: 290, alignment: .top)
+        }.frame(width: 168,height: 290, alignment: .top)
                 .background(Color.white)
                 .cornerRadius(10)
                 .shadow(radius: 5)
