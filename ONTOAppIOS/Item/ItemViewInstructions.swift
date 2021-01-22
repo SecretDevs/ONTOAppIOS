@@ -17,24 +17,26 @@ struct ItemViewInstructions: View {
     let basePrice: Float
 
     var body: some View {
-        VStack {
-            Text(self.text)
+        VStack(alignment: .leading) {
+            Text(self.text).font(.system(size: 16))
+                    .fontWeight(.bold)
                     .foregroundColor(.black)
                     .layoutPriority(.greatestFiniteMagnitude)
 
 
             ForEach(0..<self.instructions.count) { i in
                 HStack {
-                    Text("Белки").font(.subheadline)
+                    Text("Белки").font(.subheadline).accentColor(Color.gray)
                     Spacer()
-                    Text("\(self.instructions[i], specifier: "%.2f")").font(.subheadline)
+                    Text("\(self.instructions[i], specifier: "%.2f")").font(.subheadline).accentColor(Color.gray)
                 }.padding(2)
             }
-
+            Divider()
             HStack {
-                Text("Цена").font(.subheadline)
+                Text("Цена").font(.subheadline).accentColor(Color.gray)
                 Spacer()
-                Text("\(self.instructions[3], specifier: "%.0f")").font(.body)
+                Text("\(self.price, specifier: "%.0f") ₽").font(.system(size: 20))
+                .fontWeight(.bold)
             }.padding(2)
                     .padding(.top, 5)
         }.padding(.leading, 10)
