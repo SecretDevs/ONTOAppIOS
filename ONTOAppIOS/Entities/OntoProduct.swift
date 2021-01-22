@@ -5,7 +5,8 @@
 
 import Foundation
 
-struct OntoProduct: Codable, Identifiable{
+struct OntoProduct: Codable, Identifiable, Hashable{
+    let uuid = UUID()
     let id: Int32
     let name: String
     let price: Float

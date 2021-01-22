@@ -8,7 +8,7 @@ import SwiftUI
 
 struct DropDownView: View {
 
-    @State var expand = false
+    @State var expand = true
     let text: String
     let title: String
     var body: some View {

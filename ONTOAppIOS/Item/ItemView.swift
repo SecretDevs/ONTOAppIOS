@@ -14,6 +14,7 @@ struct ItemView: View {
     @Binding var shouldPopToRootView : Bool
     @State private var tabBar: UITabBar?
     @EnvironmentObject var cartViewModel : ViewRouter
+    @ObservedObject var viewModel = ItemViewModel()
 
 
     var btnBack : some View {
@@ -30,26 +31,22 @@ struct ItemView: View {
             }
     }
 
-    let text: String
+    var id: Int32?
     var similarProducts: [OntoProduct] = [OntoProduct(id: 10, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 2, similarProducts: [1,2,3]),
                                           OntoProduct(id: 11, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 1, similarProducts: [1,2,3]),
                                           OntoProduct(id: 12, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 1, similarProducts: [1,2,3])]
     var tags = ["Ежи", "Грызуны", "Птицы", "Рептилии", "Рыбы", "Млекопитающие", "Коты"]
-    let url: URL
-    let price: Float
-    let basePrice: Float
-    let description: String
 
     var body: some View {
         VStack(alignment: .leading) {
             ScrollView() {
                 VStack(alignment: .leading) {
                     HStack {
-                        URLImage(self.url, content: { image in
+                        URLImage(URL(string: self.viewModel.product?.image ?? "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg")!, content: { image in
                             image.image.centerCropped()
                         }).frame(height: 180)
                                 .cornerRadius(10)
-                        ItemViewInstructions(text: self.text, price: self.price, basePrice: self.basePrice)
+                        ItemViewInstructions(text: self.viewModel.product?.name ?? "", price: self.viewModel.product?.price ?? 0, basePrice: self.viewModel.product?.price ?? 0)
                     }
 
                     VStack(alignment: .leading) {
@@ -58,8 +55,8 @@ struct ItemView: View {
                     }
 
                     VStack{
-                        DropDownView(text: self.description, title: "Описание")
-                        DropDownView(text: self.description, title: "Преимущества")
+                        DropDownView(text: self.viewModel.product?.description ?? "", title: "Описание")
+                        DropDownView(text: self.viewModel.product?.description ?? "", title: "Преимущества")
                     }
 
                     VStack(alignment: .leading) {
@@ -70,7 +67,11 @@ struct ItemView: View {
 
                 }
             }
-        }.background(NavigationConfigurator { nc in
+        }
+                .onAppear{
+                    self.viewModel.getProduct(id: self.id ?? 0)
+                }
+                .background(NavigationConfigurator { nc in
                    nc.hidesBarsOnSwipe = true
                     //nc.isNavigationBarHidden = true
                     //nc.navigationBar.barTintColor = .white
@@ -95,7 +96,7 @@ struct ItemView: View {
                 ForEach(0..<self.similarProducts.count) { i in
                     let productCard = ProductCardView(text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price)
                     ZStack(alignment: .bottomTrailing) {
-                        NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price, basePrice: similarProducts[i].price, description: similarProducts[i].description)) {
+                        NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, id: similarProducts[i].id)) {
                             productCard
                         }.isDetailLink(false)
 

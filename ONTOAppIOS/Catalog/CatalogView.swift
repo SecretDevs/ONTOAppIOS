@@ -19,6 +19,7 @@ struct CatalogView: View {
     @ObservedObject var viewModel = CatalogViewModel()
     @EnvironmentObject var cartViewModel: ViewRouter
     @State var isActive: Bool = false
+    @State var selectedProduct: OntoProduct? = nil
     var tags = ["Кошка", "Собака", "Грызун", "Мышь", "Крыса", "Хомяк", "Дегу"]
     var offers_png = ["offer1_png", "offer1_png", "offer1_png"]
     var offers_svg = ["offer1_svg", "offer1_svg", "offer1_svg"]
@@ -113,29 +114,43 @@ struct CatalogView: View {
         let value = ceil(Double(self.viewModel.products.count / 2))
         let value3 = value * 310
         let value4 = value3
-        return Grid(tracks: 2) {
-            ForEach(0..<self.viewModel.products.count) { i in
-                let productCard = ProductCardView(text: self.viewModel.products[i].name, url: URL(string: self.viewModel.products[i].image)!, price: self.viewModel.products[i].price)
-                ZStack(alignment: .bottomTrailing) {
-                    NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, text: self.viewModel.products[i].name, url: URL(string: self.viewModel.products[i].image)!, price: self.viewModel.products[i].price, basePrice: 150.0, description: self.viewModel.products[i].description), isActive: self.$isActive) {
-                        productCard.gridSpan(column: 1)
+        return VStack{
+            VStack {
+                if selectedProduct != nil{
+                    NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, id: selectedProduct!.id), isActive: self.$isActive) {
+                        Text("Empty.")
                     }.isDetailLink(false)
-                    Button(action: {
-                        self.cartViewModel.addProductToCart(product: self.viewModel.products[i])
-                    }) {
-                        HStack {
-                            Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
-                        }.frame(width: 37)
-                    }
-                            .padding(.leading, 20)
-                            .padding(.trailing, 12)
-                            .padding(.bottom, 12)
                 }
-            }
-        }.frame(height: CGFloat(value4))
-                .gridContentMode(.fill)
-                .gridPacking(.dense)
-                .gridFlow(.rows)
+            }.hidden()
+            Grid(tracks: 2) {
+                ForEach(self.viewModel.products, id: \.uuid) { currentProduct in
+                    //let productCard = ProductCardView(text: currentProduct.name, url: URL(string: currentProduct.image)!, price: currentProduct.price)
+                    ZStack(alignment: .bottomTrailing) {
+                        Button(action: {
+                            self.selectedProduct = currentProduct
+                            self.isActive = true
+                        }, label: {
+                            ProductCardView(text: currentProduct.name, url: URL(string: currentProduct.image)!, price: currentProduct.price).gridSpan(column: 1)
+                        })
+
+                        Button(action: {
+                            self.cartViewModel.addProductToCart(product: currentProduct)
+                        }) {
+                            HStack {
+                                Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
+                            }.frame(width: 37)
+                        }
+                                .padding(.leading, 20)
+                                .padding(.trailing, 12)
+                                .padding(.bottom, 12)
+                    }
+                }
+            }.frame(height: CGFloat(value4))
+                    .gridContentMode(.fill)
+                    .gridPacking(.dense)
+                    .gridFlow(.rows)
+        }
+
 
     }
 

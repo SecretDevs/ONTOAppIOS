@@ -4,3 +4,22 @@
 //
 
 import Foundation
+import Combine
+
+class ItemViewModel: ObservableObject{
+
+    @Published var product: OntoProduct?
+    var cancellation: AnyCancellable?
+    let service = CatalogService()
+
+    func getProduct(id: Int32) {
+        cancellation = service.fetch()
+                .mapError({ (error) -> Error in
+                    print(error)
+                    return error
+                })
+                .sink(receiveCompletion: {_ in}, receiveValue: { ontoResponse in
+                    self.product = ontoResponse.data.products[Int(id) - 1]
+                })
+    }
+}
