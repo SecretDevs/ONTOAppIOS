@@ -8,7 +8,7 @@ import SwiftUI
 
 struct DropDownView: View {
 
-    @State var expand = true
+    @State var expand: Bool
     let text: String
     let title: String
     var body: some View {
@@ -18,10 +18,12 @@ struct DropDownView: View {
                 Spacer()
 
                 if (expand){
-                Image(systemName:  "chevron.up").resizable().frame(width: 13, height: 6)
+                Image(systemName:  "chevron.up").resizable().frame(width: 16, height: 8)
+                        .font(Font.title.weight(.bold))
                 }
                 else {
-                    Image(systemName:  "chevron.right").resizable().frame(width: 6, height: 13)
+                    Image(systemName:  "chevron.right").resizable().frame(width: 8, height: 16)
+                            .font(Font.title.weight(.bold))
                 }
             }.contentShape(Rectangle())
                     .onTapGesture {
@@ -34,10 +36,12 @@ struct DropDownView: View {
 
 
         }
-        .padding()
+        .padding(.leading,15).padding(.trailing,15)
+                .padding(.bottom,4)
+                .padding(.top,4)
         .background(Color.white)
         .cornerRadius(20)
-    }//
+    }
 }
 
 struct DropDownItemView_Previews: PreviewProvider {

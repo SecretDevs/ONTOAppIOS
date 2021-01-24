@@ -38,7 +38,7 @@ struct ItemViewInstructions: View {
                 Text("\(self.price, specifier: "%.0f") ₽").font(.system(size: 20))
                 .fontWeight(.bold)
             }.padding(2)
-                    .padding(.top, 5)
+            .padding(.bottom,2)
         }.padding(.leading, 10)
                 .padding(.trailing)
     }

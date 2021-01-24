@@ -11,30 +11,31 @@ import ExyteGrid
 
 struct ItemView: View {
 
-    @Binding var shouldPopToRootView : Bool
+    @Binding var shouldPopToRootView: Bool
     @State private var tabBar: UITabBar?
-    @EnvironmentObject var cartViewModel : ViewRouter
+    @EnvironmentObject var cartViewModel: ViewRouter
     @ObservedObject var viewModel = ItemViewModel()
+    @ObservedObject var catalogViewModel = CatalogViewModel()
 
 
-    var btnBack : some View {
-            Button(action: {
-                self.shouldPopToRootView = false
+    var btnBack: some View {
+        Button(action: {
+            self.shouldPopToRootView = false
 
-            }) {
-                HStack {
-                    Image(systemName: "chevron.left").resizable().frame(width: 12, height: 20).foregroundColor(Color.black)
-                    Spacer()
-                    Text("Товар").font(.system(size: 23)).fontWeight(.bold).foregroundColor(Color.black)
+        }) {
+            HStack {
+                Image(systemName: "chevron.left").resizable().frame(width: 12, height: 20).foregroundColor(Color.black)
+                Spacer()
+                Text("Товар").font(.system(size: 23)).fontWeight(.bold).foregroundColor(Color.black)
 
-                }.frame(width: 100)
-            }
+            }.frame(width: 100)
+        }
     }
 
     var id: Int32?
-    var similarProducts: [OntoProduct] = [OntoProduct(id: 10, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 2, similarProducts: [1,2,3]),
-                                          OntoProduct(id: 11, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 1, similarProducts: [1,2,3]),
-                                          OntoProduct(id: 12, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан",parameters: [["Белки":"15"],["Жиры":"12"]], description: "Вкусеый сочный таракан", inStock: 1, similarProducts: [1,2,3])]
+    var similarProducts: [OntoProduct] = [OntoProduct(id: 10, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", parameters: [["Белки": "15"], ["Жиры": "12"]], description: "Вкусеый сочный таракан", inStock: 2, similarProducts: [1, 2, 3]),
+                                          OntoProduct(id: 11, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", parameters: [["Белки": "15"], ["Жиры": "12"]], description: "Вкусеый сочный таракан", inStock: 1, similarProducts: [1, 2, 3]),
+                                          OntoProduct(id: 12, name: "Таракан", price: 150.0, image: "https://bio-onto.ru/wp-content/uploads/2020/08/whatsapp-image-2020-08-06-at-15.13.20.jpeg", info: "Просто таракан", parameters: [["Белки": "15"], ["Жиры": "12"]], description: "Вкусеый сочный таракан", inStock: 1, similarProducts: [1, 2, 3])]
     var tags = ["Ежи", "Грызуны", "Птицы", "Рептилии", "Рыбы", "Млекопитающие", "Коты"]
 
     var body: some View {
@@ -46,33 +47,38 @@ struct ItemView: View {
                             image.image.centerCropped()
                         }).frame(height: 180)
                                 .cornerRadius(10)
+                                .padding(.leading, 7)
+                                .padding(.trailing, 7)
                         ItemViewInstructions(text: self.viewModel.product?.name ?? "", price: self.viewModel.product?.price ?? 0, basePrice: self.viewModel.product?.price ?? 0)
                     }
 
                     VStack(alignment: .leading) {
-                        Text("Подходит для").font(.body).padding()
-                        TagCloudView(tags: tags, tagBackgroundColor: Color.green.opacity(0.3), tagTextColor: Color.green, tagRadius: 10)
+                        Text("Подходит для").fontWeight(.bold).padding(.leading, 15)
+                        TagCloudView(tags: tags, tagBackgroundColor: Color.buttonEndColor.opacity(0.13), tagTextColor: Color.buttonEndColor, tagRadius: 10)
                     }
 
-                    VStack{
-                        DropDownView(text: self.viewModel.product?.description ?? "", title: "Описание")
-                        DropDownView(text: self.viewModel.product?.description ?? "", title: "Преимущества")
+                    VStack {
+                        Divider().padding(.leading, 15).padding(.trailing, 15)
+                        DropDownView(expand: true, text: self.viewModel.product?.description ?? "", title: "Описание")
+                        Divider().padding(.leading, 15).padding(.trailing, 15)
+                        DropDownView(expand: false, text: self.viewModel.product?.description ?? "", title: "Подробнее")
+                        Divider().padding(.leading, 15).padding(.trailing, 15)
                     }
 
                     VStack(alignment: .leading) {
-                        Text("Похожие товары").font(.body).padding()
-
+                        Text("Похожие товары").fontWeight(.bold).padding(.leading, 15)
+                        scroll()
                     }
 
 
                 }
             }
         }
-                .onAppear{
+                .onAppear {
                     self.viewModel.getProduct(id: self.id ?? 0)
                 }
                 .background(NavigationConfigurator { nc in
-                   nc.hidesBarsOnSwipe = true
+                    nc.hidesBarsOnSwipe = true
                     //nc.isNavigationBarHidden = true
                     //nc.navigationBar.barTintColor = .white
 
@@ -80,48 +86,58 @@ struct ItemView: View {
                 .navigationBarTitle("", displayMode: .inline)
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading: btnBack)
-                .introspectTabBarController{ controller in
+                .introspectTabBarController { controller in
                     self.tabBar = controller.tabBar
                     self.tabBar?.isHidden = true
                 }
-                .onDisappear{
+                .onDisappear {
                     self.tabBar?.isHidden = false
                 }
 
     }
 
     func scroll() -> some View {
-        return  ScrollView(.horizontal, showsIndicators: false) {
+        return ScrollView(.horizontal, showsIndicators: false) {
             HStack() {
-                ForEach(0..<self.similarProducts.count) { i in
-                    let productCard = ProductCardView(text: similarProducts[i].info, url: URL(string: similarProducts[i].image)!, price: similarProducts[i].price)
-                    ZStack(alignment: .bottomTrailing) {
-                        NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, id: similarProducts[i].id)) {
-                            productCard
-                        }.isDetailLink(false)
-
-                        Button(action: {
-                            self.cartViewModel.addProductToCart(product: OntoProduct(id: similarProducts[i].id, name: similarProducts[i].name, price: similarProducts[i].price, image: similarProducts[i].image, info: similarProducts[i].info, parameters: [["Белки":"Жиры"]], description: similarProducts[i].description, inStock:1, similarProducts: [1,2,3]))
-                        }) {
-                            HStack {
-                                Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
-                            }.frame(width: 40)
-                        }.padding(.bottom, 12)
-                                .padding(.trailing, 12)
-                                .padding(.leading,20)
-                    }
-
+               // let end = self.viewModel.product?.similarProducts.count ?? 1
+                ForEach(self.viewModel.product?.similarProducts ?? [1], id: \.self) { i in
+                    subScroll(index: Int(i))
                 }
             }
         }
     }
-}
 
-struct ItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    func subScroll(index: Int) -> some View {
+        let i = index - 1
+        if (self.catalogViewModel.products.count != 0) {
+            let productCard = ProductCardView(text: self.catalogViewModel.products[i].name, url: URL(string: self.catalogViewModel.products[i].image)!, price: self.catalogViewModel.products[i].price)
+            return AnyView(ZStack(alignment: .bottomTrailing) {
+                NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, id: Int32(index))) {
+                    productCard
+                }.isDetailLink(false)
+
+                Button(action: {
+                    self.cartViewModel.addProductToCart(product: OntoProduct(id: Int32(i), name: self.catalogViewModel.products[i].name, price: self.catalogViewModel.products[i].price, image: self.catalogViewModel.products[i].image, info: self.catalogViewModel.products[i].info, parameters: self.catalogViewModel.products[i].parameters, description: self.catalogViewModel.products[i].description, inStock: 1, similarProducts: self.catalogViewModel.products[i].similarProducts))
+                }) {
+                    HStack {
+                        Image("item_plus_button").resizable().aspectRatio(contentMode: .fit)
+                    }.frame(width: 40)
+                }.padding(.bottom, 12)
+                        .padding(.trailing, 12)
+                        .padding(.leading, 20)
+            })
+        } else {
+            return AnyView(Text("Загрузка..."))
+        }
     }
 }
+
+    struct ItemView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
+    }
+
 
 
 
