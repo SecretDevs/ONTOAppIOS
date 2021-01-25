@@ -12,6 +12,7 @@ import ExyteGrid
 struct ItemView: View {
 
     @Binding var shouldPopToRootView: Bool
+    @Binding var navBarHidden: Bool
     @State private var tabBar: UITabBar?
     @EnvironmentObject var cartViewModel: ViewRouter
     @ObservedObject var viewModel = ItemViewModel()
@@ -21,7 +22,7 @@ struct ItemView: View {
     var btnBack: some View {
         Button(action: {
             self.shouldPopToRootView = false
-
+            self.navBarHidden = false
         }) {
             HStack {
                 Image(systemName: "chevron.left").resizable().frame(width: 12, height: 20).foregroundColor(Color.black)
@@ -112,7 +113,7 @@ struct ItemView: View {
         if (self.catalogViewModel.products.count != 0) {
             let productCard = ProductCardView(text: self.catalogViewModel.products[i].name, url: URL(string: self.catalogViewModel.products[i].image)!, price: self.catalogViewModel.products[i].price)
             return AnyView(ZStack(alignment: .bottomTrailing) {
-                NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, id: Int32(index))) {
+                NavigationLink(destination: ItemView(shouldPopToRootView: self.$shouldPopToRootView, navBarHidden: self.$navBarHidden, id: Int32(index))) {
                     productCard
                 }.isDetailLink(false)
 

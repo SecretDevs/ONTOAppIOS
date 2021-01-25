@@ -14,6 +14,7 @@ import URLImage
 struct OffersView: View{
     @Binding var tabViewTag : Int
     @State var isActive: Bool = false
+    @State var navBarHidden: Bool = false
     @State var selectedOffer: OntoOffer? = nil
     @ObservedObject var viewModel = OffersViewModel()
     @EnvironmentObject var cartViewModel : ViewRouter
@@ -42,7 +43,7 @@ struct OffersView: View{
                 VStack{
                     VStack{
                         if selectedOffer != nil{
-                            NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, id: selectedOffer!.id), isActive: self.$isActive) {
+                            NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, navBarHidden: self.$navBarHidden, id: selectedOffer!.id), isActive: self.$isActive) {
                                 Text("Empty.")
                             }.isDetailLink(false)
                         }

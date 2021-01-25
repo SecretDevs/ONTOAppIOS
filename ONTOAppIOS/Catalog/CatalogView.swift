@@ -14,6 +14,7 @@ import SwiftUIPager
 struct CatalogView: View {
 
     @Binding var tabViewTag : Int
+    @State var navBarHidden: Bool = false
     @State var selected = ""
     @State var pageIndex = 0
     @ObservedObject var viewModel = CatalogViewModel()
@@ -117,7 +118,7 @@ struct CatalogView: View {
         return VStack{
             VStack {
                 if selectedProduct != nil{
-                    NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, id: selectedProduct!.id), isActive: self.$isActive) {
+                    NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, navBarHidden: self.$navBarHidden, id: selectedProduct!.id), isActive: self.$isActive) {
                         Text("Empty.")
                     }.isDetailLink(false)
                 }

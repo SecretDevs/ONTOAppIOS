@@ -13,7 +13,10 @@ struct CartView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Binding var tabViewTag : Int
     @State private var tabBar: UITabBar?
+    @State var navBarHidden: Bool = false
     @EnvironmentObject var viewModel : ViewRouter
+    @State var isActive: Bool = false
+    @State var selectedProductInCart: ProductInCart? = nil
 
     var body: some View {
         if (viewModel.selectedProducts.isEmpty){
@@ -51,10 +54,29 @@ struct CartView: View {
                         self.tabBar?.isHidden = false
                     }
         }else{
-            List(self.viewModel.selectedProducts) { productInCart in
-                ProductInCartCardView(productInCart: productInCart)
+            NavigationView{
+                VStack{
+                    VStack {
+                        if selectedProductInCart != nil{
+                            NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, navBarHidden: self.$navBarHidden, id: selectedProductInCart!.product.id), isActive: self.$isActive) {
+                                Text("Empty.")
+                            }.isDetailLink(false)
+                        }
+                    }.hidden()
+                    List(self.viewModel.selectedProducts) { productInCart in
+                        Button(action: {
+                            self.selectedProductInCart = productInCart
+                            self.navBarHidden = true
+                            self.isActive = true
+                        }, label: {
+                            ProductInCartCardView(productInCart: productInCart)
+                        }).buttonStyle(PlainButtonStyle())
+                    }
+                            .listStyle(PlainListStyle())
+                            .buttonStyle(PlainButtonStyle())
+                }.navigationBarHidden(true)
             }
-                    .buttonStyle(PlainButtonStyle())
+                    .navigationBarHidden(self.navBarHidden)
                     .navigationBarTitle("Корзина")
                     .introspectTabBarController{ controller in
                         self.tabBar = controller.tabBar
