@@ -58,7 +58,7 @@ struct CartView: View {
                 VStack{
                     VStack {
                         if selectedProductInCart != nil{
-                            NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, navBarHidden: self.$navBarHidden, id: selectedProductInCart!.product.id), isActive: self.$isActive) {
+                            NavigationLink(destination: ItemView(tabViewTag: self.$tabViewTag,shouldPopToRootView: self.$isActive, navBarHidden: self.$navBarHidden, id: selectedProductInCart!.product.id), isActive: self.$isActive) {
                                 Text("Empty.")
                             }.isDetailLink(false)
                         }

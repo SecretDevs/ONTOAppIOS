@@ -9,6 +9,8 @@ import SwiftUI
 
 class CatalogViewModel: ObservableObject{
     @Published var products: [OntoProduct] = []
+    @Published var similarProducts: [Int : [OntoProduct]] = [0 : []]
+
     var cancellation: AnyCancellable?
     let service = CatalogService()
 
@@ -24,6 +26,15 @@ class CatalogViewModel: ObservableObject{
                 })
                 .sink(receiveCompletion: {_ in}, receiveValue: { ontoResponse in
                     self.products = ontoResponse.data.products
+
+                    self.products.forEach { p in
+                        var arr: [OntoProduct] = []
+                        p.similarProducts.forEach { i in
+                            arr.append(ontoResponse.data.products[Int(i)-1])
+                        }
+                        self.similarProducts[Int(p.id)] = arr
+                    }
+
                 })
     }
 }

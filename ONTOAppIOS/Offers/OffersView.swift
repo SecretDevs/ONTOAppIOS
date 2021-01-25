@@ -43,7 +43,7 @@ struct OffersView: View{
                 VStack{
                     VStack{
                         if selectedOffer != nil{
-                            NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, navBarHidden: self.$navBarHidden, id: selectedOffer!.id), isActive: self.$isActive) {
+                            NavigationLink(destination: ItemView(tabViewTag: self.$tabViewTag,shouldPopToRootView: self.$isActive, navBarHidden: self.$navBarHidden, id: selectedOffer!.id), isActive: self.$isActive) {
                                 Text("Empty.")
                             }.isDetailLink(false)
                         }

@@ -18,7 +18,7 @@ struct ItemViewInstructions: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(self.text).font(.system(size: 16))
+            Text(self.text).font(.system(size: 14))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
                     .layoutPriority(.greatestFiniteMagnitude)

@@ -9,6 +9,8 @@ import Combine
 import URLImage
 
 struct ArticleView: View {
+    @Binding var tabViewTag : Int
+
     var id: Int32?
     @State private var scrollViewID = UUID()
 
@@ -56,7 +58,10 @@ struct ArticleView: View {
                     .id(self.scrollViewID)
                     .navigationBarTitle("", displayMode: .inline)
                     .navigationBarBackButtonHidden(true)
-                    .navigationBarItems(leading: btnBack)
+                    .navigationBarItems(leading: btnBack, trailing:
+                    NavigationLink(destination: CartView(tabViewTag: self.$tabViewTag)){
+                        CartButton()
+                    })
             Button(action: {
                 self.scrollViewID = UUID()
             }, label: {

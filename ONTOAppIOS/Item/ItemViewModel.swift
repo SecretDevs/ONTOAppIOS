@@ -9,8 +9,11 @@ import Combine
 class ItemViewModel: ObservableObject{
 
     @Published var product: OntoProduct?
+    @Published var similarProducts: [OntoProduct]? = []
     var cancellation: AnyCancellable?
     let service = CatalogService()
+
+
 
     func getProduct(id: Int32) {
         cancellation = service.fetch()
@@ -20,6 +23,9 @@ class ItemViewModel: ObservableObject{
                 })
                 .sink(receiveCompletion: {_ in}, receiveValue: { ontoResponse in
                     self.product = ontoResponse.data.products[Int(id) - 1]
-                })
+                   self.product?.similarProducts.forEach { i in
+                       self.similarProducts?.append(ontoResponse.data.products[Int(i)-1])
+                    }
+                    })
     }
 }

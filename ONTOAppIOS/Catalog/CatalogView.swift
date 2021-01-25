@@ -118,7 +118,7 @@ struct CatalogView: View {
         return VStack{
             VStack {
                 if selectedProduct != nil{
-                    NavigationLink(destination: ItemView(shouldPopToRootView: self.$isActive, navBarHidden: self.$navBarHidden, id: selectedProduct!.id), isActive: self.$isActive) {
+                    NavigationLink(destination: ItemView(tabViewTag: self.$tabViewTag,shouldPopToRootView: self.$isActive, navBarHidden: self.$navBarHidden, id: selectedProduct!.id), isActive: self.$isActive) {
                         Text("Empty.")
                     }.isDetailLink(false)
                 }

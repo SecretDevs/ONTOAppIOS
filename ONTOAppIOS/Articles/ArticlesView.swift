@@ -39,7 +39,7 @@ struct ArticlesView: View{
             NavigationView {
                 Grid(tracks: 2) {
                     ForEach(0..<articles.count) { i in
-                        NavigationLink(destination: ArticleView(id: articles[i].id)){
+                        NavigationLink(destination: ArticleView(tabViewTag: self.$tabViewTag,id: articles[i].id)){
                             ArticleCardView(text: articles[i].name, url: URL(string: articles[i].image)!)
                                     .gridSpan(column: i % 3 == 0 ? 2 : 1)
                         }

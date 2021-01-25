@@ -24,7 +24,7 @@ struct ProductInCartCardView: View {
             VStack(alignment: .leading) {
                 Text(self.productInCart.product.name)
                         .foregroundColor(.black)
-                        .layoutPriority(.greatestFiniteMagnitude)
+                        .layoutPriority(.greatestFiniteMagnitude).font(.system(size: 14))
                 Spacer()
                 HStack{
                     Button(action: {
